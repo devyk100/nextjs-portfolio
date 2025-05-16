@@ -1,103 +1,107 @@
+import CPSection from "@/components/cp-section/cp-section";
+import AboutMe from "@/components/portfolio/about-me";
+import PortfolioSection from "@/components/portfolio/portfolio-section";
+import Card from "@/components/projects/card";
+import SkillsSection from "@/components/skills-section/skills";
+import { Button } from "@/components/ui/button";
+import NavButton from "@/components/ui/nav-button";
+import ThemeToggle from "@/components/ui/theme-toggle";
+import { Code, File } from "lucide-react";
 import Image from "next/image";
+import { CgWebsite } from "react-icons/cg";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      <main className="flex flex-col items-center justify-center p-2">
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+        {/* Navbar */}
+        <PortfolioSection>
+          <div className="w-full m-2">
+            <NavButton>Home</NavButton>
+            <NavButton>Projects</NavButton>
+          </div>
+          <ThemeToggle className="absolute top-[2px] right-[2px]" />
+        </PortfolioSection>
+
+        <PortfolioSection className="mt-10">
+          <div className="flex flex-wrap justify-around">
+            <div className="min-w-[200px] max-w-[300px] flex flex-col gap-2 items-center">
+              <Image src={"/profile.png"} height={100} width={100} className="rounded-full w-32 mt-10  h-32 object-cover" alt="profile pic"></Image>
+              <h2 className="text-lg w-fit text-center font-semibold">
+                Yash Ramesh Kumar
+              </h2>
+            </div>
+            <AboutMe />
+          </div>
+        </PortfolioSection>
+
+        {/* <PortfolioSection>
+            Work Experience
+        </PortfolioSection> */}
+
+        <PortfolioSection className="mt-10">
+          <h1 className="text-lg font-semibold my-1">Skills</h1>
+          <SkillsSection />
+        </PortfolioSection>
+
+        <PortfolioSection className="mt-10">
+          <h3 className="font-semibold">Competitive Programming</h3>
+          <CPSection />
+        </PortfolioSection>
+
+        <PortfolioSection className="mt-10">
+          <h1 className="text-lg font-semibold">Featured Projects</h1>
+          <div className="flex flex-wrap gap-2 mt-2 items-center justify-center">
+            <Card desc="Peer programming playground" name="Kaicode" >
+              <Image alt="image" src={"/image.jpg"} height={100} width={100} className="w-full h-[200px] object-cover"/>
+              <ul className="text-sm list-disc p-2 pl-6">
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+              </ul>
+              <div className="p-2 flex gap-1 text-sm">                
+                <Button className="text-sm hover:cursor-pointer">
+                  Live <CgWebsite />
+                </Button>
+                <Button variant={"outline"} className="text-sm hover:cursor-pointer">
+                  Blog <File />
+                </Button>
+                <Button variant={"link"} className="text-sm hover:cursor-pointer">
+                  Backend <Code />
+                </Button>
+                <Button variant={"link"} className="text-sm hover:cursor-pointer">
+                  Frontend <Code />
+                </Button>
+              </div>
+            </Card>
+
+            <Card desc="Fullstack voice chat" name="Riotalk" >
+
+            </Card>
+
+            <Card desc="Blender MCP project" name="Blender MCP Project">
+
+            </Card>
+
+            <Card desc="A fault tolerant queue service" name="YuClase" >
+
+            </Card>
+
+            <Card desc="Using async io, reverse proxy and load balance" name="Reverse Proxy and Load Balance" >
+
+            </Card>
+
+            <Card desc="Offline-first android app for data collection" name="iCrops" >
+
+            </Card>
+          </div>
+        </PortfolioSection>
+
+        <PortfolioSection className="mt-5">
+          <h1>Certifications</h1>
+        </PortfolioSection>
+
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </>
   );
 }
