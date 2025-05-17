@@ -34,8 +34,34 @@ export default function SkillsSection() {
                 <h2 className="font-semibold my-1">
                     Libraries and Frameworks
                 </h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, eligendi?
+                <p className="flex flex-wrap gap-5 items-center">
+                    <span>
+                        ReactJS
+                    </span>
+                    <span>
+                        NextJS
+                    </span>
+                    <span>
+                        NextAuth
+                    </span>
+                    <span>
+                        Prisma
+                    </span>
+                    <span>
+                        Gin
+                    </span>
+                    <span>
+                        React Native
+                    </span>
+                    <span>
+                        Jetpack Compose
+                    </span>
+                    <span>
+                        ExpressJS
+                    </span>
+                    <span>
+                        Zustand
+                    </span>
                 </p>
             </div>
             <Separator />
@@ -43,8 +69,25 @@ export default function SkillsSection() {
                 <h2 className="font-semibold my-1">
                     Tools
                 </h2>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, soluta.
+                <p className="flex flex-wrap gap-5 items-center">
+                    <span>
+                        Linux
+                    </span>
+                    <span>
+                        Git
+                    </span>
+                    <span>
+                        AWS
+                    </span>
+                    <span>
+                        PostgreSQL
+                    </span>
+                    <span>
+                        Redis
+                    </span>
+                    <span>
+                        Nginx
+                    </span>
                 </p>
             </div> 
             <Separator />
