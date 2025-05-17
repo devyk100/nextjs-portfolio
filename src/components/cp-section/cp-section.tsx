@@ -45,7 +45,7 @@ export default function CPSection() {
                         <div className="flex select-none flex-col font-light text-xs relative">
                             <div>Max Rating: {userInfo.maxRating as ReactNode}</div>
                             <div>Current Rating: {userInfo.currentRating as ReactNode}</div>
-                            <div>Max Rank: {userInfo.maxRank}</div>
+                            <div>Max Rank: <span className="dark:text-green-300 text-green-700">{userInfo.maxRank}</span></div>
                         </div>
                     </>
                 }

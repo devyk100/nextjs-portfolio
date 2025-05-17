@@ -15,7 +15,7 @@ export default function AboutMe() {
                 I am a Software Engineer with the passion to write fast, scalable, and efficient backend systems that work seamlessly.
             </p>
             <p className="text-sm my-2">
-                Most of my interest lies in backend
+                I am eager to contribute my skills and enthusiasm to a forward thinking organisation that values creativity, teamwork and passion drive for excellence.
             </p>
             <div className="flex gap-3 flex-wrap items-center m-2 ">
                 <Link href={"https://github.com/devyk100"}>

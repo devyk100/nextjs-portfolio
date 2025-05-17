@@ -6,7 +6,7 @@ export default function PortfolioSection({className, children}: {
     children?: ReactNode
 }) {
     return (<>
-        <section className={cn("max-w-[1000px] w-full relative", className)}>
+        <section className={cn("max-w-[700px] lg:max-w-[1000px] w-full relative", className)}>
             {children}
         </section>
     </>)
