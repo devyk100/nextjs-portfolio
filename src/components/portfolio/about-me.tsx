@@ -33,7 +33,9 @@ export default function AboutMe() {
                 <Link href={""}>
                     <FaMediumM className="w-6 h-6" />
                 </Link>
+                <Link href={"https://drive.google.com/file/d/184CZvZU8kKpNBP__j15J4K4gro_CyI-O/view"}>
                 <Button variant={"secondary"} className="text-sm hover:cursor-pointer"><File /> Resume</Button>
+                </Link>
             </div>
         </div>
     </>)

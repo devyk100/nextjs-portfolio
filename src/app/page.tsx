@@ -28,7 +28,7 @@ export default function Home() {
         <PortfolioSection className="mt-10">
           <div className="flex flex-wrap justify-around">
             <div className="min-w-[200px] max-w-[300px] flex flex-col gap-2 items-center">
-              <Image src={"/profile.png"} height={100} width={100} className="rounded-full w-32 mt-10  h-32 object-cover" alt="profile pic"></Image>
+              <Image src={"/profile.png"} height={100} width={100} className="rounded-full w-32 mt-10 border-[0.5px] border-zinc-200 h-32 object-cover" alt="profile pic"></Image>
               <h2 className="text-lg w-fit text-center font-semibold">
                 Yash Ramesh Kumar
               </h2>
