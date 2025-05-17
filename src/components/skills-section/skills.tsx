@@ -1,17 +1,19 @@
-import { DiJava, DiJavascript } from "react-icons/di";
+import { DiAws, DiJava, DiJavascript, DiLinux, DiNginx, DiPostgresql, DiRedis } from "react-icons/di";
 import { Separator } from "../ui/separator";
-import { FaGolang } from "react-icons/fa6";
-import { TbBrandCpp } from "react-icons/tb";
-import { SiKotlin, SiTypescript } from "react-icons/si";
+import { FaAws, FaGolang } from "react-icons/fa6";
+import { TbBrandCpp, TbBrandReactNative } from "react-icons/tb";
+import { SiExpress, SiJetpackcompose, SiKotlin, SiNextdotjs, SiPrisma, SiRedux, SiTypescript } from "react-icons/si";
+import { FaReact } from "react-icons/fa";
+import { GitCommit, GitGraph } from "lucide-react";
 
 export default function SkillsSection() {
     return (<>
         <div className="text-sm my-2">
             <div>
-                <h2 className="font-semibold my-1">
+                <h2 className="font-semibold mt-2">
                     Languages
                 </h2>
-                <p className="flex flex-wrap gap-5 items-center">
+                <p className="flex flex-wrap gap-x-5 gap-y-1 items-center">
                     <span className="flex items-center gap-1">
                         Golang <FaGolang className="w-6 h-6" />
                     </span>
@@ -31,62 +33,65 @@ export default function SkillsSection() {
             </div>
             <Separator />
             <div>
-                <h2 className="font-semibold my-1">
+                <h2 className="font-semibold mt-2">
                     Libraries and Frameworks
                 </h2>
-                <p className="flex flex-wrap gap-5 items-center">
-                    <span>
-                        ReactJS
+                <p className="flex flex-wrap gap-x-5 gap-y-1 items-center">
+                    <span className="flex gap-x-1 items-center">
+                        ReactJS <FaReact />
                     </span>
-                    <span>
-                        NextJS
+                    <span className="flex gap-x-1 items-center">
+                        NextJS <SiNextdotjs />
                     </span>
                     <span>
                         NextAuth
                     </span>
-                    <span>
-                        Prisma
+                    <span className="flex gap-x-1 items-center">
+                        Prisma <SiPrisma />
                     </span>
                     <span>
                         Gin
                     </span>
-                    <span>
-                        React Native
+                    <span className="flex gap-x-1 items-center">
+                        React Native <TbBrandReactNative />
                     </span>
-                    <span>
-                        Jetpack Compose
+                    <span className="flex gap-x-1 items-center">
+                        Jetpack Compose <SiJetpackcompose />
                     </span>
-                    <span>
-                        ExpressJS
+                    <span className="flex gap-x-1 items-center">
+                        ExpressJS <SiExpress />
                     </span>
                     <span>
                         Zustand
+                    </span>
+                    <span className="flex gap-x-1 items-center">
+                        Redux <SiRedux />
                     </span>
                 </p>
             </div>
             <Separator />
             <div>
-                <h2 className="font-semibold my-1">
+                <h2 className="font-semibold mt-2">
                     Tools
                 </h2>
-                <p className="flex flex-wrap gap-5 items-center">
-                    <span>
-                        Linux
+                <p className="flex flex-wrap gap-x-5 gap-y-1 items-center">
+                    <span className="flex gap-x-1 items-center">
+                        Linux <DiLinux />
                     </span>
-                    <span>
-                        Git
+                    <span className="flex gap-x-1 items-center">
+                        Git <GitGraph className="h-4 w-4" />
                     </span>
-                    <span>
-                        AWS
+                    <span className="flex gap-x-1 items-center">
+                        AWS <FaAws className="h-4 w-4" />
                     </span>
-                    <span>
-                        PostgreSQL
+                    <span className="flex gap-x-1 items-center">
+                        PostgreSQL <DiPostgresql className="h-6 w-6"/>
                     </span>
-                    <span>
-                        Redis
+                    <span className="flex gap-x-1 items-center">
+                        Redis <DiRedis className="h-6 w-6"/>
                     </span>
-                    <span>
-                        Nginx
+                    <span className="flex gap-x-1 items-center">
+                        Nginx <DiNginx className="h-6 w-6"/>
                     </span>
                 </p>
             </div> 

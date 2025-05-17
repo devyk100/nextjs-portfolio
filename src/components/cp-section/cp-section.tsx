@@ -39,7 +39,7 @@ export default function CPSection() {
                         <Skeleton className="w-[100px] h-[7px] rounded-full" />
                         <Skeleton className="w-[100px] h-[7px] rounded-full" />
                     </div> : <>
-                        <Link href={""} className="flex gap-2 items-center text-sm">
+                        <Link href={"https://codeforces.com/profile/ShonenDev"} className="flex gap-2 items-center text-sm">
                             <SiCodeforces className="" /> <span className="text-sm">Codeforces</span>
                         </Link>
                         <div className="flex select-none flex-col font-light text-xs relative">
@@ -51,12 +51,12 @@ export default function CPSection() {
                 }
             </div>
             <div className="">
-                <Link href={""} className="text-sm flex items-center h-fit gap-1">
+                <Link href={"https://leetcode.com/u/devyk100/"} className="text-sm flex items-center h-fit gap-1">
                     <SiLeetcode /> Leetcode
                 </Link>
             </div>
             <div className="h-fit">
-                <Link href={""} className="text-sm h-fit flex items-center">Atcoder</Link>
+                <Link href={"https://atcoder.jp/users/ShonenDev"} className="text-sm h-fit flex items-center">Atcoder</Link>
             </div>
             
         </div>
