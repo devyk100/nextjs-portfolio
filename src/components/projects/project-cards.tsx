@@ -8,7 +8,7 @@ import { FaGithub, FaMedium } from "react-icons/fa";
 
 export default function ProjectCards() {
     return (<>
-        <div className="flex flex-wrap gap-2 mt-2 items-center justify-center w-full">
+        <div className="flex flex-wrap gap-2 mt-2 items-start justify-center w-full">
             <Card desc="Peer programming playground" name="Kaicode" coverUrl="/image.webp" point1="Lorem ipsum dolor sit amet." point2="Lorem ipsum dolor sit amet consectetur adipisicing.">
                 <div className="p-2 flex flex-wrap gap-1 text-sm">
                     <Button className="text-sm hover:cursor-pointer">

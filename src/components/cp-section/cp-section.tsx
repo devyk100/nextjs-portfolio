@@ -4,6 +4,7 @@ import axios from "axios"
 import { Skeleton } from "@/components/ui/skeleton"
 import { SiCodeforces, SiLeetcode } from "react-icons/si"
 import Link from "next/link"
+import { Button } from "../ui/button"
 
 type CPUserInfo = {
     maxRating: Number;
@@ -33,15 +34,17 @@ export default function CPSection() {
     return (<>
         <div className="mt-2 flex flex-wrap gap-3">
             <div className="flex flex-col text-sm">
+                <Link href={"https://codeforces.com/profile/ShonenDev"} className="flex gap-2 items-center text-sm hover:cursor-pointer">
+                    <Button variant={"link"} className="p-0 m-0 hover:cursor-pointer text-foreground">
+                        <SiCodeforces className="" /> <span className="text-sm">Codeforces</span>
+                    </Button>
+                </Link>
                 {
                     userInfo == null ? <div className="flex flex-col gap-1">
                         <Skeleton className="w-[100px] h-[15px] rounded-full" />
                         <Skeleton className="w-[100px] h-[7px] rounded-full" />
                         <Skeleton className="w-[100px] h-[7px] rounded-full" />
                     </div> : <>
-                        <Link href={"https://codeforces.com/profile/ShonenDev"} className="flex gap-2 items-center text-sm">
-                            <SiCodeforces className="" /> <span className="text-sm">Codeforces</span>
-                        </Link>
                         <div className="flex select-none flex-col font-light text-xs relative">
                             <div>Max Rating: {userInfo.maxRating as ReactNode}</div>
                             <div>Current Rating: {userInfo.currentRating as ReactNode}</div>
@@ -51,14 +54,20 @@ export default function CPSection() {
                 }
             </div>
             <div className="">
-                <Link href={"https://leetcode.com/u/devyk100/"} className="text-sm flex items-center h-fit gap-1">
-                    <SiLeetcode /> Leetcode
+                <Link href={"https://leetcode.com/u/devyk100/"} className="text-sm flex items-center h-fit gap-1 hover:cursor-pointer">
+                    <Button variant={"link"} className="p-0 m-0 hover:cursor-pointer text-foreground">
+                        <SiLeetcode /> Leetcode
+                    </Button>
                 </Link>
             </div>
             <div className="h-fit">
-                <Link href={"https://atcoder.jp/users/ShonenDev"} className="text-sm h-fit flex items-center">Atcoder</Link>
+                <Link href={"https://atcoder.jp/users/ShonenDev"} className="text-sm h-fit flex items-center hover:cursor-pointer">
+                    <Button variant={"link"} className="p-0 m-0 hover:cursor-pointer text-foreground">
+                        Atcoder
+                    </Button>
+                </Link>
             </div>
-            
+
         </div>
     </>)
 }

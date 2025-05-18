@@ -51,49 +51,49 @@ export default function Home() {
         </PortfolioSection> */}
 
         <PortfolioSection className="mt-10">
-          <h1 className="text-lg font-semibold my-1 flex gap-1">Skills <GiSkills /></h1>
+          <h1 className="text-lg font-semibold my-1 flex gap-2 items-center underline-wavy-primary">Skills <GiSkills /></h1>
           <SkillsSection />
         </PortfolioSection>
 
         <PortfolioSection className="mt-10">
-          <h3 className="font-semibold">Competitive Programming</h3>
+          <h3 className="font-semibold underline-wavy-primary">Competitive Programming</h3>
           <CPSection />
         </PortfolioSection>
 
         <PortfolioSection className="mt-10" id="projects">
-          <h1 className="text-lg font-semibold flex gap-1 items-center">Featured Projects <GrProjects /></h1>
+          <h1 className="font-semibold flex gap-1 items-center underline-wavy-primary">Featured Projects <GrProjects /></h1>
           <ProjectCards />
         </PortfolioSection>
 
         <PortfolioSection className="mt-10">
-          <h1 className="text-lg font-semibold flex gap-1 items-center">Certifications <FaCertificate /></h1>
+          <h1 className="font-semibold flex gap-1 items-center underline-wavy-primary">Certifications <FaCertificate /></h1>
           <ul className="list-disc pl-5 gap-1 flex flex-col">
             <li className="w-full h-fit">
               <div className="w-full flex items-center justify-between flex-wrap gap-x-8 text-sm">
                 <span className="w-screen block">Object Oriented Design</span>
                 <span className="text-sm italic font-light">University of Alberta</span>
-                <Link href={""} className="text-sm italic flex gap-1 items-center">Certificate <Link2 className="w-4 h-4" /> </Link>
+                <Link href={""} className="text-sm italic flex gap-1 items-center underline text-primary">Certificate <Link2 className="w-4 h-4" /> </Link>
               </div>
             </li>
             <li className="w-full">
               <div className="w-full flex items-center justify-between flex-wrap gap-x-8 text-sm">
                 <span className="w-screen block">Design Patterns</span>
                 <span className="text-sm italic font-light">University of Alberta</span>
-                <Link href={""} className="text-sm italic flex gap-1 items-center">Certificate <Link2 className="w-4 h-4" /> </Link>
+                <Link href={""} className="text-sm italic flex gap-1 items-center underline text-primary">Certificate <Link2 className="w-4 h-4" /> </Link>
               </div>
             </li>
             <li className="w-full">
               <div className="w-full flex items-center justify-between flex-wrap gap-x-8 text-sm">
                 <span className="w-screen block">Software Architecture</span>
                 <span className="text-sm italic font-light">University of Alberta</span>
-                <Link href={""} className="text-sm italic flex gap-1 items-center">Certificate <Link2 className="w-4 h-4" /> </Link>
+                <Link href={""} className="text-sm italic flex gap-1 items-center underline text-primary">Certificate <Link2 className="w-4 h-4" /> </Link>
               </div>
             </li>
           </ul>
         </PortfolioSection>
 
         <PortfolioSection className="mt-10">
-          <h1 className="text-lg font-semibold flex gap-1 items-center">
+          <h1 className="font-semibold flex gap-1 items-center underline-wavy-primary">
             Open Source <DiGit className="w-6 h-6" />
           </h1>
           <div className="text-sm">
@@ -105,7 +105,7 @@ export default function Home() {
         </PortfolioSection>
 
         <PortfolioSection className="mt-10">
-          <h1 className="text-lg font-semibold flex gap-1">Education <GraduationCap /></h1>
+          <h1 className="font-semibold flex gap-1 underline-wavy-primary">Education <GraduationCap /></h1>
           <ul className="text-sm">
             <li className="mt-2 flex justify-between">
               <div>
@@ -127,7 +127,7 @@ export default function Home() {
         </PortfolioSection>
 
         <PortfolioSection className="mt-10">
-          <h1 className="text-lg font-semibold flex gap-1 items-center">Other Achievements <GiAchievement /></h1>
+          <h1 className="font-semibold flex gap-1 items-center underline-wavy-primary">Other Achievements <GiAchievement /></h1>
           <ul className="text-sm mt-2 list-disc pl-5">
             <li>SIH @Waitlist Qualified</li>
             <li>Junior Skill Championship Round 3 Qualified - Web Technologies</li>
@@ -137,7 +137,7 @@ export default function Home() {
         </PortfolioSection>
 
         <PortfolioSection className="mt-10">
-          <h1 className="text-lg font-semibold flex gap-1">Languages <Languages /></h1>
+          <h1 className="font-semibold flex gap-1 underline-wavy-primary">Languages <Languages /></h1>
           <ul className="text-sm max-w-[500px] pl-5 list-disc mt-2">
             <li className="">
               <div className="flex gap-x-4 justify-between">
@@ -161,7 +161,7 @@ export default function Home() {
         </PortfolioSection>
 
         <PortfolioSection className="mt-10 mb-10">
-          <h1 className="text-lg font-semibold flex gap-1">Positions of Responsibility <PersonStanding /></h1>
+          <h1 className="font-semibold flex gap-1 underline-wavy-primary">Positions of Responsibility <PersonStanding /></h1>
           <ul className="text-sm mt-2 flex flex-col">
             <li>
               <div className="flex justify-between">
@@ -188,7 +188,7 @@ export default function Home() {
         </PortfolioSection>
 
         <PortfolioSection className="mt-10">
-          <div className="text-center w-full text-sm p-2">
+          <div className="text-center w-full text-sm p-2 font-light select-none">
             © 2025 Developed by Yash
           </div>
         </PortfolioSection>

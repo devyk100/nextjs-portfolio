@@ -121,3 +121,16 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+@layer utilities {
+  .underline-wavy {
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+  }
+  .underline-wavy-primary {
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: var(--primary);
+  }
+}
