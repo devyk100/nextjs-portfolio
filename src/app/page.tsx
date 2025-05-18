@@ -51,7 +51,7 @@ export default function Home() {
         </PortfolioSection> */}
 
         <PortfolioSection className="mt-10">
-          <h1 className="text-lg font-semibold my-1 flex gap-1">Skills <GiSkills/></h1>
+          <h1 className="text-lg font-semibold my-1 flex gap-1">Skills <GiSkills /></h1>
           <SkillsSection />
         </PortfolioSection>
 
@@ -66,23 +66,35 @@ export default function Home() {
         </PortfolioSection>
 
         <PortfolioSection className="mt-10">
-          <h1 className="text-lg font-semibold flex gap-1 items-center">Certifications <FaCertificate/></h1>
+          <h1 className="text-lg font-semibold flex gap-1 items-center">Certifications <FaCertificate /></h1>
           <ul className="list-disc pl-5 gap-1 flex flex-col">
             <li className="w-full h-fit">
-              <div className="w-full flex items-center flex-wrap gap-x-8 text-sm"><span>Object Oriented Design</span> <span className="text-sm italic font-light">University of Alberta</span> <Link href={""} className="text-sm italic flex gap-1 items-center">Certificate <Link2 className="w-4 h-4" /> </Link></div>
+              <div className="w-full flex items-center justify-between flex-wrap gap-x-8 text-sm">
+                <span className="w-screen block">Object Oriented Design</span>
+                <span className="text-sm italic font-light">University of Alberta</span>
+                <Link href={""} className="text-sm italic flex gap-1 items-center">Certificate <Link2 className="w-4 h-4" /> </Link>
+              </div>
             </li>
             <li className="w-full">
-              <div className="w-full flex items-center flex-wrap gap-x-8 text-sm"><span>Design Patterns</span> <span className="text-sm italic font-light">University of Alberta</span> <Link href={""} className="text-sm italic flex gap-1 items-center">Certificate <Link2 className="w-4 h-4" /> </Link></div>
+              <div className="w-full flex items-center justify-between flex-wrap gap-x-8 text-sm">
+                <span className="w-screen block">Design Patterns</span>
+                <span className="text-sm italic font-light">University of Alberta</span>
+                <Link href={""} className="text-sm italic flex gap-1 items-center">Certificate <Link2 className="w-4 h-4" /> </Link>
+              </div>
             </li>
             <li className="w-full">
-              <div className="w-full flex items-center flex-wrap gap-x-8 text-sm"><span>Software Architecture</span> <span className="text-sm italic font-light">University of Alberta</span> <Link href={""} className="text-sm italic flex gap-1 items-center">Certificate <Link2 className="w-4 h-4" /> </Link></div>
+              <div className="w-full flex items-center justify-between flex-wrap gap-x-8 text-sm">
+                <span className="w-screen block">Software Architecture</span>
+                <span className="text-sm italic font-light">University of Alberta</span>
+                <Link href={""} className="text-sm italic flex gap-1 items-center">Certificate <Link2 className="w-4 h-4" /> </Link>
+              </div>
             </li>
           </ul>
         </PortfolioSection>
 
         <PortfolioSection className="mt-10">
           <h1 className="text-lg font-semibold flex gap-1 items-center">
-            Open Source <DiGit className="w-6 h-6"/>
+            Open Source <DiGit className="w-6 h-6" />
           </h1>
           <div className="text-sm">
             <ul className="list-disc pl-5">
@@ -93,7 +105,7 @@ export default function Home() {
         </PortfolioSection>
 
         <PortfolioSection className="mt-10">
-          <h1 className="text-lg font-semibold flex gap-1">Education <GraduationCap/></h1>
+          <h1 className="text-lg font-semibold flex gap-1">Education <GraduationCap /></h1>
           <ul className="text-sm">
             <li className="mt-2 flex justify-between">
               <div>
@@ -149,7 +161,7 @@ export default function Home() {
         </PortfolioSection>
 
         <PortfolioSection className="mt-10 mb-10">
-          <h1 className="text-lg font-semibold flex gap-1">Positions of Responsibility <PersonStanding/></h1>
+          <h1 className="text-lg font-semibold flex gap-1">Positions of Responsibility <PersonStanding /></h1>
           <ul className="text-sm mt-2 flex flex-col">
             <li>
               <div className="flex justify-between">
