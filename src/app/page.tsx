@@ -6,6 +6,7 @@ import ProjectCards from "@/components/projects/project-cards";
 import SkillsSection from "@/components/skills-section/skills";
 import { Button } from "@/components/ui/button";
 import NavButton from "@/components/ui/nav-button";
+import ScrollProgress from "@/components/ui/scroll-progress";
 import ThemeToggle from "@/components/ui/theme-toggle";
 import { Code, File, GraduationCap, Languages, Link2, PersonStanding } from "lucide-react";
 import Image from "next/image";
@@ -21,8 +22,10 @@ export default function Home() {
   return (
     <>
       <main className="flex flex-col items-center justify-center p-2">
+        <PortfolioSection>
+          <ScrollProgress />
+        </PortfolioSection>
 
-        {/* Navbar */}
         <PortfolioSection>
           <div className="w-full m-2">
             <NavButton href="#">Home</NavButton>
