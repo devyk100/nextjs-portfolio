@@ -12,7 +12,7 @@ export default function AboutMe() {
                 Backend and Android Developer. Competitive Programmer.
             </p>
             <p className="text-sm my-2">
-                I am a Software Engineer with the passion to write fast, scalable, and efficient backend systems that work seamlessly.
+                I am a Software Engineer with the passion to write fast, scalable, and efficient code that works seamlessly.
             </p>
             <p className="text-sm my-2">
                 I am eager to contribute my skills and enthusiasm to a forward thinking organisation that values creativity, teamwork and passion drive for excellence.

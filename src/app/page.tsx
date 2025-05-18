@@ -7,9 +7,15 @@ import SkillsSection from "@/components/skills-section/skills";
 import { Button } from "@/components/ui/button";
 import NavButton from "@/components/ui/nav-button";
 import ThemeToggle from "@/components/ui/theme-toggle";
-import { Code, File } from "lucide-react";
+import { Code, File, GraduationCap, Languages, Link2, PersonStanding } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { CgWebsite } from "react-icons/cg";
+import { DiGit, DiOpensource } from "react-icons/di";
+import { FaCertificate, FaGit } from "react-icons/fa";
+import { GiAchievement, GiSkills } from "react-icons/gi";
+import { GrProjects } from "react-icons/gr";
+import { MdCastForEducation } from "react-icons/md";
 
 export default function Home() {
   return (
@@ -19,8 +25,8 @@ export default function Home() {
         {/* Navbar */}
         <PortfolioSection>
           <div className="w-full m-2">
-            <NavButton>Home</NavButton>
-            <NavButton>Projects</NavButton>
+            <NavButton href="#">Home</NavButton>
+            <NavButton href="#projects">Projects</NavButton>
           </div>
           <ThemeToggle className="absolute top-[2px] right-[2px]" />
         </PortfolioSection>
@@ -42,7 +48,7 @@ export default function Home() {
         </PortfolioSection> */}
 
         <PortfolioSection className="mt-10">
-          <h1 className="text-lg font-semibold my-1">Skills</h1>
+          <h1 className="text-lg font-semibold my-1 flex gap-1">Skills <GiSkills/></h1>
           <SkillsSection />
         </PortfolioSection>
 
@@ -51,15 +57,126 @@ export default function Home() {
           <CPSection />
         </PortfolioSection>
 
-        <PortfolioSection className="mt-10">
-          <h1 className="text-lg font-semibold">Featured Projects</h1>
+        <PortfolioSection className="mt-10" id="projects">
+          <h1 className="text-lg font-semibold flex gap-1 items-center">Featured Projects <GrProjects /></h1>
           <ProjectCards />
         </PortfolioSection>
 
-        <PortfolioSection className="mt-5">
-          <h1>Certifications</h1>
+        <PortfolioSection className="mt-10">
+          <h1 className="text-lg font-semibold flex gap-1 items-center">Certifications <FaCertificate/></h1>
+          <ul className="list-disc pl-5 gap-1 flex flex-col">
+            <li className="w-full h-fit">
+              <div className="w-full flex items-center flex-wrap gap-x-8 text-sm"><span>Object Oriented Design</span> <span className="text-sm italic font-light">University of Alberta</span> <Link href={""} className="text-sm italic flex gap-1 items-center">Certificate <Link2 className="w-4 h-4" /> </Link></div>
+            </li>
+            <li className="w-full">
+              <div className="w-full flex items-center flex-wrap gap-x-8 text-sm"><span>Design Patterns</span> <span className="text-sm italic font-light">University of Alberta</span> <Link href={""} className="text-sm italic flex gap-1 items-center">Certificate <Link2 className="w-4 h-4" /> </Link></div>
+            </li>
+            <li className="w-full">
+              <div className="w-full flex items-center flex-wrap gap-x-8 text-sm"><span>Software Architecture</span> <span className="text-sm italic font-light">University of Alberta</span> <Link href={""} className="text-sm italic flex gap-1 items-center">Certificate <Link2 className="w-4 h-4" /> </Link></div>
+            </li>
+          </ul>
         </PortfolioSection>
 
+        <PortfolioSection className="mt-10">
+          <h1 className="text-lg font-semibold flex gap-1 items-center">
+            Open Source <DiGit className="w-6 h-6"/>
+          </h1>
+          <div className="text-sm">
+            <ul className="list-disc pl-5">
+              <li>AnkiDroid PRs</li>
+              <li>Other PRs</li>
+            </ul>
+          </div>
+        </PortfolioSection>
+
+        <PortfolioSection className="mt-10">
+          <h1 className="text-lg font-semibold flex gap-1">Education <GraduationCap/></h1>
+          <ul className="text-sm">
+            <li className="mt-2 flex justify-between">
+              <div>
+                <h3 className="">National Institute of Technology, Warangal</h3>
+                <h4 className="font-light">BTech. (Bachelor of Technology)</h4>
+                <h6 className="text-xs italic">in Electronics and Communication Engineering</h6>
+                <p className="mt-1 font-light">
+                  CGPA: 9.06 (2nd Year)
+                  <Link className="text-xs hover:cursor-pointer" href={"https://drive.google.com/file/d/1n81WXyvOiA-UoHn_JXDLpfFufLkRc6OJ/view?usp=sharing"}>
+                    <Button variant={"link"} className="text-xs p-1 hover:cursor-pointer">Gradesheet</Button>
+                  </Link>
+                </p>
+              </div>
+              <div className="font-semibold border-l-2 md:border-l-0">
+                2023 - 2027
+              </div>
+            </li>
+          </ul>
+        </PortfolioSection>
+
+        <PortfolioSection className="mt-10">
+          <h1 className="text-lg font-semibold flex gap-1 items-center">Other Achievements <GiAchievement /></h1>
+          <ul className="text-sm mt-2 list-disc pl-5">
+            <li>SIH @Waitlist Qualified</li>
+            <li>Junior Skill Championship Round 3 Qualified - Web Technologies</li>
+            <li>JEE Main 2023 - 99.1 percentile</li>
+            <li>Regional Children's Science Congress by Navoadaya Vidyalaya Samiti - 2019 </li>
+          </ul>
+        </PortfolioSection>
+
+        <PortfolioSection className="mt-10">
+          <h1 className="text-lg font-semibold flex gap-1">Languages <Languages /></h1>
+          <ul className="text-sm max-w-[500px] pl-5 list-disc mt-2">
+            <li className="">
+              <div className="flex gap-x-4 justify-between">
+                <div>English</div>
+                <div className="italic">Professional</div>
+              </div>
+            </li>
+            <li >
+              <div className="flex gap-x-4 justify-between">
+                <div>Hindi</div>
+                <div className="italic">Native</div>
+              </div>
+            </li>
+            <li >
+              <div className="flex gap-x-4 justify-between">
+                <div>Japanese</div>
+                <div className="italic flex flex-col items-end"><span>Very Basic</span> <span className="text-xs">(preparing for JLPT-N5)</span></div>
+              </div>
+            </li>
+          </ul>
+        </PortfolioSection>
+
+        <PortfolioSection className="mt-10 mb-10">
+          <h1 className="text-lg font-semibold flex gap-1">Positions of Responsibility <PersonStanding/></h1>
+          <ul className="text-sm mt-2 flex flex-col">
+            <li>
+              <div className="flex justify-between">
+                <div className="flex flex-col">
+                  <span>Software Development Club</span>
+                  <span className="text-xs">Executive Member</span>
+                </div>
+                <div className="italic">
+                  Nov'23 - Nov'24
+                </div>
+              </div>
+
+              <div className="flex justify-between mt-1">
+                <div className="flex flex-col">
+                  <span>ECE Society</span>
+                  <span className="text-xs">Executive Member</span>
+                </div>
+                <div className="italic">
+                  Aug'24 - Sept'24
+                </div>
+              </div>
+            </li>
+          </ul>
+        </PortfolioSection>
+
+        <PortfolioSection className="mt-10">
+          <div className="text-center w-full text-sm p-2">
+            © 2025 Developed by Yash
+          </div>
+        </PortfolioSection>
       </main>
     </>
   );
