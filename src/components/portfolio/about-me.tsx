@@ -13,7 +13,7 @@ import {
 export default function AboutMe() {
     return (<>
         <div className="max-w-[700px] mt-5">
-            <h3 className="font-semibold underline-wavy-primary">About Me</h3>
+            <h3 className="font-semibold underline-wavy-primary magnetic px-1 w-fit">About Me</h3>
             <p className="text-sm my-2">
                 Backend and Android Developer. Competitive Programmer.
             </p>

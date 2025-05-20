@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Montserrat, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { MagneticCursor } from "@/components/ui/magnetic-cursor";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -33,6 +34,7 @@ export default function RootLayout({
       <body
         className={`${montserratSans.variable} ${geistMono.variable} font-sans antialiased `}
       >
+        <MagneticCursor />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

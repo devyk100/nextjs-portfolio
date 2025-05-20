@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import NavButton from "@/components/ui/nav-button";
 import ScrollProgress from "@/components/ui/scroll-progress";
 import ThemeToggle from "@/components/ui/theme-toggle";
-import { Code, File, GraduationCap, Languages, Link2, PersonStanding } from "lucide-react";
+import { GraduationCap, Languages, Link2, PersonStanding } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { CgWebsite } from "react-icons/cg";
@@ -16,12 +16,11 @@ import { DiGit, DiOpensource } from "react-icons/di";
 import { FaCertificate, FaGit } from "react-icons/fa";
 import { GiAchievement, GiSkills } from "react-icons/gi";
 import { GrProjects } from "react-icons/gr";
-import { MdCastForEducation } from "react-icons/md";
 
 export default function Home() {
   return (
     <>
-      <main className="flex flex-col items-center relative justify-center p-2">
+      <main className="relative min-h-screen  text-foreground flex items-center justify-center flex-col px-3">
         <PortfolioSection>
           <ScrollProgress />
         </PortfolioSection>
@@ -42,7 +41,7 @@ export default function Home() {
           <div className="flex flex-wrap justify-around">
             <div className="min-w-[200px] max-w-[300px] flex flex-col gap-2 items-center">
               <Image src={"/profile.png"} height={100} width={100} className="rounded-full w-32 mt-10 border-[0.5px] border-zinc-200 h-32 object-cover" alt="profile pic"></Image>
-              <h2 className="text-lg w-fit text-center font-semibold">
+              <h2 className="text-lg w-fit text-center text-foreground font-semibold magnetic px-2">
                 Yash Ramesh Kumar
               </h2>
             </div>
@@ -55,22 +54,22 @@ export default function Home() {
         </PortfolioSection> */}
 
         <PortfolioSection className="mt-10">
-          <h1 className="text-lg font-semibold my-1 flex gap-2 items-center underline-wavy-primary">Skills <GiSkills /></h1>
+          <h1 className="text-lg font-semibold my-1 flex gap-2 items-center underline-wavy-primary magnetic px-1 w-fit text-foreground">Skills <GiSkills /></h1>
           <SkillsSection />
         </PortfolioSection>
 
         <PortfolioSection className="mt-10">
-          <h3 className="font-semibold underline-wavy-primary">Competitive Programming</h3>
+          <h3 className="font-semibold underline-wavy-primary magnetic px-1 w-fit text-foreground">Competitive Programming</h3>
           <CPSection />
         </PortfolioSection>
 
         <PortfolioSection className="mt-10" id="projects">
-          <h1 className="font-semibold flex gap-1 items-center underline-wavy-primary">Featured Projects <GrProjects /></h1>
+          <h1 className="font-semibold flex gap-1 items-center underline-wavy-primary magnetic px-1 w-fit text-foreground">Featured Projects <GrProjects /></h1>
           <ProjectCards />
         </PortfolioSection>
 
         <PortfolioSection className="mt-10">
-          <h1 className="font-semibold flex gap-1 items-center underline-wavy-primary">Certifications <FaCertificate /></h1>
+          <h1 className="font-semibold flex gap-1 items-center underline-wavy-primary magnetic px-1 w-fit">Certifications <FaCertificate /></h1>
           <ul className="list-disc pl-5 gap-1 flex flex-col">
             <li className="w-full h-fit">
               <div className="w-full flex items-center justify-between flex-wrap gap-x-8 text-sm">
@@ -97,7 +96,7 @@ export default function Home() {
         </PortfolioSection>
 
         <PortfolioSection className="mt-10">
-          <h1 className="font-semibold flex gap-1 items-center underline-wavy-primary">
+          <h1 className="font-semibold flex gap-1 items-center underline-wavy-primary magnetic px-1 w-fit">
             Open Source <DiGit className="w-6 h-6" />
           </h1>
           <div className="text-sm">
@@ -109,7 +108,7 @@ export default function Home() {
         </PortfolioSection>
 
         <PortfolioSection className="mt-10">
-          <h1 className="font-semibold flex gap-1 underline-wavy-primary">Education <GraduationCap /></h1>
+          <h1 className="font-semibold flex gap-1 underline-wavy-primary magnetic px-1 w-fit">Education <GraduationCap /></h1>
           <ul className="text-sm">
             <li className="mt-2 flex justify-between">
               <div>
@@ -131,7 +130,7 @@ export default function Home() {
         </PortfolioSection>
 
         <PortfolioSection className="mt-10">
-          <h1 className="font-semibold flex gap-1 items-center underline-wavy-primary">Other Achievements <GiAchievement /></h1>
+          <h1 className="font-semibold flex gap-1 items-center underline-wavy-primary magnetic px-1 w-fit">Other Achievements <GiAchievement /></h1>
           <ul className="text-sm mt-2 list-disc pl-5">
             <li>SIH @Waitlist Qualified</li>
             <li>Junior Skill Championship Round 3 Qualified - Web Technologies</li>
@@ -141,7 +140,7 @@ export default function Home() {
         </PortfolioSection>
 
         <PortfolioSection className="mt-10">
-          <h1 className="font-semibold flex gap-1 underline-wavy-primary">Languages <Languages /></h1>
+          <h1 className="font-semibold flex gap-1 underline-wavy-primary magnetic px-1 w-fit">Languages <Languages /></h1>
           <ul className="text-sm max-w-[500px] pl-5 list-disc mt-2">
             <li className="">
               <div className="flex gap-x-4 justify-between">
@@ -165,7 +164,7 @@ export default function Home() {
         </PortfolioSection>
 
         <PortfolioSection className="mt-10 mb-10">
-          <h1 className="font-semibold flex gap-1 underline-wavy-primary">Positions of Responsibility <PersonStanding /></h1>
+          <h1 className="font-semibold flex gap-1 underline-wavy-primary magnetic px-1 w-fit">Positions of Responsibility <PersonStanding /></h1>
           <ul className="text-sm mt-2 flex flex-col">
             <li>
               <div className="flex justify-between">

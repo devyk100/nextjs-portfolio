@@ -35,7 +35,7 @@ export default function CPSection() {
         <div className="mt-2 flex flex-wrap gap-3">
             <div className="flex flex-col text-sm">
                 <Link href={"https://codeforces.com/profile/ShonenDev"} className="flex gap-2 items-center text-sm hover:cursor-pointer">
-                    <Button variant={"link"} className="p-0 m-0 hover:cursor-pointer text-foreground">
+                    <Button variant={"link"} className="p-0 m-0 hover:cursor-pointer dark:text-violet-300 text-violet-900">
                         <SiCodeforces className="" /> <span className="text-sm">Codeforces</span>
                     </Button>
                 </Link>
@@ -55,14 +55,14 @@ export default function CPSection() {
             </div>
             <div className="">
                 <Link href={"https://leetcode.com/u/devyk100/"} className="text-sm flex items-center h-fit gap-1 hover:cursor-pointer">
-                    <Button variant={"link"} className="p-0 m-0 hover:cursor-pointer text-foreground">
+                    <Button variant={"link"} className="p-0 m-0 hover:cursor-pointer dark:text-violet-300 text-violet-900">
                         <SiLeetcode /> Leetcode
                     </Button>
                 </Link>
             </div>
             <div className="h-fit">
                 <Link href={"https://atcoder.jp/users/ShonenDev"} className="text-sm h-fit flex items-center hover:cursor-pointer">
-                    <Button variant={"link"} className="p-0 m-0 hover:cursor-pointer text-foreground">
+                    <Button variant={"link"} className="p-0 m-0 hover:cursor-pointer dark:text-violet-300 text-violet-900">
                         Atcoder
                     </Button>
                 </Link>
