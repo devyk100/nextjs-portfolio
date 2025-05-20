@@ -21,17 +21,21 @@ import { MdCastForEducation } from "react-icons/md";
 export default function Home() {
   return (
     <>
-      <main className="flex flex-col items-center justify-center p-2">
+      <main className="flex flex-col items-center relative justify-center p-2">
         <PortfolioSection>
           <ScrollProgress />
         </PortfolioSection>
 
-        <PortfolioSection>
+        <PortfolioSection className="relative">
           <div className="w-full m-2">
             <NavButton href="#">Home</NavButton>
             <NavButton href="#projects">Projects</NavButton>
           </div>
-          <ThemeToggle className="absolute top-[2px] right-[2px]" />
+
+
+          <div className="fixed z-20 max-w-[700px] lg:max-w-[1000px] w-full">
+            <ThemeToggle className="absolute top-[2px] right-[2px]" />
+          </div>
         </PortfolioSection>
 
         <PortfolioSection className="mt-10">

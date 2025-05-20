@@ -17,7 +17,7 @@ export default function ThemeToggle({className}: {
                 setIsDark(!isDark)
                 setTheme(!isDark? "dark": "light")
             }}
-            className={cn("w-10 hover:cursor-pointer h-10 flex items-center justify-center rounded-lg bg-gray-200 dark:bg-gray-700 transition-colors duration-300 shadow-md", className)}
+            className={cn("w-12 hover:cursor-pointer h-12 flex items-center justify-center rounded-lg bg-gray-200 dark:bg-gray-900 dark:border-gray-800 border-[0.5px] border-none transition-colors duration-300 shadow-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10", className)}
         >
             <AnimatePresence mode="wait" initial={false}>
                 <motion.div
@@ -29,9 +29,9 @@ export default function ThemeToggle({className}: {
                     className="absolute"
                 >
                     {isDark ? (
-                        <Moon className="w-5 h-5 text-blue-500" />
+                        <Moon className="w-6 h-6 text-blue-500" />
                     ) : (
-                        <Sun className="w-5 h-5 text-yellow-500" />
+                        <Sun className="w-6 h-6 text-yellow-500" />
                     )}
                 </motion.div>
             </AnimatePresence>
