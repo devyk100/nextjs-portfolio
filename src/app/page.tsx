@@ -24,11 +24,9 @@ const glassClass =
 export default function Home() {
   return (
     <>
-    <AnimatedBackground />
+      <AnimatedBackground />
+      <ScrollProgress />
       <main className={cn("relative w-full overflow-x-hidden text-foreground flex items-center justify-center flex-col px-3", glassClass)}>
-        <PortfolioSection>
-          <ScrollProgress />
-        </PortfolioSection>
 
         <PortfolioSection className="relative">
           <div className="w-full m-2">

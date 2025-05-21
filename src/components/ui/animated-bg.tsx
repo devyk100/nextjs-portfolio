@@ -7,7 +7,7 @@ export const AnimatedBackground = () => {
     const { resolvedTheme } = useTheme()
     if (!resolvedTheme) return null;
     return (
-        <motion.div className="fixed inset-0 top-0 left-0 -z-10 overflow-hidden">
+        <motion.div className="fixed inset-0 top-0 left-0 -z-10">
             <svg
                 className="w-full h-[1000px]"
                 viewBox="0 0 800 800"
