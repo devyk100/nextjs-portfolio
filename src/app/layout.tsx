@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${montserratSans.variable} ${geistMono.variable} font-sans antialiased `}
+        className={`${montserratSans.variable} ${geistMono.variable} font-sans antialiased overflow-x-hidden`}
       >
         <MagneticCursor />
         <ThemeProvider

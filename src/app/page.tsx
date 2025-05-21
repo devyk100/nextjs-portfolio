@@ -4,10 +4,12 @@ import PortfolioSection from "@/components/portfolio/portfolio-section";
 import Card from "@/components/projects/card";
 import ProjectCards from "@/components/projects/project-cards";
 import SkillsSection from "@/components/skills-section/skills";
+import { AnimatedBackground } from "@/components/ui/animated-bg";
 import { Button } from "@/components/ui/button";
 import NavButton from "@/components/ui/nav-button";
 import ScrollProgress from "@/components/ui/scroll-progress";
 import ThemeToggle from "@/components/ui/theme-toggle";
+import { cn } from "@/lib/utils";
 import { GraduationCap, Languages, Link2, PersonStanding } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,11 +18,14 @@ import { DiGit, DiOpensource } from "react-icons/di";
 import { FaCertificate, FaGit } from "react-icons/fa";
 import { GiAchievement, GiSkills } from "react-icons/gi";
 import { GrProjects } from "react-icons/gr";
+const glassClass =
+  "dark:bg-white/10 bg-violet-300/10 backdrop-blur-2xl";
 
 export default function Home() {
   return (
     <>
-      <main className="relative min-h-screen  text-foreground flex items-center justify-center flex-col px-3">
+    <AnimatedBackground />
+      <main className={cn("relative w-full overflow-x-hidden text-foreground flex items-center justify-center flex-col px-3", glassClass)}>
         <PortfolioSection>
           <ScrollProgress />
         </PortfolioSection>

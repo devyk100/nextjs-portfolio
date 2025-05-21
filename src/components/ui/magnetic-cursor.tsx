@@ -73,8 +73,8 @@ export const MagneticCursor = () => {
                     y: "-50%",
                 }}
                 animate={{
-                    width: isActive ? targetRect?.width as number + 3 : 20,
-                    height: isActive ? targetRect?.height as number + 3: 20,
+                    width: isActive ? targetRect?.width as number + 3 : 13,
+                    height: isActive ? targetRect?.height as number + 3: 13,
                     // borderRadius: isActive ? "16px" : "20px",
                 }}
                 transition={{ type: "spring", stiffness: 300, damping: 25 }}

@@ -11,6 +11,7 @@ export default function ThemeToggle({className}: {
 }) {
     const { setTheme, resolvedTheme } = useTheme()
     const [isDark, setIsDark] = useState(resolvedTheme == "dark");
+    if (!resolvedTheme) return null;
     return (
         <button
             onClick={() => {
