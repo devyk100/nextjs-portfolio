@@ -58,7 +58,7 @@ export default function AboutMe() {
                     </Button>
                 </Link>
                 <Link href={"https://drive.google.com/file/d/184CZvZU8kKpNBP__j15J4K4gro_CyI-O/view"}>
-                    <Button variant={"secondary"} className="text-sm hover:cursor-pointer"><File /> Resume</Button>
+                    <Button variant={"outline"} className="text-sm hover:cursor-pointer"><File /> Resume</Button>
                 </Link>
             </div>
 
