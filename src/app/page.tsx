@@ -25,19 +25,16 @@ export default function Home() {
   return (
     <>
       <AnimatedBackground />
+      <ThemeToggle className="fixed top-3 md:right-1/12 lg:right-3/12 right-2 z-[9999]" />
       <ScrollProgress />
       <main className={cn("relative w-full overflow-x-hidden text-foreground flex items-center justify-center flex-col px-3", glassClass)}>
 
-        <PortfolioSection className="relative">
+        <PortfolioSection className="flex justify-between items-center">
           <div className="w-full m-2">
             <NavButton href="#">Home</NavButton>
             <NavButton href="#projects">Projects</NavButton>
           </div>
 
-
-          <div className="fixed z-20 max-w-[700px] lg:max-w-[1000px] w-full">
-            <ThemeToggle className="absolute top-[2px] right-[2px]" />
-          </div>
         </PortfolioSection>
 
         <PortfolioSection className="mt-10">

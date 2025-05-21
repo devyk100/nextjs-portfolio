@@ -7,7 +7,7 @@ export default function PortfolioSection({className, children, id}: {
     id?: string
 }) {
     return (<>
-        <section className={cn("max-w-[700px] lg:max-w-[1000px] w-full relative", className)} id={id}>
+        <section className={cn("max-w-[700px] lg:max-w-[1000px] w-full", className)} id={id}>
             {children}
         </section>
     </>)

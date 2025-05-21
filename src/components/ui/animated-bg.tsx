@@ -60,8 +60,8 @@ export const AnimatedBackground = () => {
                 />
                 <defs>
                     <radialGradient id="grad" cx="50%" cy="50%" r="50%">
-                        <stop offset="0%" stopColor={(resolvedTheme == "dark" ? "#570475" : "#dc8cfa")} />
-                        <stop offset="100%" stopColor={(resolvedTheme == "dark" ? "#0e003a" : "#f6e3fc")} />
+                        <stop offset="0%" stopColor={(resolvedTheme == "dark" ? "#0c4f78" : "#dc8cfa")} />
+                        <stop offset="100%" stopColor={(resolvedTheme == "dark" ? "#070226" : "#f6e3fc")} />
                     </radialGradient>
                 </defs>
             </svg>
