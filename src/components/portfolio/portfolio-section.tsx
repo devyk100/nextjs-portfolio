@@ -1,7 +1,9 @@
 import { cn } from "@/lib/utils"
 import { ReactNode } from "react";
+import { FadeInUp } from "../ui/fade-in-up";
+// import  from "../ui/fade-in-up";
 
-export default function PortfolioSection({className, children, id}: {
+export default function PortfolioSection({ className, children, id }: {
     className?: string;
     children?: ReactNode;
     id?: string

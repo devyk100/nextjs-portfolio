@@ -6,6 +6,7 @@ import ProjectCards from "@/components/projects/project-cards";
 import SkillsSection from "@/components/skills-section/skills";
 import { AnimatedBackground } from "@/components/ui/animated-bg";
 import { Button } from "@/components/ui/button";
+import { FadeInUp } from "@/components/ui/fade-in-up";
 import NavButton from "@/components/ui/nav-button";
 import ScrollProgress from "@/components/ui/scroll-progress";
 import ThemeToggle from "@/components/ui/theme-toggle";
@@ -38,15 +39,18 @@ export default function Home() {
         </PortfolioSection>
 
         <PortfolioSection className="mt-10">
-          <div className="flex flex-wrap justify-around">
-            <div className="min-w-[200px] max-w-[300px] flex flex-col gap-2 items-center">
-              <Image src={"/profile.png"} height={100} width={100} className="rounded-full w-32 mt-10 border-[0.5px] border-zinc-200 h-32 object-cover" alt="profile pic"></Image>
-              <h2 className="text-lg w-fit text-center text-foreground font-semibold magnetic px-2">
-                Yash Ramesh Kumar
-              </h2>
+
+          <FadeInUp>
+            <div className="flex flex-wrap justify-around">
+              <div className="min-w-[200px] max-w-[300px] flex flex-col gap-2 items-center">
+                <Image src={"/profile.png"} height={100} width={100} className="rounded-full w-32 mt-10 border-[0.5px] border-zinc-200 h-32 object-cover" alt="profile pic"></Image>
+                <h2 className="text-lg w-fit text-center text-foreground font-semibold magnetic px-2">
+                  Yash Ramesh Kumar
+                </h2>
+              </div>
+              <AboutMe />
             </div>
-            <AboutMe />
-          </div>
+          </FadeInUp>
         </PortfolioSection>
 
         {/* <PortfolioSection>
@@ -54,45 +58,51 @@ export default function Home() {
         </PortfolioSection> */}
 
         <PortfolioSection className="mt-10">
-          <h1 className="text-lg font-semibold my-1 flex gap-2 items-center underline-wavy-primary magnetic px-1 w-fit text-foreground">Skills <GiSkills /></h1>
-          <SkillsSection />
+          <FadeInUp delay={0.2}>
+            <h1 className="text-lg font-semibold my-1 flex gap-2 items-center underline-wavy-primary magnetic px-1 w-fit text-foreground">Skills <GiSkills /></h1>
+            <SkillsSection />
+          </FadeInUp>
         </PortfolioSection>
 
         <PortfolioSection className="mt-10">
-          <h3 className="font-semibold underline-wavy-primary magnetic px-1 w-fit text-foreground">Competitive Programming</h3>
-          <CPSection />
+          <FadeInUp delay={0.45}>
+            <h3 className="font-semibold underline-wavy-primary magnetic px-1 w-fit text-foreground">Competitive Programming</h3>
+            <CPSection />
+          </FadeInUp>
         </PortfolioSection>
 
         <PortfolioSection className="mt-10" id="projects">
-          <h1 className="font-semibold flex gap-1 items-center underline-wavy-primary magnetic px-1 w-fit text-foreground">Featured Projects <GrProjects /></h1>
-          <ProjectCards />
+          <FadeInUp delay={0.55}>
+            <h1 className="font-semibold flex gap-1 items-center underline-wavy-primary magnetic px-1 w-fit text-foreground">Featured Projects <GrProjects /></h1>
+            <ProjectCards />
+          </FadeInUp>
         </PortfolioSection>
 
         <PortfolioSection className="mt-10">
-          <h1 className="font-semibold flex gap-1 items-center underline-wavy-primary magnetic px-1 w-fit">Certifications <FaCertificate /></h1>
-          <ul className="list-disc pl-5 gap-1 flex flex-col">
-            <li className="w-full h-fit">
-              <div className="w-full flex items-center justify-between flex-wrap gap-x-8 text-sm">
-                <span className="w-screen block">Object Oriented Design</span>
-                <span className="text-sm italic font-light">University of Alberta</span>
-                <Link href={""} className="text-sm italic flex gap-1 items-center underline text-primary">Certificate <Link2 className="w-4 h-4" /> </Link>
-              </div>
-            </li>
-            <li className="w-full">
-              <div className="w-full flex items-center justify-between flex-wrap gap-x-8 text-sm">
-                <span className="w-screen block">Design Patterns</span>
-                <span className="text-sm italic font-light">University of Alberta</span>
-                <Link href={""} className="text-sm italic flex gap-1 items-center underline text-primary">Certificate <Link2 className="w-4 h-4" /> </Link>
-              </div>
-            </li>
-            <li className="w-full">
-              <div className="w-full flex items-center justify-between flex-wrap gap-x-8 text-sm">
-                <span className="w-screen block">Software Architecture</span>
-                <span className="text-sm italic font-light">University of Alberta</span>
-                <Link href={""} className="text-sm italic flex gap-1 items-center underline text-primary">Certificate <Link2 className="w-4 h-4" /> </Link>
-              </div>
-            </li>
-          </ul>
+            <h1 className="font-semibold flex gap-1 items-center underline-wavy-primary magnetic px-1 w-fit">Certifications <FaCertificate /></h1>
+            <ul className="list-disc pl-5 gap-1 flex flex-col">
+              <li className="w-full h-fit">
+                <div className="w-full flex items-center justify-between flex-wrap gap-x-8 text-sm">
+                  <span className="w-screen block">Object Oriented Design</span>
+                  <span className="text-sm italic font-light">University of Alberta</span>
+                  <Link href={""} className="text-sm italic flex gap-1 items-center underline text-primary">Certificate <Link2 className="w-4 h-4" /> </Link>
+                </div>
+              </li>
+              <li className="w-full">
+                <div className="w-full flex items-center justify-between flex-wrap gap-x-8 text-sm">
+                  <span className="w-screen block">Design Patterns</span>
+                  <span className="text-sm italic font-light">University of Alberta</span>
+                  <Link href={""} className="text-sm italic flex gap-1 items-center underline text-primary">Certificate <Link2 className="w-4 h-4" /> </Link>
+                </div>
+              </li>
+              <li className="w-full">
+                <div className="w-full flex items-center justify-between flex-wrap gap-x-8 text-sm">
+                  <span className="w-screen block">Software Architecture</span>
+                  <span className="text-sm italic font-light">University of Alberta</span>
+                  <Link href={""} className="text-sm italic flex gap-1 items-center underline text-primary">Certificate <Link2 className="w-4 h-4" /> </Link>
+                </div>
+              </li>
+            </ul>
         </PortfolioSection>
 
         <PortfolioSection className="mt-10">
