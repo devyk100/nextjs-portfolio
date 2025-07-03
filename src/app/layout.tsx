@@ -10,13 +10,13 @@ import { MagneticCursor } from "@/components/ui/magnetic-cursor";
 // });
 
 const montserratSans = Montserrat({
-  variable: "--font-montserrat-sans",
-  subsets: ["latin"],
+	variable: "--font-montserrat-sans",
+	subsets: ["latin"],
 })
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+	variable: "--font-geist-mono",
+	subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -25,20 +25,20 @@ export const metadata: Metadata = {
 		"I'm Yash (Juquox), Backend and Android Developer. Competitive Programmer.I am a Software Engineer with the passion to write fast, scalable, and efficient code that works seamlessly.",
 	keywords: [
 		"Juquox",
-    "devyk100",
-    "Yash Ramesh Kumar",
-    "Yash Kumar",
-    "NIT Warangal",
-    "National Institute of Technology, Warangal",
-    "ECE VLSI",
-    "Yash",
-    "devyk100 developer",
+		"devyk100",
+		"Yash Ramesh Kumar",
+		"Yash Kumar",
+		"NIT Warangal",
+		"National Institute of Technology, Warangal",
+		"ECE VLSI",
+		"Yash",
+		"devyk100 developer",
 		"Juquox Developer",
-    "juquox developer",
+		"juquox developer",
 		"Backend Developer",
-    "Competitive Programmer",
+		"Competitive Programmer",
 		"Full Stack Engineer",
-    "Android Developer",
+		"Android Developer",
 		"Systems Architect",
 		"Real-time Systems",
 		"AI Tools Developer",
@@ -49,7 +49,84 @@ export const metadata: Metadata = {
 		"Distributed Systems",
 		"Real-time Infrastructure",
 		"Yash Kumar Portfolio",
-    "Yash Ramesh Kumar Portfolio"
+		"Yash Ramesh Kumar Portfolio",
+
+
+		"Yash Juquox",
+		"Yash devyk100",
+		"Yash Developer",
+		"Yash Fullstack",
+		"Yash Backend",
+		"Yash Programmer",
+		"Yash Engineer",
+		"Yash Architect",
+		"Yash Android",
+		"Yash TypeScript",
+		"Yash Next.js",
+		"Yash Docker",
+		"Juquox Developer",
+		"devyk100 Portfolio",
+		"Juquox Portfolio",
+		"ECE VLSI Engineer",
+		"NIT Warangal ECE",
+		"AI Developer",
+		"VLSI Systems",
+		"Next.js TypeScript",
+		"Distributed Systems Developer",
+		"Real-time Systems Engineer",
+		"Full Stack Developer",
+		"Backend Systems",
+		"Portfolio Yash",
+		"Yash Ramesh Portfolio",
+		"National Institute Portfolio",
+
+
+
+		"Yash Kumar Developer",
+		"Yash Ramesh Programmer",
+		"Yash Full Stack Engineer",
+		"Yash Kumar Backend Developer",
+		"Yash Android Developer",
+		"Yash AI Tools Developer",
+		"Juquox Backend Developer",
+		"devyk100 AI Tools",
+		"Next.js TypeScript Developer",
+		"Distributed Real-time Systems",
+		"Yash NIT Warangal",
+		"ECE VLSI NIT",
+		"Yash Kumar Fullstack",
+		"Yash Kumar Real-time Systems",
+		"Yash Developer Portfolio",
+
+		"Juquox Technologies",
+		"Juquox Systems",
+		"Juquox Portfolio",
+		"devyk100 Projects",
+		"Yash Portfolio",
+		"Yash Developer",
+		"Yash Engineer",
+		"Yash Architect",
+		"Yash Programmer",
+		"Kumar Developer",
+		"Kumar Engineer",
+		"VLSI Engineer",
+		"ECE Engineer",
+		"ECE Developer",
+		"NIT Developer",
+		"Warangal Engineer",
+		"Backend Engineer",
+		"Systems Developer",
+		"Android Engineer",
+		"Fullstack Engineer",
+		"TypeScript Engineer",
+		"Docker Developer",
+		"Distributed Developer",
+		"AI Developer",
+		"Real-time Developer",
+		"Prisma Engineer",
+		"Next.js Engineer",
+		"Competitive Programmer",
+		"VLSI Architect"
 	],
 	authors: [{ name: "Yash Kumar", url: "https://github.com/devyk100" }],
 	creator: "Yash Kumar (Juquox | devyk100)",
@@ -98,33 +175,34 @@ export const metadata: Metadata = {
 		icon: [{ url: "/yarei.jpeg" }, { url: "/favicon.ico" }],
 	},
 	verification: {
-		google: "Skibidy toilet", 	},
+		google: "Skibidy toilet",
+	},
 	category: "Technology",
 	// archives: ["https://smoggyowo.tech/blog"],
-	assets: ["https://smoggyowo.tech/public"], 
+	assets: ["https://smoggyowo.tech/public"],
 };
 
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en" className="scroll-smooth">
-      <body
-        className={`${montserratSans.variable} ${geistMono.variable} font-sans antialiased overflow-x-hidden`}
-      >
-        <MagneticCursor />
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
-      </body>
-    </html>
-  );
+	return (
+		<html lang="en" className="scroll-smooth">
+			<body
+				className={`${montserratSans.variable} ${geistMono.variable} font-sans antialiased overflow-x-hidden`}
+			>
+				<MagneticCursor />
+				<ThemeProvider
+					attribute="class"
+					defaultTheme="system"
+					enableSystem
+					disableTransitionOnChange
+				>
+					{children}
+				</ThemeProvider>
+			</body>
+		</html>
+	);
 }
