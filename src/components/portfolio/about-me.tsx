@@ -15,7 +15,7 @@ export default function AboutMe() {
         <div className="max-w-[700px] mt-5">
             <h3 className="font-semibold underline-wavy-primary magnetic px-1 w-fit">About Me</h3>
             <p className="text-sm my-2">
-                Backend and Android Developer. Competitive Programmer.
+                Backend Developer. Competitive Programmer.
             </p>
             <p className="text-sm my-2">
                 I am a Software Engineer with the passion to write fast, scalable, and efficient code that works seamlessly.

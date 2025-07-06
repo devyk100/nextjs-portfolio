@@ -22,7 +22,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
 	title: "Yash Ramesh Kumar | Juquox | devyk100 - Software Engineer",
 	description:
-		"I'm Yash (Juquox), Backend and Android Developer. Competitive Programmer.I am a Software Engineer with the passion to write fast, scalable, and efficient code that works seamlessly.",
+		"I'm Yash (Juquox), Backend Developer. Competitive Programmer.I am a Software Engineer with the passion to write fast, scalable, and efficient code that works seamlessly.",
 	keywords: [
 		"Juquox",
 		"devyk100",
