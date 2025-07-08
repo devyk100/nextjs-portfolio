@@ -1,6 +1,5 @@
 import React from "react";
 import { AnimatedBackground } from "@/components/ui/animated-bg";
-import { FadeInUp } from "@/components/ui/fade-in-up";
 import PortfolioSection from "@/components/portfolio/portfolio-section";
 import ThemeToggle from "@/components/ui/theme-toggle";
 import ScrollProgress from "@/components/ui/scroll-progress";
@@ -57,7 +56,6 @@ export default function KaicodePage() {
 
         {/* Hero Section */}
         <PortfolioSection className="mt-10">
-          <FadeInUp>
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Kaicode
@@ -77,12 +75,10 @@ export default function KaicodePage() {
                 </span>
               </div>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Quick Links */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.1}>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               <Link href="https://github.com/devyk100/kaicode-frontend" target="_blank" className="group">
                 <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
@@ -132,12 +128,10 @@ export default function KaicodePage() {
                 </div>
               </Link>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Project Overview */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.2}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Code className="w-6 h-6" />
               Project Overview
@@ -163,12 +157,10 @@ export default function KaicodePage() {
                 through AWS SQS queues.
               </p>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Tech Stack */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.3}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Layers className="w-6 h-6" />
               Technology Stack
@@ -259,12 +251,10 @@ export default function KaicodePage() {
                 </ul>
               </div>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
-        {/* Key Features */}
+        {/* Core Features */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.4}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Settings className="w-6 h-6" />
               Key Features
@@ -299,12 +289,10 @@ export default function KaicodePage() {
                 </p>
               </div>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Code Repository Links */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.5}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Github className="w-6 h-6" />
               Source Code
@@ -342,17 +330,15 @@ export default function KaicodePage() {
                 </div>
               </Link>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
-        {/* Demo Videos */}
+        {/* Demo Video */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.6}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Play className="w-6 h-6" />
-              Demo Videos
+              Demo Video
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 gap-6">
               <div className="p-6 rounded-lg border bg-card">
                 <div className="aspect-video bg-muted rounded-lg mb-4 flex items-center justify-center">
                   <div className="text-center">
@@ -360,31 +346,16 @@ export default function KaicodePage() {
                     <p className="text-sm text-muted-foreground">Real-time Collaboration Demo</p>
                   </div>
                 </div>
-                <h3 className="text-lg font-medium mb-2">Collaborative Editing in Action</h3>
+                <h3 className="text-lg font-medium mb-2">Live Coding & Execution</h3>
                 <p className="text-sm text-muted-foreground">
-                  Watch multiple developers coding together with synchronized cursors and real-time editing.
-                </p>
-              </div>
-              
-              <div className="p-6 rounded-lg border bg-card">
-                <div className="aspect-video bg-muted rounded-lg mb-4 flex items-center justify-center">
-                  <div className="text-center">
-                    <Play className="w-12 h-12 mx-auto mb-2 text-muted-foreground" />
-                    <p className="text-sm text-muted-foreground">Code Execution Demo</p>
-                  </div>
-                </div>
-                <h3 className="text-lg font-medium mb-2">Secure Code Execution</h3>
-                <p className="text-sm text-muted-foreground">
-                  See how code runs safely in containerized environments with real-time output.
+                  Watch multiple developers collaborate in real-time with secure code execution in Docker containers.
                 </p>
               </div>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Documentation Links */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.7}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <FileText className="w-6 h-6" />
               Technical Documentation
@@ -414,7 +385,6 @@ export default function KaicodePage() {
                 </div>
               </Link>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Footer */}
