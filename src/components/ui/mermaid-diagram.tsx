@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 interface MermaidDiagramProps {
   chart: string;
@@ -9,76 +9,77 @@ interface MermaidDiagramProps {
 
 export function MermaidDiagram({ chart, className = "" }: MermaidDiagramProps) {
   const elementRef = useRef<HTMLDivElement>(null);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    const renderDiagram = async () => {
-      if (typeof window !== 'undefined' && elementRef.current) {
-        try {
-          const mermaid = (await import('mermaid')).default;
-          
-          mermaid.initialize({
-            startOnLoad: false,
-            theme: 'base',
-            themeVariables: {
-              primaryColor: '#3b82f6',
-              primaryTextColor: '#1f2937',
-              primaryBorderColor: '#1e40af',
-              lineColor: '#6b7280',
-              sectionBkgColor: '#f3f4f6',
-              altSectionBkgColor: '#e5e7eb',
-              gridColor: '#d1d5db',
-              secondaryColor: '#10b981',
-              tertiaryColor: '#f59e0b',
-              background: '#ffffff',
-              mainBkg: '#ffffff',
-              secondBkg: '#f9fafb',
-              tertiaryBkg: '#f3f4f6'
-            },
-            flowchart: {
-              useMaxWidth: true,
-              htmlLabels: true,
-              curve: 'basis'
-            },
-            sequence: {
-              useMaxWidth: true,
-              wrap: true,
-              diagramMarginX: 50,
-              diagramMarginY: 10
-            },
-            gantt: {
-              useMaxWidth: true,
-            },
-            securityLevel: 'loose'
-          });
+    setIsClient(true);
+  }, []);
 
-          // Clear previous content
+  useEffect(() => {
+    if (!isClient || !elementRef.current) return;
+
+    const renderDiagram = async () => {
+      try {
+        const mermaid = (await import('mermaid')).default;
+        
+        // Initialize mermaid with proper configuration
+        mermaid.initialize({
+          startOnLoad: false,
+          theme: 'default',
+          securityLevel: 'loose',
+          fontFamily: 'Arial, sans-serif',
+          flowchart: {
+            useMaxWidth: true,
+            htmlLabels: true,
+            curve: 'basis'
+          },
+          sequence: {
+            useMaxWidth: true,
+            wrap: true
+          },
+          gantt: {
+            useMaxWidth: true
+          }
+        });
+
+        // Clear previous content
+        if (elementRef.current) {
           elementRef.current.innerHTML = '';
           
+          // Create unique ID for this diagram
           const id = `mermaid-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
-          const wrapper = document.createElement('div');
-          wrapper.id = id;
-          wrapper.className = 'mermaid';
-          wrapper.textContent = chart;
-          elementRef.current.appendChild(wrapper);
           
-          await mermaid.run({
-            querySelector: `#${id}`,
-          });
-        } catch (error) {
-          console.error('Error rendering Mermaid diagram:', error);
-          if (elementRef.current) {
-            elementRef.current.innerHTML = `
-              <div class="p-4 border border-gray-200 rounded-lg bg-gray-50">
-                <pre class="text-sm text-gray-700 whitespace-pre-wrap overflow-x-auto">${chart}</pre>
-              </div>
-            `;
-          }
+          // Render the diagram
+          const { svg } = await mermaid.render(id, chart);
+          elementRef.current.innerHTML = svg;
+        }
+      } catch (error) {
+        console.error('Error rendering Mermaid diagram:', error);
+        // Fallback to code display
+        if (elementRef.current) {
+          elementRef.current.innerHTML = `
+            <div class="p-4 border border-red-200 rounded-lg bg-red-50">
+              <p class="text-red-600 text-sm mb-2">Diagram failed to render. Showing code:</p>
+              <pre class="text-sm text-gray-700 whitespace-pre-wrap overflow-x-auto">${chart}</pre>
+            </div>
+          `;
         }
       }
     };
 
-    renderDiagram();
-  }, [chart]);
+    const timeoutId = setTimeout(renderDiagram, 100);
+    return () => clearTimeout(timeoutId);
+  }, [chart, isClient]);
+
+  if (!isClient) {
+    return (
+      <div className={`mermaid-container overflow-x-auto ${className}`} style={{ minHeight: '200px' }}>
+        <div className="p-4 border border-gray-200 rounded-lg bg-gray-50">
+          <p className="text-gray-600 text-sm">Loading diagram...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div 
