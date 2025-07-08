@@ -1,6 +1,5 @@
 import React from "react";
 import { AnimatedBackground } from "@/components/ui/animated-bg";
-import { FadeInUp } from "@/components/ui/fade-in-up";
 import PortfolioSection from "@/components/portfolio/portfolio-section";
 import ThemeToggle from "@/components/ui/theme-toggle";
 import ScrollProgress from "@/components/ui/scroll-progress";
@@ -62,7 +61,6 @@ export default function PristinePage() {
 
         {/* Hero Section */}
         <PortfolioSection className="mt-10">
-          <FadeInUp>
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
                 Pristine
@@ -85,12 +83,10 @@ export default function PristinePage() {
                 </span>
               </div>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Quick Links */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.1}>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               <Link href="https://github.com/devyk100/pristine" target="_blank" className="group">
                 <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
@@ -128,12 +124,10 @@ export default function PristinePage() {
                 </div>
               </Link>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Project Overview */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.2}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Code className="w-6 h-6" />
               Project Overview
@@ -158,12 +152,10 @@ export default function PristinePage() {
                 easy to deploy and manage in production environments.
               </p>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Tech Stack */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.3}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Layers className="w-6 h-6" />
               Technology Stack
@@ -254,12 +246,10 @@ export default function PristinePage() {
                 </ul>
               </div>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Core Features */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.4}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Settings className="w-6 h-6" />
               Core Features
@@ -344,12 +334,10 @@ export default function PristinePage() {
                 </ul>
               </div>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Architecture Highlights */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.5}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Layers className="w-6 h-6" />
               Architecture Highlights
@@ -411,12 +399,10 @@ export default function PristinePage() {
                 </ul>
               </div>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Source Code */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.6}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Github className="w-6 h-6" />
               Source Code
@@ -438,49 +424,32 @@ export default function PristinePage() {
                 </div>
               </Link>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
-        {/* Demo Videos */}
+        {/* Demo Video */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.7}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Play className="w-6 h-6" />
-              Demo Videos
+              Demo Video
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 gap-6">
               <div className="p-6 rounded-lg border bg-card">
                 <div className="aspect-video bg-muted rounded-lg mb-4 flex items-center justify-center">
                   <div className="text-center">
                     <Play className="w-12 h-12 mx-auto mb-2 text-muted-foreground" />
-                    <p className="text-sm text-muted-foreground">SSL Certificate Management</p>
+                    <p className="text-sm text-muted-foreground">Reverse Proxy Demo</p>
                   </div>
                 </div>
-                <h3 className="text-lg font-medium mb-2">Automatic SSL Provisioning</h3>
+                <h3 className="text-lg font-medium mb-2">SSL & Load Balancing</h3>
                 <p className="text-sm text-muted-foreground">
-                  Watch Pristine automatically obtain and renew SSL certificates using Let's Encrypt.
-                </p>
-              </div>
-              
-              <div className="p-6 rounded-lg border bg-card">
-                <div className="aspect-video bg-muted rounded-lg mb-4 flex items-center justify-center">
-                  <div className="text-center">
-                    <Play className="w-12 h-12 mx-auto mb-2 text-muted-foreground" />
-                    <p className="text-sm text-muted-foreground">Load Balancing Demo</p>
-                  </div>
-                </div>
-                <h3 className="text-lg font-medium mb-2">High-Performance Proxying</h3>
-                <p className="text-sm text-muted-foreground">
-                  See Pristine handling high-throughput traffic with load balancing and failover.
+                  Watch Pristine automatically provision SSL certificates and handle high-throughput traffic with load balancing.
                 </p>
               </div>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Documentation Links */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.8}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <FileText className="w-6 h-6" />
               Technical Documentation
@@ -510,7 +479,6 @@ export default function PristinePage() {
                 </div>
               </Link>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Footer */}

@@ -1,6 +1,5 @@
 import React from "react";
 import { AnimatedBackground } from "@/components/ui/animated-bg";
-import { FadeInUp } from "@/components/ui/fade-in-up";
 import PortfolioSection from "@/components/portfolio/portfolio-section";
 import ThemeToggle from "@/components/ui/theme-toggle";
 import ScrollProgress from "@/components/ui/scroll-progress";
