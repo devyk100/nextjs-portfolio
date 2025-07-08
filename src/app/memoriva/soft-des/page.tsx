@@ -41,30 +41,27 @@ export default function MemorivaSoftwareDesignPage() {
 
         {/* Hero Section */}
         <PortfolioSection className="mt-10">
-          <FadeInUp>
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
-                Memoriva Software Design
-              </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-                AI-Powered Study Assistant Architecture & Component Design
-              </p>
-            </div>
-          </FadeInUp>
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
+              Memoriva Software Design
+            </h1>
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8">
+              AI-Powered Study Assistant Architecture & Component Design
+            </p>
+          </div>
         </PortfolioSection>
 
         {/* Architecture Overview */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.1}>
-            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
-              <Layers className="w-6 h-6" />
-              System Architecture Overview
-            </h2>
-            <div className="bg-card rounded-lg p-6 border">
-              <div className="mb-6">
-                <h3 className="text-lg font-medium mb-4">High-Level Architecture</h3>
-                <MermaidDiagram
-                  chart={`graph TB
+          <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
+            <Layers className="w-6 h-6" />
+            System Architecture Overview
+          </h2>
+          <div className="bg-card rounded-lg p-6 border">
+            <div className="mb-6">
+              <h3 className="text-lg font-medium mb-4">High-Level Architecture</h3>
+              <MermaidDiagram
+                chart={`graph TB
     subgraph "Frontend Layer"
         UI[Next.js UI]
         Editor[TipTap Editor]
@@ -118,57 +115,55 @@ export default function MemorivaSoftwareDesignPage() {
     Queue --> Redis
     
     Docker --> AWS`}
-                />
-              </div>
+              />
             </div>
-          </FadeInUp>
+          </div>
         </PortfolioSection>
 
         {/* Frontend Architecture */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.2}>
-            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
-              <Code className="w-6 h-6" />
-              Frontend Architecture
-            </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <div className="bg-card rounded-lg p-6 border">
-                <h3 className="text-lg font-medium mb-4">Component Structure</h3>
-                <div className="space-y-3">
-                  <div className="p-3 bg-muted rounded">
-                    <h4 className="font-medium text-sm">Study Session Components</h4>
-                    <ul className="text-sm text-muted-foreground mt-1 space-y-1">
-                      <li>• TipTap Rich Text Editor</li>
-                      <li>• Image Upload & Processing</li>
-                      <li>• Study Session Management</li>
-                      <li>• Progress Tracking</li>
-                    </ul>
-                  </div>
-                  <div className="p-3 bg-muted rounded">
-                    <h4 className="font-medium text-sm">AI Integration Layer</h4>
-                    <ul className="text-sm text-muted-foreground mt-1 space-y-1">
-                      <li>• RAG Query Interface</li>
-                      <li>• AI Response Display</li>
-                      <li>• Context Management</li>
-                      <li>• Real-time Processing</li>
-                    </ul>
-                  </div>
-                  <div className="p-3 bg-muted rounded">
-                    <h4 className="font-medium text-sm">Authentication & State</h4>
-                    <ul className="text-sm text-muted-foreground mt-1 space-y-1">
-                      <li>• NextAuth.js Integration</li>
-                      <li>• User Session Management</li>
-                      <li>• TanStack Query Caching</li>
-                      <li>• Optimistic Updates</li>
-                    </ul>
-                  </div>
+          <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
+            <Code className="w-6 h-6" />
+            Frontend Architecture
+          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="bg-card rounded-lg p-6 border">
+              <h3 className="text-lg font-medium mb-4">Component Structure</h3>
+              <div className="space-y-3">
+                <div className="p-3 bg-muted rounded">
+                  <h4 className="font-medium text-sm">Study Session Components</h4>
+                  <ul className="text-sm text-muted-foreground mt-1 space-y-1">
+                    <li>• TipTap Rich Text Editor</li>
+                    <li>• Image Upload & Processing</li>
+                    <li>• Study Session Management</li>
+                    <li>• Progress Tracking</li>
+                  </ul>
+                </div>
+                <div className="p-3 bg-muted rounded">
+                  <h4 className="font-medium text-sm">AI Integration Layer</h4>
+                  <ul className="text-sm text-muted-foreground mt-1 space-y-1">
+                    <li>• RAG Query Interface</li>
+                    <li>• AI Response Display</li>
+                    <li>• Context Management</li>
+                    <li>• Real-time Processing</li>
+                  </ul>
+                </div>
+                <div className="p-3 bg-muted rounded">
+                  <h4 className="font-medium text-sm">Authentication & State</h4>
+                  <ul className="text-sm text-muted-foreground mt-1 space-y-1">
+                    <li>• NextAuth.js Integration</li>
+                    <li>• User Session Management</li>
+                    <li>• TanStack Query Caching</li>
+                    <li>• Optimistic Updates</li>
+                  </ul>
                 </div>
               </div>
-              
-              <div className="bg-card rounded-lg p-6 border">
-                <h3 className="text-lg font-medium mb-4">State Management</h3>
-                <div className="bg-muted rounded-lg p-4">
-                  <pre className="text-sm overflow-x-auto">
+            </div>
+            
+            <div className="bg-card rounded-lg p-6 border">
+              <h3 className="text-lg font-medium mb-4">State Management</h3>
+              <div className="bg-muted rounded-lg p-4">
+                <pre className="text-sm overflow-x-auto">
 {`// TanStack Query Structure
 interface StudySessionStore {
   // Session State
@@ -200,67 +195,65 @@ interface StudySession {
   images: SessionImage[]
   ragResults: RAGResult[]
 }`}
-                  </pre>
-                </div>
+                </pre>
               </div>
             </div>
-          </FadeInUp>
+          </div>
         </PortfolioSection>
 
         {/* RAG Architecture */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.3}>
-            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
-              <Brain className="w-6 h-6" />
-              RAG (Retrieval-Augmented Generation) Architecture
-            </h2>
-            <div className="space-y-6">
-              <div className="bg-card rounded-lg p-6 border">
-                <h3 className="text-lg font-medium mb-4">RAG Pipeline Components</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="p-4 bg-muted rounded">
-                    <h4 className="font-medium mb-2">Document Processing</h4>
-                    <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Text extraction from images</li>
-                      <li>• Content chunking strategies</li>
-                      <li>• Metadata enrichment</li>
-                      <li>• Quality filtering</li>
-                    </ul>
-                  </div>
-                  <div className="p-4 bg-muted rounded">
-                    <h4 className="font-medium mb-2">Vector Embeddings</h4>
-                    <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• OpenAI text-embedding-3-small</li>
-                      <li>• Semantic similarity search</li>
-                      <li>• Vector indexing optimization</li>
-                      <li>• Embedding caching</li>
-                    </ul>
-                  </div>
-                  <div className="p-4 bg-muted rounded">
-                    <h4 className="font-medium mb-2">Retrieval System</h4>
-                    <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Similarity-based retrieval</li>
-                      <li>• Context ranking algorithms</li>
-                      <li>• Multi-modal search</li>
-                      <li>• Result relevance scoring</li>
-                    </ul>
-                  </div>
-                  <div className="p-4 bg-muted rounded">
-                    <h4 className="font-medium mb-2">Generation Pipeline</h4>
-                    <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Context injection</li>
-                      <li>• Prompt engineering</li>
-                      <li>• Response synthesis</li>
-                      <li>• Quality validation</li>
-                    </ul>
-                  </div>
+          <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
+            <Brain className="w-6 h-6" />
+            RAG (Retrieval-Augmented Generation) Architecture
+          </h2>
+          <div className="space-y-6">
+            <div className="bg-card rounded-lg p-6 border">
+              <h3 className="text-lg font-medium mb-4">RAG Pipeline Components</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="p-4 bg-muted rounded">
+                  <h4 className="font-medium mb-2">Document Processing</h4>
+                  <ul className="text-sm text-muted-foreground space-y-1">
+                    <li>• Text extraction from images</li>
+                    <li>• Content chunking strategies</li>
+                    <li>• Metadata enrichment</li>
+                    <li>• Quality filtering</li>
+                  </ul>
+                </div>
+                <div className="p-4 bg-muted rounded">
+                  <h4 className="font-medium mb-2">Vector Embeddings</h4>
+                  <ul className="text-sm text-muted-foreground space-y-1">
+                    <li>• OpenAI text-embedding-3-small</li>
+                    <li>• Semantic similarity search</li>
+                    <li>• Vector indexing optimization</li>
+                    <li>• Embedding caching</li>
+                  </ul>
+                </div>
+                <div className="p-4 bg-muted rounded">
+                  <h4 className="font-medium mb-2">Retrieval System</h4>
+                  <ul className="text-sm text-muted-foreground space-y-1">
+                    <li>• Similarity-based retrieval</li>
+                    <li>• Context ranking algorithms</li>
+                    <li>• Multi-modal search</li>
+                    <li>• Result relevance scoring</li>
+                  </ul>
+                </div>
+                <div className="p-4 bg-muted rounded">
+                  <h4 className="font-medium mb-2">Generation Pipeline</h4>
+                  <ul className="text-sm text-muted-foreground space-y-1">
+                    <li>• Context injection</li>
+                    <li>• Prompt engineering</li>
+                    <li>• Response synthesis</li>
+                    <li>• Quality validation</li>
+                  </ul>
                 </div>
               </div>
-              
-              <div className="bg-card rounded-lg p-6 border">
-                <h3 className="text-lg font-medium mb-4">RAG Processing Flow</h3>
-                <MermaidDiagram
-                  chart={`sequenceDiagram
+            </div>
+            
+            <div className="bg-card rounded-lg p-6 border">
+              <h3 className="text-lg font-medium mb-4">RAG Processing Flow</h3>
+              <MermaidDiagram
+                chart={`sequenceDiagram
     participant User as User
     participant Frontend as Next.js Frontend
     participant API as Gin API
@@ -284,66 +277,64 @@ interface StudySession {
     Queue->>API: Update Status
     API->>Frontend: Processing Complete
     Frontend->>User: Display Results`}
-                />
-              </div>
+              />
             </div>
-          </FadeInUp>
+          </div>
         </PortfolioSection>
 
         {/* Backend Architecture */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.4}>
-            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
-              <Database className="w-6 h-6" />
-              Backend Architecture
-            </h2>
-            <div className="space-y-6">
-              <div className="bg-card rounded-lg p-6 border">
-                <h3 className="text-lg font-medium mb-4">Service Architecture</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="p-4 bg-muted rounded">
-                    <h4 className="font-medium mb-2">API Layer (Gin)</h4>
-                    <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• RESTful API endpoints</li>
-                      <li>• Authentication middleware</li>
-                      <li>• CORS configuration</li>
-                      <li>• Request validation</li>
-                    </ul>
-                  </div>
-                  <div className="p-4 bg-muted rounded">
-                    <h4 className="font-medium mb-2">Queue Service</h4>
-                    <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Concurrent job processing</li>
-                      <li>• Worker pool management</li>
-                      <li>• Job status tracking</li>
-                      <li>• Error handling & retries</li>
-                    </ul>
-                  </div>
-                  <div className="p-4 bg-muted rounded">
-                    <h4 className="font-medium mb-2">RAG Service</h4>
-                    <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Document processing pipeline</li>
-                      <li>• Vector similarity search</li>
-                      <li>• Context retrieval</li>
-                      <li>• Response generation</li>
-                    </ul>
-                  </div>
-                  <div className="p-4 bg-muted rounded">
-                    <h4 className="font-medium mb-2">Storage Services</h4>
-                    <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• S3 file management</li>
-                      <li>• PostgreSQL operations</li>
-                      <li>• Vector database queries</li>
-                      <li>• Cache management</li>
-                    </ul>
-                  </div>
+          <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
+            <Database className="w-6 h-6" />
+            Backend Architecture
+          </h2>
+          <div className="space-y-6">
+            <div className="bg-card rounded-lg p-6 border">
+              <h3 className="text-lg font-medium mb-4">Service Architecture</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="p-4 bg-muted rounded">
+                  <h4 className="font-medium mb-2">API Layer (Gin)</h4>
+                  <ul className="text-sm text-muted-foreground space-y-1">
+                    <li>• RESTful API endpoints</li>
+                    <li>• Authentication middleware</li>
+                    <li>• CORS configuration</li>
+                    <li>• Request validation</li>
+                  </ul>
+                </div>
+                <div className="p-4 bg-muted rounded">
+                  <h4 className="font-medium mb-2">Queue Service</h4>
+                  <ul className="text-sm text-muted-foreground space-y-1">
+                    <li>• Concurrent job processing</li>
+                    <li>• Worker pool management</li>
+                    <li>• Job status tracking</li>
+                    <li>• Error handling & retries</li>
+                  </ul>
+                </div>
+                <div className="p-4 bg-muted rounded">
+                  <h4 className="font-medium mb-2">RAG Service</h4>
+                  <ul className="text-sm text-muted-foreground space-y-1">
+                    <li>• Document processing pipeline</li>
+                    <li>• Vector similarity search</li>
+                    <li>• Context retrieval</li>
+                    <li>• Response generation</li>
+                  </ul>
+                </div>
+                <div className="p-4 bg-muted rounded">
+                  <h4 className="font-medium mb-2">Storage Services</h4>
+                  <ul className="text-sm text-muted-foreground space-y-1">
+                    <li>• S3 file management</li>
+                    <li>• PostgreSQL operations</li>
+                    <li>• Vector database queries</li>
+                    <li>• Cache management</li>
+                  </ul>
                 </div>
               </div>
-              
-              <div className="bg-card rounded-lg p-6 border">
-                <h3 className="text-lg font-medium mb-4">Service Integration</h3>
-                <div className="bg-muted rounded-lg p-4">
-                  <pre className="text-sm overflow-x-auto">
+            </div>
+            
+            <div className="bg-card rounded-lg p-6 border">
+              <h3 className="text-lg font-medium mb-4">Service Integration</h3>
+              <div className="bg-muted rounded-lg p-4">
+                <pre className="text-sm overflow-x-auto">
 {`// Go Service Structure
 type Services struct {
     Database    *DatabaseService
@@ -368,25 +359,23 @@ type QueueService struct {
     ragService  *RAGService
     dbService   *DatabaseService
 }`}
-                  </pre>
-                </div>
+                </pre>
               </div>
             </div>
-          </FadeInUp>
+          </div>
         </PortfolioSection>
 
         {/* Data Models */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.5}>
-            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
-              <FileText className="w-6 h-6" />
-              Data Models & Schemas
-            </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <div className="bg-card rounded-lg p-6 border">
-                <h3 className="text-lg font-medium mb-4">Database Schema (PostgreSQL)</h3>
-                <div className="bg-muted rounded-lg p-4">
-                  <pre className="text-sm overflow-x-auto">
+          <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
+            <FileText className="w-6 h-6" />
+            Data Models & Schemas
+          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="bg-card rounded-lg p-6 border">
+              <h3 className="text-lg font-medium mb-4">Database Schema (PostgreSQL)</h3>
+              <div className="bg-muted rounded-lg p-4">
+                <pre className="text-sm overflow-x-auto">
 {`-- Prisma Schema
 model User {
   id            String         @id @default(cuid())
@@ -431,14 +420,14 @@ model RAGResult {
   studySession    StudySession @relation(fields: [studySessionId], references: [id])
   createdAt       DateTime     @default(now())
 }`}
-                  </pre>
-                </div>
+                </pre>
               </div>
-              
-              <div className="bg-card rounded-lg p-6 border">
-                <h3 className="text-lg font-medium mb-4">Vector Database Schema</h3>
-                <div className="bg-muted rounded-lg p-4">
-                  <pre className="text-sm overflow-x-auto">
+            </div>
+            
+            <div className="bg-card rounded-lg p-6 border">
+              <h3 className="text-lg font-medium mb-4">Vector Database Schema</h3>
+              <div className="bg-muted rounded-lg p-4">
+                <pre className="text-sm overflow-x-auto">
 {`// Vector Database Structure
 interface DocumentChunk {
   id: string
@@ -479,82 +468,79 @@ interface ProcessingJob {
   completedAt?: Date
   error?: string
 }`}
-                  </pre>
-                </div>
+                </pre>
               </div>
             </div>
-          </FadeInUp>
+          </div>
         </PortfolioSection>
 
         {/* AI Integration */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.6}>
-            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
-              <Cloud className="w-6 h-6" />
-              AI Integration & Performance
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-card rounded-lg p-6 border">
-                <h3 className="text-lg font-medium mb-4">AI Service Integration</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-2">
-                    <span className="w-2 h-2 bg-green-500 rounded-full mt-2"></span>
-                    <div>
-                      <strong>OpenAI Integration:</strong> Text embeddings and GPT models for content understanding
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mt-2"></span>
-                    <div>
-                      <strong>DeepSeek API:</strong> Alternative LLM for cost-effective processing
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full mt-2"></span>
-                    <div>
-                      <strong>Vector Database:</strong> Efficient similarity search and retrieval
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full mt-2"></span>
-                    <div>
-                      <strong>OCR Processing:</strong> Text extraction from uploaded images
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              
-              <div className="bg-card rounded-lg p-6 border">
-                <h3 className="text-lg font-medium mb-4">Performance Optimizations</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-2">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mt-2"></span>
-                    <div>
-                      <strong>Concurrent Processing:</strong> Multi-worker queue system for parallel job execution
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-2 h-2 bg-green-500 rounded-full mt-2"></span>
-                    <div>
-                      <strong>Embedding Caching:</strong> Redis caching for frequently accessed embeddings
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full mt-2"></span>
-                    <div>
-                      <strong>Chunking Strategy:</strong> Optimized text chunking for better retrieval accuracy
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full mt-2"></span>
-                    <div>
-                      <strong>Response Streaming:</strong> Real-time status updates during processing
-                    </div>
-                  </li>
-                </ul>
-              </div>
+          <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
+            <Cloud className="w-6 h-6" />
+            AI Integration & Performance
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-card rounded-lg p-6 border">
+              <h3 className="text-lg font-medium mb-4">AI Service Integration</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-2">
+                  <span className="w-2 h-2 bg-green-500 rounded-full mt-2"></span>
+                  <div>
+                    <strong>OpenAI Integration:</strong> Text embeddings and GPT models for content understanding
+                  </div>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full mt-2"></span>
+                  <div>
+                    <strong>DeepSeek API:</strong> Alternative LLM for cost-effective processing
+                  </div>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="w-2 h-2 bg-purple-500 rounded-full mt-2"></span>
+                  <div>
+                    <strong>Vector Database:</strong> Efficient similarity search and retrieval
+                  </div>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="w-2 h-2 bg-orange-500 rounded-full mt-2"></span>
+                  <div>
+                    <strong>OCR Processing:</strong> Text extraction from uploaded images
+                  </div>
+                </li>
+              </ul>
             </div>
-          </FadeInUp>
+            
+            <div className="bg-card rounded-lg p-6 border">
+              <h3 className="text-lg font-medium mb-4">Performance Optimizations</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-2">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full mt-2"></span>
+                  <div>
+                    <strong>Concurrent Processing:</strong> Multi-worker queue system for parallel job execution
+                  </div>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="w-2 h-2 bg-green-500 rounded-full mt-2"></span>
+                  <div>
+                    <strong>Embedding Caching:</strong> Redis caching for frequently accessed embeddings
+                  </div>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="w-2 h-2 bg-purple-500 rounded-full mt-2"></span>
+                  <div>
+                    <strong>Chunking Strategy:</strong> Optimized text chunking for better retrieval accuracy
+                  </div>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="w-2 h-2 bg-orange-500 rounded-full mt-2"></span>
+                  <div>
+                    <strong>Response Streaming:</strong> Real-time status updates during processing
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </PortfolioSection>
 
         {/* Footer */}
