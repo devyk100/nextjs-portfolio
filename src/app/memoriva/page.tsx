@@ -94,39 +94,51 @@ export default function MemorivaPage() {
         {/* Quick Links */}
         <PortfolioSection className="mt-10">
           <FadeInUp delay={0.1}>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <Link href="#" className="group">
-                <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
-                  <div className="flex items-center gap-3 mb-2">
-                    <Play className="w-5 h-5 text-purple-600" />
-                    <h3 className="font-semibold">Live Demo</h3>
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    Try Memoriva flashcard app online
-                  </p>
-                </div>
-              </Link>
-              
-              <Link href="#" className="group">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <Link href="https://github.com/devyk100/memoriva-frontend" target="_blank" className="group">
                 <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
                   <div className="flex items-center gap-3 mb-2">
                     <Github className="w-5 h-5" />
-                    <h3 className="font-semibold">GitHub Repository</h3>
+                    <h3 className="font-semibold">Frontend Code</h3>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    View source code and contribute
+                    Next.js frontend repository
                   </p>
                 </div>
               </Link>
               
-              <Link href="#" className="group">
+              <Link href="https://github.com/devyk100/memoriva-backend" target="_blank" className="group">
                 <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
                   <div className="flex items-center gap-3 mb-2">
-                    <BookOpen className="w-5 h-5 text-pink-600" />
-                    <h3 className="font-semibold">User Guide</h3>
+                    <Github className="w-5 h-5" />
+                    <h3 className="font-semibold">Backend Code</h3>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    Learn how to maximize your learning
+                    Golang backend repository
+                  </p>
+                </div>
+              </Link>
+              
+              <Link href="/memoriva/soft-des" className="group">
+                <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
+                  <div className="flex items-center gap-3 mb-2">
+                    <FileText className="w-5 h-5 text-green-600" />
+                    <h3 className="font-semibold">Software Design</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    RAG architecture & AI integration
+                  </p>
+                </div>
+              </Link>
+              
+              <Link href="/memoriva/system-des" className="group">
+                <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
+                  <div className="flex items-center gap-3 mb-2">
+                    <Layers className="w-5 h-5 text-purple-600" />
+                    <h3 className="font-semibold">System Design</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Scalable AI infrastructure
                   </p>
                 </div>
               </Link>
@@ -142,6 +154,14 @@ export default function MemorivaPage() {
               Project Overview
             </h2>
             <div className="prose dark:prose-invert max-w-none">
+              <div className="p-4 mb-6 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
+                <p className="text-sm font-medium text-green-800 dark:text-green-200 mb-2">
+                  📋 Setup Requirements
+                </p>
+                <p className="text-sm text-green-700 dark:text-green-300">
+                  Memoriva requires both frontend and backend repositories to run. Please clone and set up both repositories before starting the application.
+                </p>
+              </div>
               <p className="text-lg leading-relaxed mb-4">
                 Memoriva is a spaced repetition based AI flashcard app designed for better memory retention. 
                 Built with NextJS and powered by GPT-4, it creates intelligent study sessions that adapt to 
