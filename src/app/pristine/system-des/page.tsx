@@ -1,6 +1,5 @@
 import React from "react";
 import { AnimatedBackground } from "@/components/ui/animated-bg";
-import { FadeInUp } from "@/components/ui/fade-in-up";
 import PortfolioSection from "@/components/portfolio/portfolio-section";
 import ThemeToggle from "@/components/ui/theme-toggle";
 import ScrollProgress from "@/components/ui/scroll-progress";
@@ -42,7 +41,6 @@ export default function PristineSystemDesignPage() {
 
         {/* Hero Section */}
         <PortfolioSection className="mt-10">
-          <FadeInUp>
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
                 Pristine System Design
@@ -51,12 +49,10 @@ export default function PristineSystemDesignPage() {
                 Scalable Reverse Proxy Infrastructure & Deployment Architecture
               </p>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* System Overview */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.1}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Network className="w-6 h-6" />
               System Architecture Overview
@@ -143,12 +139,10 @@ export default function PristineSystemDesignPage() {
                 />
               </div>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Scalability Architecture */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.2}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Zap className="w-6 h-6" />
               Scalability & Performance Architecture
@@ -220,12 +214,10 @@ const performanceMetrics = {
                 </div>
               </div>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* High Availability Design */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.3}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Shield className="w-6 h-6" />
               High Availability & Fault Tolerance
@@ -293,12 +285,10 @@ const performanceMetrics = {
                 />
               </div>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Certificate Management */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.4}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Database className="w-6 h-6" />
               Certificate Management & Security Architecture
@@ -379,12 +369,10 @@ const certificateArchitecture = {
                 </div>
               </div>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Network Architecture */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.5}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Globe className="w-6 h-6" />
               Network Architecture & Traffic Management
@@ -468,12 +456,10 @@ const networkConfig = {
                 </div>
               </div>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Deployment Architecture */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.6}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Server className="w-6 h-6" />
               Deployment & Infrastructure Architecture
@@ -573,12 +559,10 @@ spec:
                 </div>
               </div>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Monitoring & Observability */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.7}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Monitor className="w-6 h-6" />
               Monitoring & Observability Architecture
@@ -658,12 +642,10 @@ const observabilityStack = {
                 </div>
               </div>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Disaster Recovery */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.8}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Shield className="w-6 h-6" />
               Disaster Recovery & Business Continuity
@@ -743,7 +725,6 @@ const observabilityStack = {
                 </div>
               </div>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Footer */}

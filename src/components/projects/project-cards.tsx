@@ -57,7 +57,11 @@ export default function ProjectCards() {
 
             <Card desc="Offline-first android app for data collection" name="iCrops" coverUrl="/image.webp" point1="Offline-first architecture for field data collection" point2="React Native with local storage and sync capabilities" techStack="React Native, React, Express">
                 <div className="p-2 flex justify-center">
-                    <span className="text-xs text-muted-foreground">Coming Soon</span>
+                    <Link href="/icrops">
+                        <Button className="text-sm hover:cursor-pointer" size={"sm"}>
+                            Learn More
+                        </Button>
+                    </Link>
                 </div>
             </Card>
         </div>

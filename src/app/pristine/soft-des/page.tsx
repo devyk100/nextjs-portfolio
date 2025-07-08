@@ -1,6 +1,5 @@
 import React from "react";
 import { AnimatedBackground } from "@/components/ui/animated-bg";
-import { FadeInUp } from "@/components/ui/fade-in-up";
 import PortfolioSection from "@/components/portfolio/portfolio-section";
 import ThemeToggle from "@/components/ui/theme-toggle";
 import ScrollProgress from "@/components/ui/scroll-progress";
@@ -42,7 +41,6 @@ export default function PristineSoftwareDesignPage() {
 
         {/* Hero Section */}
         <PortfolioSection className="mt-10">
-          <FadeInUp>
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
                 Pristine Software Design
@@ -51,12 +49,10 @@ export default function PristineSoftwareDesignPage() {
                 High-Performance Reverse Proxy Architecture & Component Design
               </p>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Architecture Overview */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.1}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Layers className="w-6 h-6" />
               System Architecture Overview
@@ -121,12 +117,10 @@ export default function PristineSoftwareDesignPage() {
                 />
               </div>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Core Components */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.2}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Code className="w-6 h-6" />
               Core Component Architecture
@@ -210,12 +204,10 @@ public:
                 </div>
               </div>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Protocol Handling */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.3}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Network className="w-6 h-6" />
               Protocol Handling & Communication
@@ -293,12 +285,10 @@ public:
                 />
               </div>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Configuration Management */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.4}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Database className="w-6 h-6" />
               Configuration & Certificate Management
@@ -384,12 +374,10 @@ struct ProxyConfig {
                 </div>
               </div>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Async I/O Architecture */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.5}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Zap className="w-6 h-6" />
               Asynchronous I/O & Performance Design
@@ -460,12 +448,10 @@ public:
                 </div>
               </div>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* SSL/TLS Implementation */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.6}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <FileText className="w-6 h-6" />
               SSL/TLS & Security Architecture
@@ -536,12 +522,10 @@ bool CertificateManager::request_certificate_acme(const std::string& domain) {
                 </div>
               </div>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Error Handling & Monitoring */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.7}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Database className="w-6 h-6" />
               Error Handling & Monitoring Design
@@ -613,7 +597,6 @@ struct ProxyMetrics {
                 </div>
               </div>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Footer */}

@@ -1,6 +1,5 @@
 import React from "react";
 import { AnimatedBackground } from "@/components/ui/animated-bg";
-import { FadeInUp } from "@/components/ui/fade-in-up";
 import PortfolioSection from "@/components/portfolio/portfolio-section";
 import ThemeToggle from "@/components/ui/theme-toggle";
 import ScrollProgress from "@/components/ui/scroll-progress";
@@ -42,7 +41,6 @@ export default function YuclaseSoftwareDesignPage() {
 
         {/* Hero Section */}
         <PortfolioSection className="mt-10">
-          <FadeInUp>
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
                 Yuclase Software Design
@@ -51,12 +49,10 @@ export default function YuclaseSoftwareDesignPage() {
                 High-Performance Message Queue Architecture & Component Design
               </p>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Architecture Overview */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.1}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Layers className="w-6 h-6" />
               System Architecture Overview
@@ -117,12 +113,10 @@ export default function YuclaseSoftwareDesignPage() {
                 />
               </div>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Core Components */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.2}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Code className="w-6 h-6" />
               Core Component Architecture
@@ -198,12 +192,10 @@ type StorageEngine struct {
                 </div>
               </div>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Network Protocol Design */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.3}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Network className="w-6 h-6" />
               Network Protocol & Communication
@@ -268,12 +260,10 @@ type StorageEngine struct {
                 />
               </div>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Storage Design */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.4}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Database className="w-6 h-6" />
               Storage Engine Design
@@ -337,12 +327,10 @@ type ConsumerInfo struct {
                 </div>
               </div>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Performance Optimizations */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.5}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Zap className="w-6 h-6" />
               Performance Optimizations & Design Patterns
@@ -410,12 +398,10 @@ type ConsumerCatalog struct {
                 </div>
               </div>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Client Architecture */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.6}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <FileText className="w-6 h-6" />
               Client Architecture & SDK Design
@@ -496,12 +482,10 @@ class SimpleYuclaseClient implements YuclaseClient {
                 </div>
               </div>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Configuration & Deployment */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.7}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Database className="w-6 h-6" />
               Configuration & Deployment Architecture
@@ -572,7 +556,6 @@ performance:
                 </ul>
               </div>
             </div>
-          </FadeInUp>
         </PortfolioSection>
 
         {/* Footer */}
