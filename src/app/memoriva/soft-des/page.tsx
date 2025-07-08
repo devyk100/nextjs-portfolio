@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { ArrowLeft, FileText, Code, Database, Cloud, Layers, Brain } from "lucide-react";
 import { Metadata } from "next";
+import { MermaidDiagram } from "@/components/ui/mermaid-diagram";
 
 export const metadata: Metadata = {
   title: "Memoriva - Software Design Document | Yash Kumar Portfolio",
@@ -63,9 +64,8 @@ export default function MemorivaSoftwareDesignPage() {
             <div className="bg-card rounded-lg p-6 border">
               <div className="mb-6">
                 <h3 className="text-lg font-medium mb-4">High-Level Architecture</h3>
-                <div className="bg-muted rounded-lg p-4">
-                  <pre className="text-sm overflow-x-auto">
-{`graph TB
+                <MermaidDiagram
+                  chart={`graph TB
     subgraph "Frontend Layer"
         UI[Next.js UI]
         Editor[TipTap Editor]
@@ -119,8 +119,7 @@ export default function MemorivaSoftwareDesignPage() {
     Queue --> Redis
     
     Docker --> AWS`}
-                  </pre>
-                </div>
+                />
               </div>
             </div>
           </FadeInUp>
@@ -261,9 +260,8 @@ interface StudySession {
               
               <div className="bg-card rounded-lg p-6 border">
                 <h3 className="text-lg font-medium mb-4">RAG Processing Flow</h3>
-                <div className="bg-muted rounded-lg p-4">
-                  <pre className="text-sm overflow-x-auto">
-{`sequenceDiagram
+                <MermaidDiagram
+                  chart={`sequenceDiagram
     participant User as User
     participant Frontend as Next.js Frontend
     participant API as Gin API
@@ -287,8 +285,7 @@ interface StudySession {
     Queue->>API: Update Status
     API->>Frontend: Processing Complete
     Frontend->>User: Display Results`}
-                  </pre>
-                </div>
+                />
               </div>
             </div>
           </FadeInUp>
