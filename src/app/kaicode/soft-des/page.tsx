@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { ArrowLeft, FileText, Code, Database, Cloud, Layers } from "lucide-react";
 import { Metadata } from "next";
+import { MermaidDiagram } from "@/components/ui/mermaid-diagram";
 
 export const metadata: Metadata = {
   title: "Kaicode - Software Design Document | Yash Kumar Portfolio",
@@ -63,9 +64,8 @@ export default function KaicodeSoftwareDesignPage() {
             <div className="bg-card rounded-lg p-6 border">
               <div className="mb-6">
                 <h3 className="text-lg font-medium mb-4">High-Level Architecture</h3>
-                <div className="bg-muted rounded-lg p-4">
-                  <pre className="text-sm overflow-x-auto">
-{`graph TB
+                <MermaidDiagram
+                  chart={`graph TB
     subgraph "Frontend Layer"
         UI[Next.js UI]
         Monaco[Monaco Editor]
@@ -107,8 +107,8 @@ export default function KaicodeSoftwareDesignPage() {
     
     UI --> DeepSeek
     Docker --> AWS`}
-                  </pre>
-                </div>
+                  className="w-full"
+                />
               </div>
             </div>
           </FadeInUp>
@@ -242,9 +242,8 @@ interface EditorStore {
               
               <div className="bg-card rounded-lg p-6 border">
                 <h3 className="text-lg font-medium mb-4">Code Execution Pipeline</h3>
-                <div className="bg-muted rounded-lg p-4">
-                  <pre className="text-sm overflow-x-auto">
-{`sequenceDiagram
+                <MermaidDiagram
+                  chart={`sequenceDiagram
     participant UI as Frontend
     participant Judge as Judge Service
     participant Orch as Orchestrator
@@ -260,8 +259,8 @@ interface EditorStore {
     SQS->>Orch: Job Complete
     Orch->>Judge: Result Ready
     Judge->>UI: Execution Result`}
-                  </pre>
-                </div>
+                  className="w-full"
+                />
               </div>
             </div>
           </FadeInUp>

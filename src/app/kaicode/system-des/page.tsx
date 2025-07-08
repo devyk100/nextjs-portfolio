@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { ArrowLeft, Network, Server, Shield, Zap, Globe, Database } from "lucide-react";
 import { Metadata } from "next";
+import { MermaidDiagram } from "@/components/ui/mermaid-diagram";
 
 export const metadata: Metadata = {
   title: "Kaicode - System Design Document | Yash Kumar Portfolio",
@@ -63,9 +64,8 @@ export default function KaicodeSystemDesignPage() {
             <div className="bg-card rounded-lg p-6 border">
               <div className="mb-6">
                 <h3 className="text-lg font-medium mb-4">High-Level System Design</h3>
-                <div className="bg-muted rounded-lg p-4">
-                  <pre className="text-sm overflow-x-auto">
-{`graph TB
+                <MermaidDiagram
+                  chart={`graph TB
     subgraph "Client Layer"
         Browser[Web Browser]
         Mobile[Mobile App]
@@ -129,8 +129,8 @@ export default function KaicodeSystemDesignPage() {
     
     AI --> S3
     Lambda --> SNS`}
-                  </pre>
-                </div>
+                  className="w-full"
+                />
               </div>
             </div>
           </FadeInUp>
@@ -244,9 +244,8 @@ const performanceTargets = {
               
               <div className="bg-card rounded-lg p-6 border">
                 <h3 className="text-lg font-medium mb-4">CRDT Synchronization Flow</h3>
-                <div className="bg-muted rounded-lg p-4">
-                  <pre className="text-sm overflow-x-auto">
-{`sequenceDiagram
+                <MermaidDiagram
+                  chart={`sequenceDiagram
     participant C1 as Client 1
     participant WS1 as WebSocket Server 1
     participant Redis as Redis Pub/Sub
@@ -268,8 +267,8 @@ const performanceTargets = {
     Redis->>WS1: Forward Operation
     WS1->>C1: Send Operation
     C1->>C1: Merge Operations`}
-                  </pre>
-                </div>
+                  className="w-full"
+                />
               </div>
             </div>
           </FadeInUp>
@@ -533,9 +532,8 @@ const monitoring = {
             <div className="bg-card rounded-lg p-6 border">
               <div className="mb-6">
                 <h3 className="text-lg font-medium mb-4">Deployment Pipeline</h3>
-                <div className="bg-muted rounded-lg p-4">
-                  <pre className="text-sm overflow-x-auto">
-{`graph LR
+                <MermaidDiagram
+                  chart={`graph LR
     subgraph "Source Control"
         Git[GitHub Repository]
         PR[Pull Request]
@@ -574,8 +572,8 @@ const monitoring = {
     
     Dev -.-> Stage
     Stage -.-> Prod`}
-                  </pre>
-                </div>
+                  className="w-full"
+                />
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
