@@ -87,7 +87,19 @@ export default function MemorivaPage() {
 
         {/* Quick Links */}
         <PortfolioSection className="mt-10">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+              <Link href="#" target="_blank" className="group">
+                <div className="p-6 rounded-lg border bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 transition-all">
+                  <div className="flex items-center gap-3 mb-2">
+                    <Play className="w-5 h-5" />
+                    <h3 className="font-semibold">Try Demo</h3>
+                  </div>
+                  <p className="text-sm text-purple-100">
+                    AI document search
+                  </p>
+                </div>
+              </Link>
+              
               <Link href="https://github.com/devyk100/memoriva-frontend" target="_blank" className="group">
                 <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
                   <div className="flex items-center gap-3 mb-2">

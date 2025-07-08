@@ -96,13 +96,13 @@ export default function IcropsPage() {
           <FadeInUp delay={0.1}>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               <Link href="#" className="group">
-                <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
+                <div className="p-6 rounded-lg border bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700 transition-all">
                   <div className="flex items-center gap-3 mb-2">
-                    <Play className="w-5 h-5 text-green-600" />
-                    <h3 className="font-semibold">Live Demo</h3>
+                    <Play className="w-5 h-5" />
+                    <h3 className="font-semibold">Try Demo</h3>
                   </div>
-                  <p className="text-sm text-muted-foreground">
-                    Try iCrops web dashboard online
+                  <p className="text-sm text-green-100">
+                    iCrops web dashboard
                   </p>
                 </div>
               </Link>
