@@ -17,32 +17,32 @@ import {
   Play,
   BookOpen,
   Settings,
-  Brain,
+  Terminal,
   Globe,
   Shield,
-  Clock,
-  Zap,
   Database,
-  Image,
-  Edit3
+  Zap,
+  CheckCircle,
+  Download,
+  FileCode
 } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Memoriva - AI Flashcard App | Yash Kumar Portfolio",
-  description: "Memoriva is a spaced repetition based AI flashcard app for better memory retention, built with NextJS, PostgreSQL, AWS services, and GPT-4 for intelligent study sessions.",
-  keywords: ["Memoriva", "AI Flashcards", "Spaced Repetition", "NextJS", "GPT-4", "Memory Retention", "Yash Kumar", "Juquox", "devyk100"],
+  title: "Mochi - C++ Competitive Programming Tool | Yash Kumar Portfolio",
+  description: "Mochi is a command-line tool for generating and testing C++ problem files for competitive programming, built with Go for template-based problem file generation and automated testing.",
+  keywords: ["Mochi", "Competitive Programming", "C++", "Go", "CLI Tool", "Template Generation", "Automated Testing", "Yash Kumar", "Juquox", "devyk100"],
   openGraph: {
-    title: "Memoriva - AI Flashcard App",
-    description: "Intelligent spaced repetition flashcard app powered by GPT-4 for enhanced memory retention",
-    url: "https://yashk.dev/memoriva",
+    title: "Mochi - C++ Competitive Programming Tool",
+    description: "Command-line tool for generating and testing C++ problem files with automated testing capabilities",
+    url: "https://yashk.dev/mochi",
     images: [{ url: "/yarei.jpeg", width: 1200, height: 630 }],
   },
 };
 
 const glassClass = "dark:bg-white/10 bg-violet-300/10 backdrop-blur-2xl";
 
-export default function MemorivaPage() {
+export default function MochiPage() {
   return (
     <>
       <AnimatedBackground />
@@ -67,24 +67,24 @@ export default function MemorivaPage() {
         <PortfolioSection className="mt-10">
           <FadeInUp>
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Memoriva
+              <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
+                Mochi
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-                AI-Powered Spaced Repetition Flashcards
+                C++ Competitive Programming Tool
               </p>
               <div className="flex flex-wrap justify-center gap-4 mb-8">
-                <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 rounded-full text-sm">
-                  NextJS
-                </span>
-                <span className="px-3 py-1 bg-pink-100 dark:bg-pink-900/30 text-pink-800 dark:text-pink-200 rounded-full text-sm">
-                  GPT-4
+                <span className="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-200 rounded-full text-sm">
+                  Go
                 </span>
                 <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full text-sm">
-                  AWS Lambda
+                  C++
                 </span>
                 <span className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 rounded-full text-sm">
-                  PostgreSQL
+                  CLI Tool
+                </span>
+                <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 rounded-full text-sm">
+                  Automated Testing
                 </span>
               </div>
             </div>
@@ -98,11 +98,11 @@ export default function MemorivaPage() {
               <Link href="#" className="group">
                 <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
                   <div className="flex items-center gap-3 mb-2">
-                    <Play className="w-5 h-5 text-purple-600" />
-                    <h3 className="font-semibold">Live Demo</h3>
+                    <Download className="w-5 h-5 text-orange-600" />
+                    <h3 className="font-semibold">Download Binary</h3>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    Try Memoriva flashcard app online
+                    Get the latest Mochi CLI tool
                   </p>
                 </div>
               </Link>
@@ -122,11 +122,11 @@ export default function MemorivaPage() {
               <Link href="#" className="group">
                 <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
                   <div className="flex items-center gap-3 mb-2">
-                    <BookOpen className="w-5 h-5 text-pink-600" />
-                    <h3 className="font-semibold">User Guide</h3>
+                    <BookOpen className="w-5 h-5 text-red-600" />
+                    <h3 className="font-semibold">Documentation</h3>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    Learn how to maximize your learning
+                    Learn how to use Mochi effectively
                   </p>
                 </div>
               </Link>
@@ -143,14 +143,14 @@ export default function MemorivaPage() {
             </h2>
             <div className="prose dark:prose-invert max-w-none">
               <p className="text-lg leading-relaxed mb-4">
-                Memoriva is a spaced repetition based AI flashcard app designed for better memory retention. 
-                Built with NextJS and powered by GPT-4, it creates intelligent study sessions that adapt to 
-                your learning patterns and optimize retention through scientifically-proven spaced repetition algorithms.
+                Mochi is a command-line tool for generating and testing C++ problem files for competitive programming. 
+                Built with Go, it provides template-based problem file generation and automated testing against 
+                predefined inputs and outputs, streamlining the competitive programming workflow.
               </p>
               <p className="leading-relaxed mb-4">
-                The app features a rich WYSIWYG editor powered by TipTap, seamless image uploading to S3 with 
-                presigned URLs, and AI-generated study content. With NextAuth integration for secure authentication 
-                and PostgreSQL for robust data persistence, Memoriva provides a comprehensive learning platform.
+                The tool features customizable C++ templates, automatic compilation and execution, test case management, 
+                and performance benchmarking. Mochi helps competitive programmers focus on problem-solving by automating 
+                the repetitive tasks of file setup, compilation, and testing.
               </p>
             </div>
           </FadeInUp>
@@ -165,86 +165,86 @@ export default function MemorivaPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <h3 className="text-lg font-medium mb-3">Frontend Technologies</h3>
+                <h3 className="text-lg font-medium mb-3">Core Technologies</h3>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                    NextJS 14 with App Router
+                    Go programming language
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                    TypeScript for type safety
+                    Cobra CLI framework
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                    TipTap WYSIWYG editor
+                    Go templates engine
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                    Tailwind CSS styling
+                    File system operations
                   </li>
                 </ul>
               </div>
               <div>
-                <h3 className="text-lg font-medium mb-3">Backend & Database</h3>
+                <h3 className="text-lg font-medium mb-3">C++ Integration</h3>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                    PostgreSQL database
+                    GCC/Clang compiler support
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                    AWS Lambda functions
+                    C++17/20 standard support
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                    AWS SAM framework
+                    Custom compilation flags
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                    NextAuth authentication
+                    Optimization settings
                   </li>
                 </ul>
               </div>
               <div>
-                <h3 className="text-lg font-medium mb-3">AI & Cloud Services</h3>
+                <h3 className="text-lg font-medium mb-3">Testing Features</h3>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
-                    GPT-4 LLM API integration
+                    Automated test execution
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
-                    AWS S3 for file storage
+                    Input/output validation
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
-                    CloudFront CDN
+                    Performance benchmarking
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
-                    Presigned URL uploads
+                    Memory usage tracking
                   </li>
                 </ul>
               </div>
               <div>
-                <h3 className="text-lg font-medium mb-3">Learning Features</h3>
+                <h3 className="text-lg font-medium mb-3">Workflow Tools</h3>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-                    Spaced repetition algorithm
+                    Template management
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-                    AI-generated content
+                    Project scaffolding
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-                    Progress tracking
+                    Configuration management
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-                    Adaptive learning paths
+                    Cross-platform support
                   </li>
                 </ul>
               </div>
@@ -262,80 +262,80 @@ export default function MemorivaPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="p-6 rounded-lg border bg-card">
                 <h3 className="text-lg font-medium mb-3 flex items-center gap-2">
-                  <Brain className="w-5 h-5 text-purple-600" />
-                  AI-Powered Learning
+                  <FileCode className="w-5 h-5 text-orange-600" />
+                  Template Generation
                 </h3>
                 <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>• GPT-4 generated study sessions</li>
-                  <li>• Intelligent content creation</li>
-                  <li>• Adaptive difficulty adjustment</li>
-                  <li>• Personalized learning paths</li>
-                  <li>• Smart question generation</li>
+                  <li>• Customizable C++ templates</li>
+                  <li>• Problem-specific scaffolding</li>
+                  <li>• Header file management</li>
+                  <li>• Boilerplate code generation</li>
+                  <li>• Template versioning</li>
                 </ul>
               </div>
               <div className="p-6 rounded-lg border bg-card">
                 <h3 className="text-lg font-medium mb-3 flex items-center gap-2">
-                  <Clock className="w-5 h-5 text-blue-600" />
-                  Spaced Repetition
+                  <Terminal className="w-5 h-5 text-blue-600" />
+                  CLI Interface
                 </h3>
                 <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>• Scientific repetition intervals</li>
-                  <li>• Forgetting curve optimization</li>
-                  <li>• Adaptive scheduling</li>
-                  <li>• Performance-based timing</li>
-                  <li>• Long-term retention focus</li>
+                  <li>• Intuitive command structure</li>
+                  <li>• Interactive prompts</li>
+                  <li>• Colored output formatting</li>
+                  <li>• Progress indicators</li>
+                  <li>• Help documentation</li>
                 </ul>
               </div>
               <div className="p-6 rounded-lg border bg-card">
                 <h3 className="text-lg font-medium mb-3 flex items-center gap-2">
-                  <Edit3 className="w-5 h-5 text-green-600" />
-                  Rich Content Editor
+                  <CheckCircle className="w-5 h-5 text-green-600" />
+                  Automated Testing
                 </h3>
                 <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>• TipTap WYSIWYG editor</li>
-                  <li>• Rich text formatting</li>
-                  <li>• Image embedding support</li>
-                  <li>• Mathematical expressions</li>
-                  <li>• Code syntax highlighting</li>
+                  <li>• Test case execution</li>
+                  <li>• Output comparison</li>
+                  <li>• Time limit enforcement</li>
+                  <li>• Memory limit checking</li>
+                  <li>• Batch testing support</li>
                 </ul>
               </div>
               <div className="p-6 rounded-lg border bg-card">
                 <h3 className="text-lg font-medium mb-3 flex items-center gap-2">
-                  <Image className="w-5 h-5 text-pink-600" />
-                  Media Management
+                  <Zap className="w-5 h-5 text-yellow-600" />
+                  Performance Analysis
                 </h3>
                 <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>• Presigned S3 uploads</li>
-                  <li>• CloudFront delivery</li>
-                  <li>• Image optimization</li>
-                  <li>• Multiple format support</li>
-                  <li>• Secure file handling</li>
+                  <li>• Execution time measurement</li>
+                  <li>• Memory usage tracking</li>
+                  <li>• Performance comparisons</li>
+                  <li>• Optimization suggestions</li>
+                  <li>• Benchmark reporting</li>
+                </ul>
+              </div>
+              <div className="p-6 rounded-lg border bg-card">
+                <h3 className="text-lg font-medium mb-3 flex items-center gap-2">
+                  <Database className="w-5 h-5 text-purple-600" />
+                  Test Management
+                </h3>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Test case organization</li>
+                  <li>• Input/output file handling</li>
+                  <li>• Test suite creation</li>
+                  <li>• Custom test generation</li>
+                  <li>• Test result archiving</li>
                 </ul>
               </div>
               <div className="p-6 rounded-lg border bg-card">
                 <h3 className="text-lg font-medium mb-3 flex items-center gap-2">
                   <Shield className="w-5 h-5 text-red-600" />
-                  Authentication
+                  Configuration
                 </h3>
                 <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>• NextAuth integration</li>
-                  <li>• Multiple OAuth providers</li>
-                  <li>• Secure session management</li>
-                  <li>• User profile management</li>
-                  <li>• Privacy protection</li>
-                </ul>
-              </div>
-              <div className="p-6 rounded-lg border bg-card">
-                <h3 className="text-lg font-medium mb-3 flex items-center gap-2">
-                  <Database className="w-5 h-5 text-teal-600" />
-                  Data Analytics
-                </h3>
-                <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>• Learning progress tracking</li>
-                  <li>• Performance analytics</li>
-                  <li>• Study session insights</li>
-                  <li>• Retention rate monitoring</li>
-                  <li>• Custom reporting</li>
+                  <li>• Compiler settings</li>
+                  <li>• Template preferences</li>
+                  <li>• Default configurations</li>
+                  <li>• Environment variables</li>
+                  <li>• Profile management</li>
                 </ul>
               </div>
             </div>
@@ -351,30 +351,29 @@ export default function MemorivaPage() {
             </h2>
             <div className="space-y-6">
               <div className="p-6 rounded-lg border bg-card">
-                <h3 className="text-lg font-medium mb-3">Local Development</h3>
+                <h3 className="text-lg font-medium mb-3">Installation</h3>
                 <div className="bg-muted p-4 rounded-md font-mono text-sm">
-                  <div className="text-muted-foreground mb-2"># Clone and install dependencies</div>
-                  <div>git clone https://github.com/devyk100/memoriva.git</div>
-                  <div>cd memoriva</div>
-                  <div>npm install</div>
-                  <div className="mt-4 text-muted-foreground mb-2"># Set up environment variables</div>
-                  <div>cp .env.example .env.local</div>
-                  <div className="mt-4 text-muted-foreground mb-2"># Run development server</div>
-                  <div>npm run dev</div>
+                  <div className="text-muted-foreground mb-2"># Install from source</div>
+                  <div>git clone https://github.com/devyk100/mochi.git</div>
+                  <div>cd mochi</div>
+                  <div>go build -o mochi</div>
+                  <div className="mt-4 text-muted-foreground mb-2"># Or download binary</div>
+                  <div>curl -L https://github.com/devyk100/mochi/releases/latest/download/mochi -o mochi</div>
+                  <div>chmod +x mochi</div>
                 </div>
               </div>
               
               <div className="p-6 rounded-lg border bg-card">
-                <h3 className="text-lg font-medium mb-3">Environment Configuration</h3>
+                <h3 className="text-lg font-medium mb-3">Basic Usage</h3>
                 <div className="bg-muted p-4 rounded-md font-mono text-sm overflow-x-auto">
-                  <div className="text-muted-foreground mb-2"># .env.local</div>
-                  <div>NEXTAUTH_SECRET=your_secret_here</div>
-                  <div>NEXTAUTH_URL=http://localhost:3000</div>
-                  <div>DATABASE_URL=postgresql://...</div>
-                  <div>OPENAI_API_KEY=sk-...</div>
-                  <div>AWS_ACCESS_KEY_ID=your_key</div>
-                  <div>AWS_SECRET_ACCESS_KEY=your_secret</div>
-                  <div>S3_BUCKET_NAME=memoriva-uploads</div>
+                  <div className="text-muted-foreground mb-2"># Create a new problem</div>
+                  <div>mochi new problem-name</div>
+                  <div className="mt-4 text-muted-foreground mb-2"># Test your solution</div>
+                  <div>mochi test problem-name.cpp</div>
+                  <div className="mt-4 text-muted-foreground mb-2"># Run with custom input</div>
+                  <div>mochi run problem-name.cpp &lt; input.txt</div>
+                  <div className="mt-4 text-muted-foreground mb-2"># Benchmark performance</div>
+                  <div>mochi bench problem-name.cpp</div>
                 </div>
               </div>
             </div>
@@ -398,7 +397,7 @@ export default function MemorivaPage() {
                   </div>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  Learn how to create your first flashcard deck and start studying with AI-powered sessions.
+                  Learn how to install Mochi and create your first competitive programming problem setup.
                 </p>
               </div>
               
@@ -411,7 +410,7 @@ export default function MemorivaPage() {
                   </div>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  Explore advanced features like AI content generation, spaced repetition optimization, and analytics.
+                  Explore advanced features like custom templates, automated testing, and performance benchmarking.
                 </p>
               </div>
             </div>
@@ -433,11 +432,11 @@ export default function MemorivaPage() {
                     <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                   <p className="text-sm text-muted-foreground mb-3">
-                    Complete NextJS application with AWS infrastructure
+                    Complete Go source code with CLI implementation
                   </p>
                   <div className="flex items-center gap-2 text-xs text-muted-foreground">
                     <span className="w-3 h-3 bg-blue-500 rounded-full"></span>
-                    TypeScript
+                    Go
                   </div>
                 </div>
               </Link>
@@ -445,15 +444,15 @@ export default function MemorivaPage() {
               <Link href="#" className="group">
                 <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
                   <div className="flex items-center justify-between mb-2">
-                    <h3 className="font-semibold">AWS Infrastructure</h3>
+                    <h3 className="font-semibold">Release Binaries</h3>
                     <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                   <p className="text-sm text-muted-foreground mb-3">
-                    SAM templates and Lambda functions
+                    Pre-compiled binaries for multiple platforms
                   </p>
                   <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                    <span className="w-3 h-3 bg-orange-500 rounded-full"></span>
-                    AWS SAM
+                    <span className="w-3 h-3 bg-green-500 rounded-full"></span>
+                    Releases
                   </div>
                 </div>
               </Link>
@@ -476,7 +475,7 @@ export default function MemorivaPage() {
                     <h3 className="font-semibold">Development Blog</h3>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    Building an AI-powered learning app with NextJS and GPT-4
+                    Building a competitive programming CLI tool with Go
                   </p>
                 </div>
               </Link>
@@ -488,7 +487,7 @@ export default function MemorivaPage() {
                     <h3 className="font-semibold">Software Design Document</h3>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    Detailed architecture and AI integration design
+                    Detailed CLI architecture and template system design
                   </p>
                 </div>
               </Link>
@@ -500,7 +499,7 @@ export default function MemorivaPage() {
                     <h3 className="font-semibold">System Design Document</h3>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    AWS infrastructure and scalability design
+                    System architecture and testing framework design
                   </p>
                 </div>
               </Link>
