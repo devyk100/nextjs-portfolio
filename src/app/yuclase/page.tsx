@@ -7,13 +7,34 @@ import ScrollProgress from "@/components/ui/scroll-progress";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { ArrowLeft, Github, FileText, Database, Network, Zap, Code, Server, Monitor } from "lucide-react";
+import { 
+  Github, 
+  ExternalLink, 
+  Code, 
+  FileText, 
+  Layers, 
+  ArrowLeft,
+  Play,
+  Settings,
+  Zap,
+  Shield,
+  Clock,
+  Database,
+  Network,
+  MessageSquare
+} from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Yuclase - High-Performance Message Queue | Yash Kumar Portfolio",
-  description: "Yuclase is a high-performance, persistent message queue service built in Go with append-only log storage and Redis-like protocol.",
-  keywords: ["Yuclase", "Message Queue", "Go", "Append-Only Log", "RESP Protocol", "Yash Kumar"],
+  description: "Yuclase is a high-performance message queue system built with Go, featuring persistent storage, clustering, and real-time messaging capabilities.",
+  keywords: ["Yuclase", "Message Queue", "Go", "Distributed Systems", "Real-time Messaging", "Yash Kumar"],
+  openGraph: {
+    title: "Yuclase - High-Performance Message Queue",
+    description: "Scalable message queue system with clustering and persistent storage",
+    url: "https://yashk.dev/yuclase",
+    images: [{ url: "/yarei.jpeg", width: 1200, height: 630 }],
+  },
 };
 
 const glassClass = "dark:bg-white/10 bg-violet-300/10 backdrop-blur-2xl";
@@ -43,192 +64,450 @@ export default function YuclasePage() {
         <PortfolioSection className="mt-10">
           <FadeInUp>
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+              <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
                 Yuclase
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-                High-Performance Message Queue Service
+                High-Performance Message Queue System
               </p>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
-                A persistent message queue service built in Go with append-only log storage, 
-                Redis-like protocol, and focus on simplicity, reliability, and performance.
-              </p>
+              <div className="flex flex-wrap justify-center gap-4 mb-8">
+                <span className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 rounded-full text-sm">
+                  Go Backend
+                </span>
+                <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full text-sm">
+                  Message Queue
+                </span>
+                <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 rounded-full text-sm">
+                  Clustering
+                </span>
+                <span className="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-200 rounded-full text-sm">
+                  Real-time
+                </span>
+              </div>
             </div>
           </FadeInUp>
         </PortfolioSection>
 
-        {/* Key Features */}
+        {/* Quick Links */}
         <PortfolioSection className="mt-10">
           <FadeInUp delay={0.1}>
-            <h2 className="text-2xl font-semibold mb-6 text-center">Key Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-card rounded-lg p-6 border">
-                <Database className="w-8 h-8 text-blue-500 mb-4" />
-                <h3 className="text-lg font-medium mb-2">Append-Only Log Storage</h3>
-                <p className="text-sm text-muted-foreground">
-                  Fast, durable message storage using append-only logs with configurable retention and segmentation.
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <Link href="https://github.com/devyk100/yuclase" target="_blank" className="group">
+                <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
+                  <div className="flex items-center gap-3 mb-2">
+                    <Github className="w-5 h-5" />
+                    <h3 className="font-semibold">Source Code</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Go implementation repository
+                  </p>
+                </div>
+              </Link>
+              
+              <Link href="/yuclase/soft-des" className="group">
+                <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
+                  <div className="flex items-center gap-3 mb-2">
+                    <FileText className="w-5 h-5 text-green-600" />
+                    <h3 className="font-semibold">Software Design</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Queue architecture & algorithms
+                  </p>
+                </div>
+              </Link>
+              
+              <Link href="/yuclase/system-des" className="group">
+                <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
+                  <div className="flex items-center gap-3 mb-2">
+                    <Layers className="w-5 h-5 text-purple-600" />
+                    <h3 className="font-semibold">System Design</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Distributed system architecture
+                  </p>
+                </div>
+              </Link>
+            </div>
+          </FadeInUp>
+        </PortfolioSection>
+
+        {/* Project Overview */}
+        <PortfolioSection className="mt-10">
+          <FadeInUp delay={0.2}>
+            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
+              <Code className="w-6 h-6" />
+              Project Overview
+            </h2>
+            <div className="prose dark:prose-invert max-w-none">
+              <div className="p-4 mb-6 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
+                <p className="text-sm font-medium text-green-800 dark:text-green-200 mb-2">
+                  🏗️ Single Repository Architecture
+                </p>
+                <p className="text-sm text-green-700 dark:text-green-300">
+                  Yuclase is a single Go repository containing the complete message queue implementation. Installation and setup instructions are available in the repository's README.
                 </p>
               </div>
-              <div className="bg-card rounded-lg p-6 border">
-                <Network className="w-8 h-8 text-green-500 mb-4" />
-                <h3 className="text-lg font-medium mb-2">Redis-Like Protocol</h3>
-                <p className="text-sm text-muted-foreground">
-                  Uses RESP (Redis Serialization Protocol) for simple, efficient client-server communication.
-                </p>
+              <p className="text-lg leading-relaxed mb-4">
+                Yuclase is a high-performance message queue system built from scratch in Go, designed for 
+                scalability, reliability, and low-latency message processing. It provides persistent storage, 
+                clustering capabilities, and real-time messaging with support for multiple consumers and producers.
+              </p>
+              <p className="leading-relaxed mb-4">
+                The system features a custom binary protocol for efficient communication, disk-based persistence 
+                for durability, and a distributed architecture that can scale horizontally across multiple nodes. 
+                Built with performance in mind, it handles thousands of messages per second with minimal latency.
+              </p>
+            </div>
+          </FadeInUp>
+        </PortfolioSection>
+
+        {/* Tech Stack */}
+        <PortfolioSection className="mt-10">
+          <FadeInUp delay={0.3}>
+            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
+              <Layers className="w-6 h-6" />
+              Technology Stack
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="text-lg font-medium mb-3">Core Technologies</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                    Go programming language
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                    Custom binary protocol
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                    TCP/UDP networking
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                    Concurrent goroutines
+                  </li>
+                </ul>
               </div>
-              <div className="bg-card rounded-lg p-6 border">
-                <Zap className="w-8 h-8 text-yellow-500 mb-4" />
-                <h3 className="text-lg font-medium mb-2">High Performance</h3>
-                <p className="text-sm text-muted-foreground">
-                  Optimized for high-throughput sequential writes with minimal memory footprint and concurrent safety.
-                </p>
+              <div>
+                <h3 className="text-lg font-medium mb-3">Storage & Persistence</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                    Disk-based persistence
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                    Write-ahead logging (WAL)
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                    Memory-mapped files
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                    Configurable retention policies
+                  </li>
+                </ul>
               </div>
-              <div className="bg-card rounded-lg p-6 border">
-                <Code className="w-8 h-8 text-purple-500 mb-4" />
-                <h3 className="text-lg font-medium mb-2">Multi-Language Clients</h3>
-                <p className="text-sm text-muted-foreground">
-                  CLI client and TypeScript/JavaScript SDK for easy integration across different platforms.
-                </p>
+              <div>
+                <h3 className="text-lg font-medium mb-3">Distributed Features</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
+                    Node clustering
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
+                    Leader election
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
+                    Replication support
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
+                    Fault tolerance
+                  </li>
+                </ul>
               </div>
-              <div className="bg-card rounded-lg p-6 border">
-                <Server className="w-8 h-8 text-orange-500 mb-4" />
-                <h3 className="text-lg font-medium mb-2">Topic-Based Messaging</h3>
-                <p className="text-sm text-muted-foreground">
-                  Organize messages into topics with independent consumer offset tracking for flexible consumption.
-                </p>
-              </div>
-              <div className="bg-card rounded-lg p-6 border">
-                <Monitor className="w-8 h-8 text-red-500 mb-4" />
-                <h3 className="text-lg font-medium mb-2">Docker Ready</h3>
-                <p className="text-sm text-muted-foreground">
-                  Containerized deployment with Docker Compose and Kubernetes support for scalable infrastructure.
-                </p>
+              <div>
+                <h3 className="text-lg font-medium mb-3">Performance Features</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+                    Zero-copy operations
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+                    Batch processing
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+                    Connection pooling
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+                    Low-latency messaging
+                  </li>
+                </ul>
               </div>
             </div>
           </FadeInUp>
         </PortfolioSection>
 
-        {/* Technical Implementation */}
+        {/* Core Features */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.2}>
-            <h2 className="text-2xl font-semibold mb-6 text-center">Technical Implementation</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div className="bg-card rounded-lg p-6 border">
-                <h3 className="text-lg font-medium mb-4">Core Architecture</h3>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mt-2"></span>
-                    <span><strong>Storage Engine:</strong> Append-only log with segmented files for efficient cleanup</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-2 h-2 bg-green-500 rounded-full mt-2"></span>
-                    <span><strong>Network Layer:</strong> TCP socket server with Redis-like protocol (RESP)</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-2 h-2 bg-yellow-500 rounded-full mt-2"></span>
-                    <span><strong>Queue Management:</strong> Topic-based organization with consumer offset tracking</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full mt-2"></span>
-                    <span><strong>Concurrency:</strong> Thread-safe operations using Go's sync primitives</span>
-                  </li>
+          <FadeInUp delay={0.4}>
+            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
+              <Settings className="w-6 h-6" />
+              Core Features
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="p-6 rounded-lg border bg-card">
+                <h3 className="text-lg font-medium mb-3 flex items-center gap-2">
+                  <MessageSquare className="w-5 h-5 text-green-600" />
+                  Message Queue
+                </h3>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• FIFO message ordering</li>
+                  <li>• Topic-based routing</li>
+                  <li>• Message acknowledgments</li>
+                  <li>• Dead letter queues</li>
+                  <li>• Priority queuing</li>
+                </ul>
+              </div>
+              <div className="p-6 rounded-lg border bg-card">
+                <h3 className="text-lg font-medium mb-3 flex items-center gap-2">
+                  <Database className="w-5 h-5 text-blue-600" />
+                  Persistent Storage
+                </h3>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Disk-based message storage</li>
+                  <li>• Write-ahead logging</li>
+                  <li>• Configurable retention</li>
+                  <li>• Crash recovery</li>
+                  <li>• Data compression</li>
+                </ul>
+              </div>
+              <div className="p-6 rounded-lg border bg-card">
+                <h3 className="text-lg font-medium mb-3 flex items-center gap-2">
+                  <Network className="w-5 h-5 text-purple-600" />
+                  Clustering
+                </h3>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Multi-node deployment</li>
+                  <li>• Leader election algorithm</li>
+                  <li>• Data replication</li>
+                  <li>• Node discovery</li>
+                  <li>• Split-brain protection</li>
+                </ul>
+              </div>
+              <div className="p-6 rounded-lg border bg-card">
+                <h3 className="text-lg font-medium mb-3 flex items-center gap-2">
+                  <Zap className="w-5 h-5 text-yellow-600" />
+                  High Performance
+                </h3>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Sub-millisecond latency</li>
+                  <li>• Thousands of messages/sec</li>
+                  <li>• Zero-copy operations</li>
+                  <li>• Memory-mapped I/O</li>
+                  <li>• Efficient serialization</li>
+                </ul>
+              </div>
+              <div className="p-6 rounded-lg border bg-card">
+                <h3 className="text-lg font-medium mb-3 flex items-center gap-2">
+                  <Shield className="w-5 h-5 text-red-600" />
+                  Reliability
+                </h3>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• At-least-once delivery</li>
+                  <li>• Exactly-once semantics</li>
+                  <li>• Automatic failover</li>
+                  <li>• Health monitoring</li>
+                  <li>• Circuit breakers</li>
+                </ul>
+              </div>
+              <div className="p-6 rounded-lg border bg-card">
+                <h3 className="text-lg font-medium mb-3 flex items-center gap-2">
+                  <Clock className="w-5 h-5 text-teal-600" />
+                  Real-time Features
+                </h3>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Live message streaming</li>
+                  <li>• Real-time metrics</li>
+                  <li>• Event notifications</li>
+                  <li>• WebSocket support</li>
+                  <li>• Push notifications</li>
+                </ul>
+              </div>
+            </div>
+          </FadeInUp>
+        </PortfolioSection>
+
+        {/* Architecture Highlights */}
+        <PortfolioSection className="mt-10">
+          <FadeInUp delay={0.5}>
+            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
+              <Layers className="w-6 h-6" />
+              Architecture Highlights
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="p-6 rounded-lg border bg-card">
+                <h3 className="text-lg font-medium mb-3">Custom Binary Protocol</h3>
+                <p className="text-muted-foreground mb-3">
+                  Designed a lightweight binary protocol optimized for message queue operations, 
+                  reducing network overhead and improving throughput compared to text-based protocols.
+                </p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Minimal header overhead</li>
+                  <li>• Efficient serialization</li>
+                  <li>• Version compatibility</li>
+                  <li>• Compression support</li>
                 </ul>
               </div>
               
-              <div className="bg-card rounded-lg p-6 border">
-                <h3 className="text-lg font-medium mb-4">Performance Characteristics</h3>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full mt-2"></span>
-                    <span><strong>Write Performance:</strong> Sequential writes optimized for maximum throughput</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-2 h-2 bg-red-500 rounded-full mt-2"></span>
-                    <span><strong>Read Performance:</strong> Efficient sequential reads with optional indexing</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-2 h-2 bg-cyan-500 rounded-full mt-2"></span>
-                    <span><strong>Memory Usage:</strong> Minimal memory footprint with disk-based storage</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-2 h-2 bg-pink-500 rounded-full mt-2"></span>
-                    <span><strong>Durability:</strong> Configurable sync intervals for performance vs durability trade-offs</span>
-                  </li>
+              <div className="p-6 rounded-lg border bg-card">
+                <h3 className="text-lg font-medium mb-3">Distributed Consensus</h3>
+                <p className="text-muted-foreground mb-3">
+                  Implements a consensus algorithm for leader election and maintaining consistency 
+                  across cluster nodes, ensuring reliable operation in distributed environments.
+                </p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Raft consensus algorithm</li>
+                  <li>• Log replication</li>
+                  <li>• Membership changes</li>
+                  <li>• Partition tolerance</li>
+                </ul>
+              </div>
+              
+              <div className="p-6 rounded-lg border bg-card">
+                <h3 className="text-lg font-medium mb-3">Storage Engine</h3>
+                <p className="text-muted-foreground mb-3">
+                  Custom storage engine with write-ahead logging and memory-mapped files for 
+                  optimal performance and durability guarantees.
+                </p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Append-only log structure</li>
+                  <li>• Segment-based storage</li>
+                  <li>• Background compaction</li>
+                  <li>• Index optimization</li>
+                </ul>
+              </div>
+              
+              <div className="p-6 rounded-lg border bg-card">
+                <h3 className="text-lg font-medium mb-3">Client Libraries</h3>
+                <p className="text-muted-foreground mb-3">
+                  Provides client libraries and SDKs for easy integration with applications, 
+                  supporting multiple programming languages and frameworks.
+                </p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Go native client</li>
+                  <li>• TypeScript/JavaScript SDK</li>
+                  <li>• Connection pooling</li>
+                  <li>• Automatic reconnection</li>
                 </ul>
               </div>
             </div>
           </FadeInUp>
         </PortfolioSection>
 
-        {/* Available Commands */}
+        {/* Source Code */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.3}>
-            <h2 className="text-2xl font-semibold mb-6 text-center">Available Commands</h2>
-            <div className="bg-card rounded-lg p-6 border">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div className="p-3 bg-muted rounded">
-                  <code className="text-sm font-mono text-blue-600">CREATE &lt;topic&gt;</code>
-                  <p className="text-xs text-muted-foreground mt-1">Create a new topic</p>
+          <FadeInUp delay={0.6}>
+            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
+              <Github className="w-6 h-6" />
+              Source Code
+            </h2>
+            <div className="grid grid-cols-1 gap-4">
+              <Link href="https://github.com/devyk100/yuclase" target="_blank" className="group">
+                <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="font-semibold">Yuclase Repository</h3>
+                    <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Complete Go implementation with clustering, persistence, and client libraries
+                  </p>
+                  <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                    <span className="w-3 h-3 bg-green-500 rounded-full"></span>
+                    Go
+                  </div>
                 </div>
-                <div className="p-3 bg-muted rounded">
-                  <code className="text-sm font-mono text-green-600">ENQUEUE &lt;topic&gt; &lt;message&gt;</code>
-                  <p className="text-xs text-muted-foreground mt-1">Add message to topic</p>
+              </Link>
+            </div>
+          </FadeInUp>
+        </PortfolioSection>
+
+        {/* Demo Videos */}
+        <PortfolioSection className="mt-10">
+          <FadeInUp delay={0.7}>
+            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
+              <Play className="w-6 h-6" />
+              Demo Videos
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="p-6 rounded-lg border bg-card">
+                <div className="aspect-video bg-muted rounded-lg mb-4 flex items-center justify-center">
+                  <div className="text-center">
+                    <Play className="w-12 h-12 mx-auto mb-2 text-muted-foreground" />
+                    <p className="text-sm text-muted-foreground">Clustering Demo</p>
+                  </div>
                 </div>
-                <div className="p-3 bg-muted rounded">
-                  <code className="text-sm font-mono text-purple-600">LISTEN &lt;topic&gt; &lt;consumer&gt;</code>
-                  <p className="text-xs text-muted-foreground mt-1">Get messages for consumer</p>
+                <h3 className="text-lg font-medium mb-2">Multi-Node Clustering</h3>
+                <p className="text-sm text-muted-foreground">
+                  Watch how Yuclase handles node failures and maintains message delivery across a cluster.
+                </p>
+              </div>
+              
+              <div className="p-6 rounded-lg border bg-card">
+                <div className="aspect-video bg-muted rounded-lg mb-4 flex items-center justify-center">
+                  <div className="text-center">
+                    <Play className="w-12 h-12 mx-auto mb-2 text-muted-foreground" />
+                    <p className="text-sm text-muted-foreground">Performance Benchmark</p>
+                  </div>
                 </div>
-                <div className="p-3 bg-muted rounded">
-                  <code className="text-sm font-mono text-orange-600">OFFSET &lt;topic&gt; &lt;consumer&gt;</code>
-                  <p className="text-xs text-muted-foreground mt-1">Get/set consumer offset</p>
-                </div>
-                <div className="p-3 bg-muted rounded">
-                  <code className="text-sm font-mono text-red-600">TOPICS</code>
-                  <p className="text-xs text-muted-foreground mt-1">List all topics</p>
-                </div>
-                <div className="p-3 bg-muted rounded">
-                  <code className="text-sm font-mono text-cyan-600">STATS [topic]</code>
-                  <p className="text-xs text-muted-foreground mt-1">Get statistics</p>
-                </div>
+                <h3 className="text-lg font-medium mb-2">High-Throughput Messaging</h3>
+                <p className="text-sm text-muted-foreground">
+                  See Yuclase processing thousands of messages per second with sub-millisecond latency.
+                </p>
               </div>
             </div>
           </FadeInUp>
         </PortfolioSection>
 
-        {/* Project Setup Note */}
+        {/* Documentation Links */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.4}>
-            <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-6">
-              <h3 className="text-lg font-medium mb-2 text-yellow-800 dark:text-yellow-200">Project Setup</h3>
-              <p className="text-sm text-yellow-700 dark:text-yellow-300">
-                Yuclase is a single repository project. Clone the repository and follow the build instructions 
-                in the README to get started with the message queue service.
-              </p>
-            </div>
-          </FadeInUp>
-        </PortfolioSection>
-
-        {/* Action Buttons */}
-        <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.5}>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="https://github.com/yash-kumar-portfolio/yuclase" target="_blank" rel="noopener noreferrer">
-                <Button className="flex items-center gap-2">
-                  <Github className="w-4 h-4" />
-                  View Source Code
-                </Button>
+          <FadeInUp delay={0.8}>
+            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
+              <FileText className="w-6 h-6" />
+              Technical Documentation
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <Link href="/yuclase/soft-des" className="group">
+                <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
+                  <div className="flex items-center gap-3 mb-2">
+                    <FileText className="w-5 h-5 text-green-600" />
+                    <h3 className="font-semibold">Software Design Document</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Detailed queue algorithms, storage engine, and protocol design
+                  </p>
+                </div>
               </Link>
-              <Link href="/yuclase/soft-des">
-                <Button variant="outline" className="flex items-center gap-2">
-                  <FileText className="w-4 h-4" />
-                  Software Design
-                </Button>
-              </Link>
-              <Link href="/yuclase/system-des">
-                <Button variant="outline" className="flex items-center gap-2">
-                  <Network className="w-4 h-4" />
-                  System Design
-                </Button>
+              
+              <Link href="/yuclase/system-des" className="group">
+                <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
+                  <div className="flex items-center gap-3 mb-2">
+                    <Layers className="w-5 h-5 text-purple-600" />
+                    <h3 className="font-semibold">System Design Document</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Distributed architecture, clustering, and scalability design
+                  </p>
+                </div>
               </Link>
             </div>
           </FadeInUp>

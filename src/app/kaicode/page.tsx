@@ -145,10 +145,10 @@ export default function KaicodePage() {
             <div className="prose dark:prose-invert max-w-none">
               <div className="p-4 mb-6 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
                 <p className="text-sm font-medium text-blue-800 dark:text-blue-200 mb-2">
-                  📋 Setup Requirements
+                  🏗️ Multi-Repository Architecture
                 </p>
                 <p className="text-sm text-blue-700 dark:text-blue-300">
-                  Kaicode requires both frontend and backend repositories to run. Please clone and set up both repositories before starting the application.
+                  Kaicode consists of two separate repositories: frontend (Next.js) and backend (Go). Installation and setup instructions are available in each repository's README.
                 </p>
               </div>
               <p className="text-lg leading-relaxed mb-4">
@@ -310,14 +310,14 @@ export default function KaicodePage() {
               Source Code
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <Link href="#" className="group">
+              <Link href="https://github.com/devyk100/kaicode-frontend" target="_blank" className="group">
                 <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
                   <div className="flex items-center justify-between mb-2">
                     <h3 className="font-semibold">Frontend Repository</h3>
                     <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                   <p className="text-sm text-muted-foreground mb-3">
-                    Next.js frontend with TypeScript and modern UI components
+                    Next.js frontend with TypeScript, Y.js CRDT, and real-time collaboration
                   </p>
                   <div className="flex items-center gap-2 text-xs text-muted-foreground">
                     <span className="w-3 h-3 bg-blue-500 rounded-full"></span>
@@ -326,18 +326,18 @@ export default function KaicodePage() {
                 </div>
               </Link>
               
-              <Link href="#" className="group">
+              <Link href="https://github.com/devyk100/kaicode-backend" target="_blank" className="group">
                 <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
                   <div className="flex items-center justify-between mb-2">
                     <h3 className="font-semibold">Backend Repository</h3>
                     <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                   <p className="text-sm text-muted-foreground mb-3">
-                    Node.js API server with AI integration and real-time features
+                    Go backend with WebSockets, Docker execution, and AI integration
                   </p>
                   <div className="flex items-center gap-2 text-xs text-muted-foreground">
                     <span className="w-3 h-3 bg-green-500 rounded-full"></span>
-                    JavaScript
+                    Go
                   </div>
                 </div>
               </Link>
@@ -387,41 +387,29 @@ export default function KaicodePage() {
           <FadeInUp delay={0.7}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <FileText className="w-6 h-6" />
-              Documentation & Design
+              Technical Documentation
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <Link href="#" className="group">
-                <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
-                  <div className="flex items-center gap-3 mb-2">
-                    <BookOpen className="w-5 h-5 text-blue-600" />
-                    <h3 className="font-semibold">Development Blog</h3>
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    Engineering process and technical decisions behind Kaicode
-                  </p>
-                </div>
-              </Link>
-              
-              <Link href="#" className="group">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <Link href="/kaicode/soft-des" className="group">
                 <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
                   <div className="flex items-center gap-3 mb-2">
                     <FileText className="w-5 h-5 text-green-600" />
                     <h3 className="font-semibold">Software Design Document</h3>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    Detailed architecture and component design specifications
+                    Detailed architecture, component design, and implementation patterns
                   </p>
                 </div>
               </Link>
               
-              <Link href="#" className="group">
+              <Link href="/kaicode/system-des" className="group">
                 <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
                   <div className="flex items-center gap-3 mb-2">
                     <Layers className="w-5 h-5 text-purple-600" />
                     <h3 className="font-semibold">System Design Document</h3>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    High-level system architecture and infrastructure design
+                    High-level system architecture, scalability, and infrastructure design
                   </p>
                 </div>
               </Link>

@@ -18,33 +18,48 @@ export function MermaidDiagram({ chart, className = "" }: MermaidDiagramProps) {
           
           mermaid.initialize({
             startOnLoad: false,
-            theme: 'dark',
+            theme: 'base',
             themeVariables: {
               primaryColor: '#3b82f6',
-              primaryTextColor: '#ffffff',
+              primaryTextColor: '#1f2937',
               primaryBorderColor: '#1e40af',
               lineColor: '#6b7280',
-              sectionBkgColor: '#1f2937',
-              altSectionBkgColor: '#374151',
-              gridColor: '#4b5563',
+              sectionBkgColor: '#f3f4f6',
+              altSectionBkgColor: '#e5e7eb',
+              gridColor: '#d1d5db',
               secondaryColor: '#10b981',
               tertiaryColor: '#f59e0b',
+              background: '#ffffff',
+              mainBkg: '#ffffff',
+              secondBkg: '#f9fafb',
+              tertiaryBkg: '#f3f4f6'
             },
             flowchart: {
               useMaxWidth: true,
               htmlLabels: true,
+              curve: 'basis'
             },
             sequence: {
               useMaxWidth: true,
               wrap: true,
+              diagramMarginX: 50,
+              diagramMarginY: 10
             },
             gantt: {
               useMaxWidth: true,
             },
+            securityLevel: 'loose'
           });
 
-          const id = `mermaid-${Math.random().toString(36).substr(2, 9)}`;
-          elementRef.current.innerHTML = `<div id="${id}">${chart}</div>`;
+          // Clear previous content
+          elementRef.current.innerHTML = '';
+          
+          const id = `mermaid-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+          const wrapper = document.createElement('div');
+          wrapper.id = id;
+          wrapper.className = 'mermaid';
+          wrapper.textContent = chart;
+          elementRef.current.appendChild(wrapper);
           
           await mermaid.run({
             querySelector: `#${id}`,
@@ -53,8 +68,8 @@ export function MermaidDiagram({ chart, className = "" }: MermaidDiagramProps) {
           console.error('Error rendering Mermaid diagram:', error);
           if (elementRef.current) {
             elementRef.current.innerHTML = `
-              <div class="p-4 border border-red-200 rounded-lg bg-red-50 dark:bg-red-900/20 dark:border-red-800">
-                <p class="text-red-700 dark:text-red-300">Error rendering diagram</p>
+              <div class="p-4 border border-gray-200 rounded-lg bg-gray-50">
+                <pre class="text-sm text-gray-700 whitespace-pre-wrap overflow-x-auto">${chart}</pre>
               </div>
             `;
           }

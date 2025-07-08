@@ -15,13 +15,10 @@ import {
   Layers, 
   ArrowLeft,
   Play,
-  BookOpen,
   Settings,
   Brain,
-  Globe,
   Shield,
   Clock,
-  Zap,
   Database,
   Image,
   Edit3
@@ -29,12 +26,12 @@ import {
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Memoriva - AI Flashcard App | Yash Kumar Portfolio",
-  description: "Memoriva is a spaced repetition based AI flashcard app for better memory retention, built with NextJS, PostgreSQL, AWS services, and GPT-4 for intelligent study sessions.",
-  keywords: ["Memoriva", "AI Flashcards", "Spaced Repetition", "NextJS", "GPT-4", "Memory Retention", "Yash Kumar", "Juquox", "devyk100"],
+  title: "Memoriva - AI Document Management | Yash Kumar Portfolio",
+  description: "Memoriva is an intelligent document management and retrieval system using RAG technology, built with Go backend and Next.js frontend.",
+  keywords: ["Memoriva", "RAG", "Document Management", "AI", "Vector Search", "Go", "Next.js", "Yash Kumar"],
   openGraph: {
-    title: "Memoriva - AI Flashcard App",
-    description: "Intelligent spaced repetition flashcard app powered by GPT-4 for enhanced memory retention",
+    title: "Memoriva - AI Document Management",
+    description: "Intelligent document management with RAG technology and vector search",
     url: "https://yashk.dev/memoriva",
     images: [{ url: "/yarei.jpeg", width: 1200, height: 630 }],
   },
@@ -71,20 +68,20 @@ export default function MemorivaPage() {
                 Memoriva
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-                AI-Powered Spaced Repetition Flashcards
+                AI-Powered Document Management & RAG System
               </p>
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 rounded-full text-sm">
-                  NextJS
+                  RAG Pipeline
                 </span>
                 <span className="px-3 py-1 bg-pink-100 dark:bg-pink-900/30 text-pink-800 dark:text-pink-200 rounded-full text-sm">
-                  GPT-4
+                  Vector Search
                 </span>
                 <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full text-sm">
-                  AWS Lambda
+                  Go Backend
                 </span>
                 <span className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 rounded-full text-sm">
-                  PostgreSQL
+                  Next.js Frontend
                 </span>
               </div>
             </div>
@@ -114,7 +111,7 @@ export default function MemorivaPage() {
                     <h3 className="font-semibold">Backend Code</h3>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    Golang backend repository
+                    Go backend repository
                   </p>
                 </div>
               </Link>
@@ -154,23 +151,23 @@ export default function MemorivaPage() {
               Project Overview
             </h2>
             <div className="prose dark:prose-invert max-w-none">
-              <div className="p-4 mb-6 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
-                <p className="text-sm font-medium text-green-800 dark:text-green-200 mb-2">
-                  📋 Setup Requirements
+              <div className="p-4 mb-6 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg">
+                <p className="text-sm font-medium text-purple-800 dark:text-purple-200 mb-2">
+                  🏗️ Multi-Repository Architecture
                 </p>
-                <p className="text-sm text-green-700 dark:text-green-300">
-                  Memoriva requires both frontend and backend repositories to run. Please clone and set up both repositories before starting the application.
+                <p className="text-sm text-purple-700 dark:text-purple-300">
+                  Memoriva consists of two separate repositories: frontend (Next.js) and backend (Go). Installation and setup instructions are available in each repository's README.
                 </p>
               </div>
               <p className="text-lg leading-relaxed mb-4">
-                Memoriva is a spaced repetition based AI flashcard app designed for better memory retention. 
-                Built with NextJS and powered by GPT-4, it creates intelligent study sessions that adapt to 
-                your learning patterns and optimize retention through scientifically-proven spaced repetition algorithms.
+                Memoriva is an intelligent document management and retrieval system that leverages 
+                advanced RAG (Retrieval-Augmented Generation) technology to help users organize, 
+                search, and interact with their documents in natural language.
               </p>
               <p className="leading-relaxed mb-4">
-                The app features a rich WYSIWYG editor powered by TipTap, seamless image uploading to S3 with 
-                presigned URLs, and AI-generated study content. With NextAuth integration for secure authentication 
-                and PostgreSQL for robust data persistence, Memoriva provides a comprehensive learning platform.
+                The platform combines powerful vector search capabilities with AI-powered document 
+                analysis to provide contextual answers and insights from your document collection. 
+                Built with modern web technologies and optimized for performance and scalability.
               </p>
             </div>
           </FadeInUp>
@@ -189,7 +186,7 @@ export default function MemorivaPage() {
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                    NextJS 14 with App Router
+                    Next.js 14 with App Router
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
@@ -197,11 +194,11 @@ export default function MemorivaPage() {
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                    TipTap WYSIWYG editor
+                    Tailwind CSS styling
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                    Tailwind CSS styling
+                    React Query for state management
                   </li>
                 </ul>
               </div>
@@ -210,61 +207,61 @@ export default function MemorivaPage() {
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                    PostgreSQL database
+                    Go backend services
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                    AWS Lambda functions
+                    PostgreSQL with pgvector
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                    AWS SAM framework
+                    Redis for caching
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                    NextAuth authentication
+                    Docker containerization
                   </li>
                 </ul>
               </div>
               <div>
-                <h3 className="text-lg font-medium mb-3">AI & Cloud Services</h3>
+                <h3 className="text-lg font-medium mb-3">AI & Vector Search</h3>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
-                    GPT-4 LLM API integration
+                    OpenAI Embeddings API
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
-                    AWS S3 for file storage
+                    Vector similarity search
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
-                    CloudFront CDN
+                    RAG pipeline implementation
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
-                    Presigned URL uploads
+                    Document chunking & indexing
                   </li>
                 </ul>
               </div>
               <div>
-                <h3 className="text-lg font-medium mb-3">Learning Features</h3>
+                <h3 className="text-lg font-medium mb-3">Infrastructure</h3>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-                    Spaced repetition algorithm
+                    RESTful API design
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-                    AI-generated content
+                    File upload handling
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-                    Progress tracking
+                    Authentication & authorization
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-                    Adaptive learning paths
+                    Scalable microservices
                   </li>
                 </ul>
               </div>
@@ -283,120 +280,124 @@ export default function MemorivaPage() {
               <div className="p-6 rounded-lg border bg-card">
                 <h3 className="text-lg font-medium mb-3 flex items-center gap-2">
                   <Brain className="w-5 h-5 text-purple-600" />
-                  AI-Powered Learning
+                  RAG Pipeline
                 </h3>
                 <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>• GPT-4 generated study sessions</li>
-                  <li>• Intelligent content creation</li>
-                  <li>• Adaptive difficulty adjustment</li>
-                  <li>• Personalized learning paths</li>
-                  <li>• Smart question generation</li>
+                  <li>• Document ingestion & processing</li>
+                  <li>• Intelligent text chunking</li>
+                  <li>• Vector embedding generation</li>
+                  <li>• Semantic similarity search</li>
+                  <li>• Context-aware retrieval</li>
                 </ul>
               </div>
               <div className="p-6 rounded-lg border bg-card">
                 <h3 className="text-lg font-medium mb-3 flex items-center gap-2">
-                  <Clock className="w-5 h-5 text-blue-600" />
-                  Spaced Repetition
+                  <Database className="w-5 h-5 text-blue-600" />
+                  Vector Database
                 </h3>
                 <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>• Scientific repetition intervals</li>
-                  <li>• Forgetting curve optimization</li>
-                  <li>• Adaptive scheduling</li>
-                  <li>• Performance-based timing</li>
-                  <li>• Long-term retention focus</li>
+                  <li>• PostgreSQL with pgvector</li>
+                  <li>• High-dimensional vector storage</li>
+                  <li>• Efficient similarity queries</li>
+                  <li>• Metadata filtering</li>
+                  <li>• Scalable indexing</li>
                 </ul>
               </div>
               <div className="p-6 rounded-lg border bg-card">
                 <h3 className="text-lg font-medium mb-3 flex items-center gap-2">
                   <Edit3 className="w-5 h-5 text-green-600" />
-                  Rich Content Editor
+                  Document Processing
                 </h3>
                 <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>• TipTap WYSIWYG editor</li>
-                  <li>• Rich text formatting</li>
-                  <li>• Image embedding support</li>
-                  <li>• Mathematical expressions</li>
-                  <li>• Code syntax highlighting</li>
+                  <li>• Multi-format support (PDF, DOCX, TXT)</li>
+                  <li>• Text extraction & cleaning</li>
+                  <li>• Metadata preservation</li>
+                  <li>• Batch processing capabilities</li>
+                  <li>• Error handling & validation</li>
                 </ul>
               </div>
               <div className="p-6 rounded-lg border bg-card">
                 <h3 className="text-lg font-medium mb-3 flex items-center gap-2">
                   <Image className="w-5 h-5 text-pink-600" />
-                  Media Management
+                  Natural Language Query
                 </h3>
                 <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>• Presigned S3 uploads</li>
-                  <li>• CloudFront delivery</li>
-                  <li>• Image optimization</li>
-                  <li>• Multiple format support</li>
-                  <li>• Secure file handling</li>
+                  <li>• Conversational search interface</li>
+                  <li>• Context-aware responses</li>
+                  <li>• Source attribution</li>
+                  <li>• Query refinement</li>
+                  <li>• Multi-turn conversations</li>
                 </ul>
               </div>
               <div className="p-6 rounded-lg border bg-card">
                 <h3 className="text-lg font-medium mb-3 flex items-center gap-2">
                   <Shield className="w-5 h-5 text-red-600" />
-                  Authentication
+                  Security & Privacy
                 </h3>
                 <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>• NextAuth integration</li>
-                  <li>• Multiple OAuth providers</li>
-                  <li>• Secure session management</li>
-                  <li>• User profile management</li>
-                  <li>• Privacy protection</li>
+                  <li>• User authentication</li>
+                  <li>• Document access control</li>
+                  <li>• Data encryption</li>
+                  <li>• Privacy-first design</li>
+                  <li>• Secure file handling</li>
                 </ul>
               </div>
               <div className="p-6 rounded-lg border bg-card">
                 <h3 className="text-lg font-medium mb-3 flex items-center gap-2">
-                  <Database className="w-5 h-5 text-teal-600" />
-                  Data Analytics
+                  <Clock className="w-5 h-5 text-teal-600" />
+                  Performance
                 </h3>
                 <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>• Learning progress tracking</li>
-                  <li>• Performance analytics</li>
-                  <li>• Study session insights</li>
-                  <li>• Retention rate monitoring</li>
-                  <li>• Custom reporting</li>
+                  <li>• Fast vector similarity search</li>
+                  <li>• Caching layer with Redis</li>
+                  <li>• Optimized query processing</li>
+                  <li>• Concurrent request handling</li>
+                  <li>• Scalable architecture</li>
                 </ul>
               </div>
             </div>
           </FadeInUp>
         </PortfolioSection>
 
-        {/* Installation & Usage */}
+        {/* Code Repository Links */}
         <PortfolioSection className="mt-10">
           <FadeInUp delay={0.5}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
-              <Code className="w-6 h-6" />
-              Installation & Usage
+              <Github className="w-6 h-6" />
+              Source Code
             </h2>
-            <div className="space-y-6">
-              <div className="p-6 rounded-lg border bg-card">
-                <h3 className="text-lg font-medium mb-3">Local Development</h3>
-                <div className="bg-muted p-4 rounded-md font-mono text-sm">
-                  <div className="text-muted-foreground mb-2"># Clone and install dependencies</div>
-                  <div>git clone https://github.com/devyk100/memoriva.git</div>
-                  <div>cd memoriva</div>
-                  <div>npm install</div>
-                  <div className="mt-4 text-muted-foreground mb-2"># Set up environment variables</div>
-                  <div>cp .env.example .env.local</div>
-                  <div className="mt-4 text-muted-foreground mb-2"># Run development server</div>
-                  <div>npm run dev</div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <Link href="https://github.com/devyk100/memoriva-frontend" target="_blank" className="group">
+                <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="font-semibold">Frontend Repository</h3>
+                    <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Next.js frontend with TypeScript and modern UI components
+                  </p>
+                  <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                    <span className="w-3 h-3 bg-blue-500 rounded-full"></span>
+                    TypeScript
+                  </div>
                 </div>
-              </div>
+              </Link>
               
-              <div className="p-6 rounded-lg border bg-card">
-                <h3 className="text-lg font-medium mb-3">Environment Configuration</h3>
-                <div className="bg-muted p-4 rounded-md font-mono text-sm overflow-x-auto">
-                  <div className="text-muted-foreground mb-2"># .env.local</div>
-                  <div>NEXTAUTH_SECRET=your_secret_here</div>
-                  <div>NEXTAUTH_URL=http://localhost:3000</div>
-                  <div>DATABASE_URL=postgresql://...</div>
-                  <div>OPENAI_API_KEY=sk-...</div>
-                  <div>AWS_ACCESS_KEY_ID=your_key</div>
-                  <div>AWS_SECRET_ACCESS_KEY=your_secret</div>
-                  <div>S3_BUCKET_NAME=memoriva-uploads</div>
+              <Link href="https://github.com/devyk100/memoriva-backend" target="_blank" className="group">
+                <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="font-semibold">Backend Repository</h3>
+                    <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Go backend with RAG pipeline and vector database integration
+                  </p>
+                  <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                    <span className="w-3 h-3 bg-green-500 rounded-full"></span>
+                    Go
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </FadeInUp>
         </PortfolioSection>
@@ -410,117 +411,62 @@ export default function MemorivaPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="p-6 rounded-lg border bg-card">
-                <h3 className="text-lg font-medium mb-3">Getting Started</h3>
-                <div className="aspect-video bg-muted rounded-lg flex items-center justify-center mb-4">
+                <div className="aspect-video bg-muted rounded-lg mb-4 flex items-center justify-center">
                   <div className="text-center">
                     <Play className="w-12 h-12 mx-auto mb-2 text-muted-foreground" />
-                    <p className="text-sm text-muted-foreground">Demo video coming soon</p>
+                    <p className="text-sm text-muted-foreground">Document Upload & Processing</p>
                   </div>
                 </div>
+                <h3 className="text-lg font-medium mb-2">RAG Pipeline in Action</h3>
                 <p className="text-sm text-muted-foreground">
-                  Learn how to create your first flashcard deck and start studying with AI-powered sessions.
+                  Watch how documents are processed, chunked, and indexed for intelligent retrieval.
                 </p>
               </div>
               
               <div className="p-6 rounded-lg border bg-card">
-                <h3 className="text-lg font-medium mb-3">Advanced Features</h3>
-                <div className="aspect-video bg-muted rounded-lg flex items-center justify-center mb-4">
+                <div className="aspect-video bg-muted rounded-lg mb-4 flex items-center justify-center">
                   <div className="text-center">
                     <Play className="w-12 h-12 mx-auto mb-2 text-muted-foreground" />
-                    <p className="text-sm text-muted-foreground">Demo video coming soon</p>
+                    <p className="text-sm text-muted-foreground">Natural Language Search</p>
                   </div>
                 </div>
+                <h3 className="text-lg font-medium mb-2">Conversational Search</h3>
                 <p className="text-sm text-muted-foreground">
-                  Explore advanced features like AI content generation, spaced repetition optimization, and analytics.
+                  See how users can ask questions in natural language and get contextual answers.
                 </p>
               </div>
-            </div>
-          </FadeInUp>
-        </PortfolioSection>
-
-        {/* Source Code & Links */}
-        <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.7}>
-            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
-              <Github className="w-6 h-6" />
-              Source Code & Resources
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <Link href="#" className="group">
-                <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="font-semibold">Main Repository</h3>
-                    <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-3">
-                    Complete NextJS application with AWS infrastructure
-                  </p>
-                  <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                    <span className="w-3 h-3 bg-blue-500 rounded-full"></span>
-                    TypeScript
-                  </div>
-                </div>
-              </Link>
-              
-              <Link href="#" className="group">
-                <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="font-semibold">AWS Infrastructure</h3>
-                    <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-3">
-                    SAM templates and Lambda functions
-                  </p>
-                  <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                    <span className="w-3 h-3 bg-orange-500 rounded-full"></span>
-                    AWS SAM
-                  </div>
-                </div>
-              </Link>
             </div>
           </FadeInUp>
         </PortfolioSection>
 
         {/* Documentation Links */}
         <PortfolioSection className="mt-10">
-          <FadeInUp delay={0.8}>
+          <FadeInUp delay={0.7}>
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <FileText className="w-6 h-6" />
-              Documentation & Design
+              Technical Documentation
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <Link href="#" className="group">
-                <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
-                  <div className="flex items-center gap-3 mb-2">
-                    <BookOpen className="w-5 h-5 text-blue-600" />
-                    <h3 className="font-semibold">Development Blog</h3>
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    Building an AI-powered learning app with NextJS and GPT-4
-                  </p>
-                </div>
-              </Link>
-              
-              <Link href="#" className="group">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <Link href="/memoriva/soft-des" className="group">
                 <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
                   <div className="flex items-center gap-3 mb-2">
                     <FileText className="w-5 h-5 text-green-600" />
                     <h3 className="font-semibold">Software Design Document</h3>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    Detailed architecture and AI integration design
+                    Detailed RAG pipeline architecture and AI integration design
                   </p>
                 </div>
               </Link>
               
-              <Link href="#" className="group">
+              <Link href="/memoriva/system-des" className="group">
                 <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
                   <div className="flex items-center gap-3 mb-2">
                     <Layers className="w-5 h-5 text-purple-600" />
                     <h3 className="font-semibold">System Design Document</h3>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    AWS infrastructure and scalability design
+                    Scalable infrastructure and vector database architecture
                   </p>
                 </div>
               </Link>
