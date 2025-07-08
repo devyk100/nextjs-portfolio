@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { ArrowLeft, Network, Server, Shield, Zap, Globe, Database, Monitor } from "lucide-react";
 import { Metadata } from "next";
+import { MermaidDiagram } from "@/components/ui/mermaid-diagram";
 
 export const metadata: Metadata = {
   title: "Pristine - System Design Document | Yash Kumar Portfolio",
@@ -63,9 +64,8 @@ export default function PristineSystemDesignPage() {
             <div className="bg-card rounded-lg p-6 border">
               <div className="mb-6">
                 <h3 className="text-lg font-medium mb-4">High-Level System Design</h3>
-                <div className="bg-muted rounded-lg p-4">
-                  <pre className="text-sm overflow-x-auto">
-{`graph TB
+                <MermaidDiagram
+                  chart={`graph TB
     subgraph "Internet"
         Users[Users/Clients]
         CDN[Content Delivery Network]
@@ -139,8 +139,8 @@ export default function PristineSystemDesignPage() {
     HealthCheck --> Proxy1
     HealthCheck --> Proxy2
     HealthCheck --> Proxy3`}
-                  </pre>
-                </div>
+                  className="w-full"
+                />
               </div>
             </div>
           </FadeInUp>
@@ -257,9 +257,8 @@ const performanceMetrics = {
               
               <div className="bg-card rounded-lg p-6 border">
                 <h3 className="text-lg font-medium mb-4">Failure Recovery Flow</h3>
-                <div className="bg-muted rounded-lg p-4">
-                  <pre className="text-sm overflow-x-auto">
-{`sequenceDiagram
+                <MermaidDiagram
+                  chart={`sequenceDiagram
     participant Client as Client
     participant LB as Load Balancer
     participant Proxy1 as Pristine Instance 1
@@ -290,8 +289,8 @@ const performanceMetrics = {
     
     Client->>LB: New Request
     LB->>Proxy1: Route to Recovered Instance`}
-                  </pre>
-                </div>
+                  className="w-full"
+                />
               </div>
             </div>
           </FadeInUp>
@@ -672,9 +671,8 @@ const observabilityStack = {
             <div className="bg-card rounded-lg p-6 border">
               <div className="mb-6">
                 <h3 className="text-lg font-medium mb-4">Multi-Region Deployment</h3>
-                <div className="bg-muted rounded-lg p-4">
-                  <pre className="text-sm overflow-x-auto">
-{`graph TB
+                <MermaidDiagram
+                  chart={`graph TB
     subgraph "Primary Region (US-East)"
         PrimaryProxy[Pristine Cluster]
         PrimaryCerts[Certificate Store]
@@ -720,8 +718,8 @@ const observabilityStack = {
     CentralMonitoring --> PrimaryProxy
     CentralMonitoring --> SecondaryProxy
     CentralMonitoring --> TertiaryProxy`}
-                  </pre>
-                </div>
+                  className="w-full"
+                />
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

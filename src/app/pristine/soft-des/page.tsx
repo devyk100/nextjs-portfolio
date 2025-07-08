@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { ArrowLeft, FileText, Code, Database, Network, Layers, Zap } from "lucide-react";
 import { Metadata } from "next";
+import { MermaidDiagram } from "@/components/ui/mermaid-diagram";
 
 export const metadata: Metadata = {
   title: "Pristine - Software Design Document | Yash Kumar Portfolio",
@@ -63,9 +64,8 @@ export default function PristineSoftwareDesignPage() {
             <div className="bg-card rounded-lg p-6 border">
               <div className="mb-6">
                 <h3 className="text-lg font-medium mb-4">High-Level Architecture</h3>
-                <div className="bg-muted rounded-lg p-4">
-                  <pre className="text-sm overflow-x-auto">
-{`graph TB
+                <MermaidDiagram
+                  chart={`graph TB
     subgraph "Client Layer"
         HTTPClient[HTTP Clients]
         HTTPSClient[HTTPS Clients]
@@ -117,8 +117,8 @@ export default function PristineSoftwareDesignPage() {
     LoadBalancer --> Backend1
     LoadBalancer --> Backend2
     LoadBalancer --> Backend3`}
-                  </pre>
-                </div>
+                  className="w-full"
+                />
               </div>
             </div>
           </FadeInUp>
@@ -256,9 +256,8 @@ public:
               
               <div className="bg-card rounded-lg p-6 border">
                 <h3 className="text-lg font-medium mb-4">Request Processing Flow</h3>
-                <div className="bg-muted rounded-lg p-4">
-                  <pre className="text-sm overflow-x-auto">
-{`sequenceDiagram
+                <MermaidDiagram
+                  chart={`sequenceDiagram
     participant Client as Client
     participant Proxy as Reverse Proxy
     participant Router as Request Router
@@ -290,8 +289,8 @@ public:
             Handler->>Client: Forward Frame
         end
     end`}
-                  </pre>
-                </div>
+                  className="w-full"
+                />
               </div>
             </div>
           </FadeInUp>
