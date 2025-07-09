@@ -80,7 +80,7 @@ export default function KaicodePage() {
         {/* Quick Links */}
         <PortfolioSection className="mt-10">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-              <Link href="#" target="_blank" className="group">
+              <Link href="https://kc.yashk.dev" target="_blank" className="group">
                 <div className="p-6 rounded-lg border bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 transition-all">
                   <div className="flex items-center gap-3 mb-2">
                     <Play className="w-5 h-5" />
