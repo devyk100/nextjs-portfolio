@@ -23,14 +23,14 @@ export default function AboutMe() {
             <p className="text-sm mt-2">
                 I am eager to contribute my skills and enthusiasm to a forward thinking organisation that values creativity, teamwork and passion drive for excellence.
             </p>
-            <Accordion type="single" collapsible>
+            {/* <Accordion type="single" collapsible>
                 <AccordionItem value="item-1">
                     <AccordionTrigger className="hover:cursor-pointer">Read more about Me</AccordionTrigger>
                     <AccordionContent className="select-none">
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt quam magni itaque ut quibusdam eius voluptatem, repellendus architecto consequuntur laudantium nulla, quod quae? Soluta, recusandae excepturi maiores quam sunt libero.
                     </AccordionContent>
                 </AccordionItem>
-            </Accordion>
+            </Accordion> */}
             <div className="flex gap-1 flex-wrap items-center my-2 ">
                 <Link href={"https://github.com/devyk100"}>
                     <Button variant={"outline"} className="rounded-full hover:cursor-pointer" size={"icon"}>
