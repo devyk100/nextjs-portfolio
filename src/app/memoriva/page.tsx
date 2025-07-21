@@ -87,7 +87,7 @@ export default function MemorivaPage() {
 
         {/* Quick Links */}
         <PortfolioSection className="mt-10">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               <Link href="https://memoriva.yashk.dev" target="_blank" className="group">
                 <div className="p-6 rounded-lg border bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 transition-all">
                   <div className="flex items-center gap-3 mb-2">
@@ -100,7 +100,7 @@ export default function MemorivaPage() {
                 </div>
               </Link>
               
-              <Link href="https://github.com/devyk100/memoriva-frontend" target="_blank" className="group">
+              <Link href="https://github.com/devyk100/memoriva" target="_blank" className="group">
                 <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
                   <div className="flex items-center gap-3 mb-2">
                     <Github className="w-5 h-5" />
@@ -112,7 +112,7 @@ export default function MemorivaPage() {
                 </div>
               </Link>
               
-              <Link href="https://github.com/devyk100/memoriva-backend" target="_blank" className="group">
+              <Link href="https://github.com/devyk100/memoriva-rag-backend" target="_blank" className="group">
                 <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
                   <div className="flex items-center gap-3 mb-2">
                     <Github className="w-5 h-5" />
@@ -128,15 +128,15 @@ export default function MemorivaPage() {
                 <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
                   <div className="flex items-center gap-3 mb-2">
                     <FileText className="w-5 h-5 text-green-600" />
-                    <h3 className="font-semibold">Software Design</h3>
+                    <h3 className="font-semibold">Design</h3>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    RAG architecture & AI integration
+                    RAG architecture & AI integration, and Software Design
                   </p>
                 </div>
               </Link>
               
-              <Link href="/memoriva/system-des" className="group">
+              {/* <Link href="/memoriva/system-des" className="group">
                 <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
                   <div className="flex items-center gap-3 mb-2">
                     <Layers className="w-5 h-5 text-purple-600" />
@@ -146,7 +146,7 @@ export default function MemorivaPage() {
                     Scalable AI infrastructure
                   </p>
                 </div>
-              </Link>
+              </Link> */}
             </div>
         </PortfolioSection>
 

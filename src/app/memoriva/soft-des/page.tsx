@@ -31,7 +31,7 @@ export default function MemorivaSoftwareDesignPage() {
         <PortfolioSection className="flex justify-between items-center">
           <div className="w-full m-2">
             <Link href="/memoriva">
-              <Button variant="ghost" className="flex items-center gap-2">
+              <Button variant="ghost" className="flex items-center gap-2 cursor-pointer">
                 <ArrowLeft className="w-4 h-4" />
                 Back to Memoriva
               </Button>
@@ -247,6 +247,7 @@ interface StudySession {
             <div className="bg-card rounded-lg p-6 border">
               <h3 className="text-lg font-medium mb-4">RAG Processing Flow</h3>
               <MermaidDiagram
+              className="bg-zinc-100"
                 chart={`sequenceDiagram
     participant User as User
     participant Frontend as Next.js Frontend
@@ -255,7 +256,6 @@ interface StudySession {
     participant RAG as RAG Service
     participant Embedding as Embedding Service
     participant LLM as LLM Service
-    participant VectorDB as Vector Database
     
     User->>Frontend: Upload Study Material
     Frontend->>API: POST /study-sessions/process
@@ -263,7 +263,6 @@ interface StudySession {
     Queue->>RAG: Process Document
     
     RAG->>Embedding: Generate Embeddings
-    Embedding->>VectorDB: Store Vectors
     RAG->>LLM: Generate Study Insights
     
     LLM->>RAG: Return Insights
