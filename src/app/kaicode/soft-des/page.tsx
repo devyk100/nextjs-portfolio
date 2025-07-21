@@ -65,6 +65,7 @@ export default function KaicodeSoftwareDesignPage() {
               <div className="mb-6">
                 <h3 className="text-lg font-medium mb-4">High-Level Architecture</h3>
                 <MermaidDiagram
+                  
                   chart={`graph TB
     subgraph "Frontend Layer"
         UI[Next.js UI]
@@ -107,7 +108,7 @@ export default function KaicodeSoftwareDesignPage() {
     
     UI --> DeepSeek
     Docker --> AWS`}
-                  className="w-full"
+                  className="w-full bg-zinc-100"
                 />
               </div>
             </div>
@@ -259,7 +260,7 @@ interface EditorStore {
     SQS->>Orch: Job Complete
     Orch->>Judge: Result Ready
     Judge->>UI: Execution Result`}
-                  className="w-full"
+                  className="w-full bg-zinc-100"
                 />
               </div>
             </div>
