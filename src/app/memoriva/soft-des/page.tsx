@@ -61,6 +61,7 @@ export default function MemorivaSoftwareDesignPage() {
             <div className="mb-6">
               <h3 className="text-lg font-medium mb-4">High-Level Architecture</h3>
               <MermaidDiagram
+              className="bg-white"
                 chart={`graph TB
     subgraph "Frontend Layer"
         UI[Next.js UI]
@@ -69,7 +70,7 @@ export default function MemorivaSoftwareDesignPage() {
         Query[TanStack Query]
     end
     
-    subgraph "Backend Services"
+    subgraph "Backend Services - on AWS EC2"
         API[Gin REST API]
         RAG[RAG Service]
         LLM[LLM Service]
@@ -86,14 +87,9 @@ export default function MemorivaSoftwareDesignPage() {
     
     subgraph "Data Layer"
         PostgreSQL[(PostgreSQL)]
-        S3[AWS S3]
         Redis[(Redis Cache)]
     end
     
-    subgraph "Infrastructure"
-        Docker[Docker Containers]
-        AWS[AWS Services]
-    end
     
     UI --> Editor
     UI --> Auth
@@ -111,10 +107,8 @@ export default function MemorivaSoftwareDesignPage() {
     Embedding --> VectorDB
     
     API --> PostgreSQL
-    API --> S3
     Queue --> Redis
-    
-    Docker --> AWS`}
+    `}
               />
             </div>
           </div>

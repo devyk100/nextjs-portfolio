@@ -15,7 +15,7 @@ export default function ProjectCards() {
                 </div>
             </Card>
 
-            <Card desc="AI-powered document management with RAG technology" name="Memoriva" coverUrl="/image.webp" point1="RAG pipeline for intelligent document retrieval" point2="Vector search with OpenAI embeddings and LLM integration" techStack="Next.js, Go, PostgreSQL">
+            <Card desc="AI-powered document management with RAG technology" name="Memoriva" coverUrl="/memoriva.png" point1="RAG pipeline for intelligent document retrieval" point2="Vector search with OpenAI embeddings and LLM integration" techStack="Next.js, Go, PostgreSQL">
                 <div className="p-2 flex justify-center">
                     <Link href="/memoriva">
                         <Button className="text-sm hover:cursor-pointer" size={"sm"}>
@@ -25,7 +25,7 @@ export default function ProjectCards() {
                 </div>
             </Card>
 
-            <Card desc="High-performance message queue system with clustering" name="Yuclase" coverUrl="/image.webp" point1="Fault-tolerant distributed message queue" point2="Custom binary protocol with persistent storage" techStack="Golang">
+            <Card desc="High-performance message queue system with clustering" name="Yuclase" coverUrl="/yuclase.png" point1="Fault-tolerant distributed message queue" point2="Custom binary protocol with persistent storage" techStack="Golang">
                 <div className="p-2 flex justify-center">
                     <Link href="/yuclase">
                         <Button className="text-sm hover:cursor-pointer" size={"sm"}>
@@ -35,7 +35,7 @@ export default function ProjectCards() {
                 </div>
             </Card>
 
-            <Card desc="High-performance reverse proxy with SSL/TLS and HTTP/2" name="Pristine" coverUrl="/image.webp" point1="Automatic SSL certificate management with Let's Encrypt" point2="Load balancing and WebSocket proxying capabilities" techStack="C++, Boost.Asio">
+            <Card desc="High-performance reverse proxy with SSL/TLS and HTTP/2" name="Pristine" coverUrl="/pristine.png" point1="Automatic SSL certificate management with Let's Encrypt" point2="Load balancing and WebSocket proxying capabilities" techStack="C++, Boost.Asio">
                 <div className="p-2 flex justify-center">
                     <Link href="/pristine">
                         <Button className="text-sm hover:cursor-pointer" size={"sm"}>
@@ -45,7 +45,7 @@ export default function ProjectCards() {
                 </div>
             </Card>
 
-            <Card desc="Simple competitive programming template manager" name="Mochi" coverUrl="/image.webp" point1="Template management for competitive programming" point2="Quick setup and file generation utilities" techStack="Golang">
+            <Card desc="Simple competitive programming template manager" name="Mochi" coverUrl="/mochi.png" point1="Template management for competitive programming" point2="Quick setup and file generation utilities" techStack="Golang">
                 <div className="p-2 flex justify-center">
                     <Link href="/mochi">
                         <Button className="text-sm hover:cursor-pointer" size={"sm"}>
