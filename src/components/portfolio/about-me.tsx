@@ -52,12 +52,12 @@ export default function AboutMe() {
                         <FaDiscord className="w-6 h-6" />
                     </Button>
                 </Link>
-                <Link href={""}>
+                {/* <Link href={""}>
                     <Button variant={"outline"} className="rounded-full hover:cursor-pointer" size={"icon"}>
                         <FaMediumM className="w-6 h-6" />
                     </Button>
-                </Link>
-                <Link href={"https://drive.google.com/file/d/184CZvZU8kKpNBP__j15J4K4gro_CyI-O/view"}>
+                </Link> */}
+                <Link href={"https://drive.google.com/file/d/1jHNnSGerqOV6RvQIOv1sYO6mDGAZ0lRd/view?usp=sharing"}>
                     <Button variant={"outline"} className="text-sm hover:cursor-pointer"><File /> Resume</Button>
                 </Link>
             </div>

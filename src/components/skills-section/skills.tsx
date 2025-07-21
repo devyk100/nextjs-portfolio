@@ -26,9 +26,9 @@ export default function SkillsSection() {
                     <span className="flex items-center gap-1">
                         Java <DiJava className="w-6 h-6"/>
                     </span>
-                    <span className="flex items-center gap-1">
+                    {/* <span className="flex items-center gap-1">
                         Kotlin <SiKotlin className="w-3 h-3"/>
-                    </span>
+                    </span> */}
                 </p>
             </div>
             <Separator />
