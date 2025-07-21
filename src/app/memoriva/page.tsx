@@ -51,7 +51,7 @@ export default function MemorivaPage() {
         <PortfolioSection className="flex justify-between items-center">
           <div className="w-full m-2">
             <Link href="/">
-              <Button variant="ghost" className="flex items-center gap-2">
+              <Button variant="ghost" className="flex items-center gap-2 cursor-pointer">
                 <ArrowLeft className="w-4 h-4" />
                 Back to Portfolio
               </Button>
@@ -95,7 +95,7 @@ export default function MemorivaPage() {
                     <h3 className="font-semibold">Try Demo</h3>
                   </div>
                   <p className="text-sm text-purple-100">
-                    AI document search
+                    Flashcard and AI generated study sessions
                   </p>
                 </div>
               </Link>
@@ -166,14 +166,10 @@ export default function MemorivaPage() {
                 </p>
               </div>
               <p className="text-lg leading-relaxed mb-4">
-                Memoriva is an intelligent document management and retrieval system that leverages 
-                advanced RAG (Retrieval-Augmented Generation) technology to help users organize, 
-                search, and interact with their documents in natural language.
+                Memoriva is flashcard review app that is based on the SRS - Spaced repetition system for better memory retention of the flashcards. It has baked in RAG for generating flashcard sesssions for study for specific topics, your weak topics, etc., based on the prompt given. 
               </p>
               <p className="leading-relaxed mb-4">
-                The platform combines powerful vector search capabilities with AI-powered document 
-                analysis to provide contextual answers and insights from your document collection. 
-                Built with modern web technologies and optimized for performance and scalability.
+                The platform combines powerful SRS algorithm for better retention and uses RAG for generating AI based flashcard study sessions.
               </p>
             </div>
         </PortfolioSection>
@@ -234,10 +230,10 @@ export default function MemorivaPage() {
                     <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
                     OpenAI Embeddings API
                   </li>
-                  <li className="flex items-center gap-2">
+                  {/* <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
                     Vector similarity search
-                  </li>
+                  </li> */}
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
                     RAG pipeline implementation
@@ -292,7 +288,7 @@ export default function MemorivaPage() {
                   <li>• Context-aware retrieval</li>
                 </ul>
               </div>
-              <div className="p-6 rounded-lg border bg-card">
+              {/* <div className="p-6 rounded-lg border bg-card">
                 <h3 className="text-lg font-medium mb-3 flex items-center gap-2">
                   <Database className="w-5 h-5 text-blue-600" />
                   Vector Database
@@ -304,7 +300,7 @@ export default function MemorivaPage() {
                   <li>• Metadata filtering</li>
                   <li>• Scalable indexing</li>
                 </ul>
-              </div>
+              </div> */}
               <div className="p-6 rounded-lg border bg-card">
                 <h3 className="text-lg font-medium mb-3 flex items-center gap-2">
                   <Edit3 className="w-5 h-5 text-green-600" />
@@ -360,47 +356,6 @@ export default function MemorivaPage() {
             </div>
         </PortfolioSection>
 
-        {/* Code Repository Links */}
-        <PortfolioSection className="mt-10">
-            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
-              <Github className="w-6 h-6" />
-              Source Code
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <Link href="https://github.com/devyk100/memoriva-frontend" target="_blank" className="group">
-                <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="font-semibold">Frontend Repository</h3>
-                    <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-3">
-                    Next.js frontend with TypeScript and modern UI components
-                  </p>
-                  <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                    <span className="w-3 h-3 bg-blue-500 rounded-full"></span>
-                    TypeScript
-                  </div>
-                </div>
-              </Link>
-              
-              <Link href="https://github.com/devyk100/memoriva-backend" target="_blank" className="group">
-                <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="font-semibold">Backend Repository</h3>
-                    <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-3">
-                    Go backend with RAG pipeline and vector database integration
-                  </p>
-                  <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                    <span className="w-3 h-3 bg-green-500 rounded-full"></span>
-                    Go
-                  </div>
-                </div>
-              </Link>
-            </div>
-        </PortfolioSection>
-
         {/* Demo Video */}
         <PortfolioSection className="mt-10">
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
@@ -412,49 +367,17 @@ export default function MemorivaPage() {
                 <div className="aspect-video bg-muted rounded-lg mb-4 flex items-center justify-center">
                   <div className="text-center">
                     <Play className="w-12 h-12 mx-auto mb-2 text-muted-foreground" />
-                    <p className="text-sm text-muted-foreground">RAG Pipeline Demo</p>
+                    {/* <p className="text-sm text-muted-foreground">RAG Pipeline Demo</p> */}
                   </div>
                 </div>
-                <h3 className="text-lg font-medium mb-2">Document Processing & Search</h3>
-                <p className="text-sm text-muted-foreground">
+                <h3 className="text-lg font-medium mb-2">Demo</h3>
+                {/* <p className="text-sm text-muted-foreground">
                   Watch how documents are processed, indexed, and searched using natural language queries with contextual answers.
-                </p>
+                </p> */}
               </div>
             </div>
         </PortfolioSection>
 
-        {/* Documentation Links */}
-        <PortfolioSection className="mt-10">
-            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
-              <FileText className="w-6 h-6" />
-              Technical Documentation
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <Link href="/memoriva/soft-des" className="group">
-                <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
-                  <div className="flex items-center gap-3 mb-2">
-                    <FileText className="w-5 h-5 text-green-600" />
-                    <h3 className="font-semibold">Software Design Document</h3>
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    Detailed RAG pipeline architecture and AI integration design
-                  </p>
-                </div>
-              </Link>
-              
-              <Link href="/memoriva/system-des" className="group">
-                <div className="p-6 rounded-lg border bg-card hover:bg-accent transition-colors">
-                  <div className="flex items-center gap-3 mb-2">
-                    <Layers className="w-5 h-5 text-purple-600" />
-                    <h3 className="font-semibold">System Design Document</h3>
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    Scalable infrastructure and vector database architecture
-                  </p>
-                </div>
-              </Link>
-            </div>
-        </PortfolioSection>
 
         {/* Footer */}
         <PortfolioSection className="mt-10 mb-10">
