@@ -55,9 +55,9 @@ export default function SkillsSection() {
                     <span className="flex gap-x-1 items-center">
                         React Native <TbBrandReactNative />
                     </span>
-                    <span className="flex gap-x-1 items-center">
+                    {/* <span className="flex gap-x-1 items-center">
                         Jetpack Compose <SiJetpackcompose />
-                    </span>
+                    </span> */}
                     <span className="flex gap-x-1 items-center">
                         ExpressJS <SiExpress />
                     </span>
