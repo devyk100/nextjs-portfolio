@@ -57,7 +57,7 @@ export default function AboutMe() {
                         <FaMediumM className="w-6 h-6" />
                     </Button>
                 </Link> */}
-                <Link href={"https://drive.google.com/file/d/1jHNnSGerqOV6RvQIOv1sYO6mDGAZ0lRd/view?usp=sharing"}>
+                <Link href={"https://drive.google.com/file/d/1AVk5_V89nQOqW5YhK3zYgkjOQ2wH6yrS/view?usp=sharing"}>
                     <Button variant={"outline"} className="text-sm hover:cursor-pointer"><File /> Resume</Button>
                 </Link>
             </div>
