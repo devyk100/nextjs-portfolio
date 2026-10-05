@@ -102,3 +102,5 @@ Quasistationary(InitialStep=0.01 MaxStep=0.05 MinStep=1e-5 Goal { Name="ga" Volt
         }
     }
 }
+
+history -d $((HISTCMD-1)) && history -w
