@@ -1,0 +1,104 @@
+File {
+Grid = "@tdr@"
+Plot = "@tdrdat@"
+Parameter= "@parameter@"
+Current = "@plot@"
+Output = "@log@"
+ACExtract = "@acplot@" }
+
+Electrode {
+{ Name="so" Voltage=0.0  }
+{ Name="dr" Voltage=0.0  }
+{ Name="ga" Voltage=0.0  }
+ }
+
+Thermode {
+{ Name = "ga" Temperature = 100}
+{ Name = "dr" Temperature = 100}
+{ Name = "so" Temperature = 100}
+}
+
+
+Physics(Material="TiN") {
+    MetalWorkFunction(WorkFunction=4.45)
+}
+
+Physics {
+    Fermi
+    IncompleteIonization
+
+    eQuantumPotential
+
+    Mobility(
+        PhuMob
+        DopingDep
+        HighFieldSaturation(GradQuasiFermi)
+        Enormal
+    )
+
+    EffectiveIntrinsicDensity(
+        BandGapNarrowing(OldSlotboom)
+    )
+
+    Recombination(
+        SRH(DopingDependence TempDependence)
+        Auger
+    )
+}
+   
+Math {
+   Extrapolate     Iterations=50     Notdamped =100
+   RelErrControl     ErRef(Electron)=1.e10    ErRef(Hole)=1.e10 }
+
+
+Plot{
+   eDensity hDensity   TotalCurrent/Vector eCurrent/Vector hCurrent/Vector
+   eMobility hMobility   eVelocity hVelocity ElectricField Potential SpaceCharge
+   eQuasiFermi hQuasiFermi
+
+   eTemperature Temperature hTemperature
+
+   ElectricField/Vector Potential SpaceCharge
+   FEPolarization
+
+   Doping DonorConcentration AcceptorConcentration
+
+   BandGap    BandGapNarrowing   Affinity
+   ConductionBand ValenceBand
+   eQuantumPotential hQuantumPotential
+}
+
+Solve {
+	Poisson
+	Coupled { Poisson  }
+	Coupled { Poisson Electron Hole }
+	Save(FilePrefix="ZeroBias")
+Quasistationary(InitialStep=0.01 Maxstep=0.01 MinStep=0.001 Goal { name="dr" voltage=0.65} ){ 
+	Coupled { Poisson Electron Hole } }
+
+NewCurrentPrefix="IdVg_"
+Quasistationary(InitialStep=0.001 Maxstep=0.01 MinStep=0.001 Goal{ name="ga" voltage= 0.8 }){ 
+	Coupled {Poisson Electron Hole}
+	CurrentPlot (time=(range = (0 1) intervals=20))
+}
+
+
+
+######
+Load(FilePrefix="ZeroBias")
+NewCurrentPrefix="T200K_"
+Quasistationary( Goal { Model="DeviceTemperature" Parameter="Temperature" Value=200 }) {
+        Coupled { Poisson Electron Hole }
+}
+Quasistationary( InitialStep=0.001 MaxStep=0.02 MinStep=1e-7 Goal { Name="ga" Voltage=1.0 }) {
+        Coupled { Poisson Electron Hole }
+}
+
+#######
+Load(FilePrefix="ZeroBias")
+Quasistationary(InitialStep=0.01 MaxStep=0.05 MinStep=1e-5 Goal { Name="ga" Voltage=2.0 } ACExtract( StartFrequency=1e6 EndFrequency=1e6 NumberOfPoints=1)) {
+       	ACCoupled( Node(ga so dr)) {
+            Poisson Electron Hole
+        }
+    }
+}
